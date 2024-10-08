@@ -1,20 +1,19 @@
-* {
-  font-family: "poppins";
-}
 .resource-header {
   width: 100%;
+  margin-top: 12vh;
   height: 256px;
   background-color: #15357a;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: start;
-  padding-left: 150px;
+  padding-left: 100px;
 }
 .resource-header h1 {
   margin-bottom: 25px;
   color: #fff;
   font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .resource-header p {
@@ -25,6 +24,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .resource-card-section {
@@ -66,4 +66,14 @@
 .card-text p {
   margin-top: 15px;
   color: #86868a;
+}
+.resource-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pagination button {
+  margin: 0 8px;
+  padding: 8px 16px;
 }
