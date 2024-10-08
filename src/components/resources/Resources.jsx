@@ -4,14 +4,12 @@ import { useState } from "react";
 
 const Resources = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 9; // Number of cards per page
+  const cardsPerPage = 9;
 
-  // Calculate the range of cards for the current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = cardLists.slice(indexOfFirstCard, indexOfLastCard);
 
-  // Function to change the page
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -63,17 +61,27 @@ const Resources = () => {
             </>
           ))}
         </div>
-        <div className="pagination">
-          {/* Render the Previous button if we're not on the first page */}
-          {currentPage > 1 && <button onClick={handlePrevious}>Prev</button>}
+        <div className="pages">
+          {currentPage > 1 && (
+            <button className="page-btn" onClick={handlePrevious}>
+              Prev
+            </button>
+          )}
 
-          <button onClick={() => handlePageChange(1)}>1</button>
-          <button onClick={() => handlePageChange(2)}>2</button>
-          <button onClick={() => handlePageChange(3)}>3</button>
+          <button className="page-btn" onClick={() => handlePageChange(1)}>
+            1
+          </button>
+          <button className="page-btn" onClick={() => handlePageChange(2)}>
+            2
+          </button>
+          <button className="page-btn" onClick={() => handlePageChange(3)}>
+            3
+          </button>
 
-          {/* Render the Next button if there are more pages */}
           {currentPage < Math.ceil(cardLists.length / cardsPerPage) && (
-            <button onClick={handleNext}>Next</button>
+            <button className="page-btn" onClick={handleNext}>
+              Next
+            </button>
           )}
         </div>
       </section>
