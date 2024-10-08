@@ -69,9 +69,8 @@ const Calculator = () => {
             <div className="form-group">
                 <label>Annual Salary</label>
                 <div className="input-group">
-                    <span className= 'ml-2'>Rp.</span>
+                    <span>Rp.</span>
                     <input
-
                         type="number"
                         value={salary}
                         onChange={handleSalaryChange}
@@ -82,7 +81,7 @@ const Calculator = () => {
             <div className='gropcont'>
             <div className="form-group ">
                 <label>Employee Status</label>
-                <select  className= 'ml-2'value={employeeStatus} onChange={(e) => setEmployeeStatus(e.target.value)}>
+                <select  value={employeeStatus} onChange={(e) => setEmployeeStatus(e.target.value)}>
                     <option value="">Select Employee Status</option>
                     <option value="vl-1">TK/O: Single with no dependents</option>
                     <option value="vl-2">K/O: Married with no dependents</option>
