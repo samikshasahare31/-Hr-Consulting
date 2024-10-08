@@ -1,0 +1,145 @@
+.peo-container {
+  width: 100%;
+  height: auto;
+}
+
+.peo-pricing {
+  width: 100%;
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.peo-pricing h2 {
+  opacity: 60%;
+  color: white;
+}
+
+.peo-pricing h1 {
+  color: white;
+  padding-bottom: 4rem;
+}
+
+.peo-pricing-cards {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.peo-pricing-card {
+  width: 48%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.peo-pricing-card h3 {
+  color: #002863;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.peo-pricing-card-price {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background-color: lightgray;
+  border-radius: 10px;
+  line-height: 2.25rem;
+}
+
+.peo-pricing-card-price h3 {
+  text-align: start;
+  padding: 0;
+}
+
+.peo-pricing-card-price h5 {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.peo-pricing-card h4 {
+  font-size: 1.25rem;
+  margin: 2rem 0 1rem 2rem;
+  color: #002863;
+}
+
+.peo-pricing-card ul {
+  font-size: 1.25rem;
+  list-style: none;
+}
+
+.peo-pricing-card ul li {
+  position: relative;
+  padding-left: 4rem;
+  line-height: 2rem;
+}
+
+.peo-pricing-card ul li::before {
+  content: "✔";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  margin-left: 2rem;
+}
+
+.peo-pricing-btn {
+  width: 20%;
+  text-align: center;
+  background-color: gold;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 0;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
+/*                                    Responsive Styles */
+
+@media (max-width: 1024px) {
+  .peo-pricing-cards {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .peo-pricing-cards {
+    width: 92.5%;
+  }
+
+  .peo-pricing-card ul {
+    font-size: 18px;
+  }
+
+  .peo-pricing-card ul li {
+    padding-left: 3.5rem;
+  }
+
+  .peo-pricing-card ul li::before {
+    width: 22px;
+    height: 22px;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .peo-pricing-cards {
+    flex-wrap: wrap;
+    width: 95%;
+    gap: 2rem;
+  }
+
+  .peo-pricing-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,218 @@
+/*                      Main Section Styles */
+.peo-container {
+  width: 100%;
+  height: auto;
+}
+
+.peo-main {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.peo-main-image {
+  width: 50%;
+  text-align: center;
+}
+
+.peo-main-image img {
+  width: 100%;
+}
+
+.peo-main-contant {
+  width: 45%;
+  padding-top: 4rem;
+}
+
+.peo-container h2 {
+  font-weight: 300;
+  opacity: 60%;
+  padding: 1rem 0;
+}
+
+.peo-main-contant h1 {
+  font-size: 2.5rem;
+  color: #002863;
+  padding-bottom: 1rem;
+}
+
+.peo-main-contant p {
+  opacity: 70%;
+  line-height: 1.5rem;
+}
+
+.peo-main-btn {
+  width: 30%;
+  text-align: center;
+  background-color: gold;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 0;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
+/*                           Solutions Section Styles */
+.peo-solution {
+  width: 100%;
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.peo-solution h1 {
+  color: #002863;
+}
+
+.peo-solution-cards {
+  width: 80%;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.peo-solution-card {
+  width: 32%;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px 0 rgb(9 22 48 / 0.06);
+}
+
+.peo-solution-card img {
+  width: 15%;
+}
+
+.peo-solution-card h2 {
+  opacity: 100%;
+  font-weight: 600;
+  color: #002863;
+}
+
+.peo-solution-card p {
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+/*                           Benefits Section Styles */
+.peo-benefit {
+  width: 100%;
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.peo-benefit h1 {
+  color: #002863;
+}
+
+.peo-benefit-cards {
+  width: 80%;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.peo-benefit-card {
+  width: 32%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px 0 rgb(9 22 48 / 0.06);
+}
+
+.peo-benefit-card img {
+  width: 100%;
+}
+
+.peo-benefit-card h2 {
+  opacity: 100%;
+  font-weight: 600;
+  color: #002863;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+}
+
+.peo-benefit-card p {
+  font-size: 1.25rem;
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+
+.peo-benefit-unique {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://recruitindo.com/wp-content/uploads/2023/12/save-time.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.peo-benefit-unique h2,
+.peo-benefit-unique p {
+  color: white;
+}
+
+.peo-benefit-unique img {
+  width: 20%;
+  cursor: pointer;
+}
+
+.peo-benefit-unique:hover {
+  background-image: none;
+  background-color: #002863;
+  transition: background 1.5s ease;
+}
+
+/*                                     Responsive Styles */
+@media (max-width: 1200px) {
+  .peo-main {
+    width: 90%;
+  }
+
+  .peo-main-image {
+    width: 48%;
+    text-align: center;
+  }
+
+  .peo-main-contant {
+    width: 48%;
+  }
+
+  .peo-main-contant h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .peo-main-contant {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .peo-main {
+    width: 95%;
+  }
+
+  .peo-main-contant h1 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+}
