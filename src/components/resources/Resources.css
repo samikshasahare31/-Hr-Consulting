@@ -20,7 +20,7 @@
   color: #acadac;
 }
 .resource-section {
-  margin-top: 50px;
+  margin: 50px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -76,4 +76,20 @@
 .pagination button {
   margin: 0 8px;
   padding: 8px 16px;
+}
+.page-btn {
+  padding: 10px 8px;
+  border-radius: 5px;
+  border: 1px solid rgb(121, 117, 117);
+}
+.page-btn:active {
+  background-color: #15357a;
+  color: white;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
