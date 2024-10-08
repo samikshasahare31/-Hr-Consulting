@@ -16,6 +16,7 @@
 .peo-pricing h2 {
   opacity: 60%;
   color: white;
+  font-weight: 400;
 }
 
 .peo-pricing h1 {
@@ -114,9 +115,14 @@
   padding: 2rem 0;
 }
 
+.peo-resources h2{
+  color: #050505;
+  font-weight: 900;
+}
 .peo-resources h1 {
   color: #002863;
 }
+
 
 .peo-resource-cards {
   width: 80%;

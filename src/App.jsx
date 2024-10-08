@@ -14,11 +14,17 @@ import PeoEor from "./components/services/peo&eor/PeoEor";
 import PricingManagedServices from "./components/pricing/managedServices/PricingManagedServices";
 import PricingPeoEor from "./components/pricing/peo&eor/PricingPeoEor";
 import PricingRecruitment from "./components/pricing/recruitment/PricingRecruitment";
+import Calculator from "./components/calculator/Calculator";
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../public/i18n'; 
+
 
 function App() {
   return (
     <>
+     <I18nextProvider i18n={i18n}>
       <BrowserRouter>
+    
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +32,7 @@ function App() {
           <Route path="/jobVacancies" element={<JobVac />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/calculator" element={<Calculator/>}/>
 
           <Route path="/services/peo&eor" element={<PeoEor />} />
           <Route path="/services/recruitment" element={<Recruitment />} />
@@ -44,6 +51,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+      </I18nextProvider>
     </>
   );
 }

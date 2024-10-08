@@ -13,6 +13,15 @@ function Navbar() {
     const servicesDropdownRef = useRef(null);
     const pricingDropdownRef = useRef(null);
 
+
+
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            i18n.changeLanguage(savedLanguage);
+        }
+    }, [i18n]);
+
     useEffect(() => {
         const handleScroll = () => {
             setSticky(window.scrollY > 0);
@@ -55,12 +64,17 @@ function Navbar() {
     };
 
     const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng); // Change the language
-        setIsLanguageDropdownOpen(false); // Close the dropdown after selecting a language
+        i18n.changeLanguage(lng); 
+        localStorage.setItem('language', lng); 
+        setIsLanguageDropdownOpen(false); 
     };
 
     const navItems = (
         <>
+
+            <li>
+                <a href='/aboutUs'>{t('About')}</a>
+            </li>
             <li ref={servicesDropdownRef}>
                 <div className="flex items-center cursor-pointer" onClick={toggleServicesDropdown}>
                     <span>{t('Services')}</span>
@@ -96,13 +110,14 @@ function Navbar() {
             </li>
 
             <li>
+                <a href='/calculator'>{t('Calculator')}</a>
+            </li>
+
+            <li>
                 <a href="/resources">{t('Resources')}</a>
             </li>
             <li>
                 <a href='contactUs'>{t('Contact Us')}</a>
-            </li>
-            <li>
-                <a href='/aboutUs'>{t('About')}</a>
             </li>
 
             <li ref={languageDropdownRef}>
@@ -190,3 +205,36 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,10 @@
 import React from "react";
 import "./PeoEor.css";
 import { peoPricing } from "../../../assets/data/peoPricing";
+import { useTranslation } from 'react-i18next';
 
 function PricingPeoEor() {
+  const { t } = useTranslation(); 
   const peoResources = [
     {
       id: 0,
@@ -37,25 +39,25 @@ function PricingPeoEor() {
     <div className="peo-container">
       {/* Main Section */}
       <div className="peo-pricing">
-        <h2>PRICING</h2>
-        <h1>PEO / EOR Price Sheet</h1>
+        <h2>{t('PRICING')}</h2>
+        <h1>{t('PEO / EOR Price Sheet')}</h1>
         <div className="peo-pricing-cards">
           {peoPricing.map((data) => (
             <div key={data.id} className="peo-pricing-card">
               <h3>{data.name}</h3>
               <div className="peo-pricing-card-price">
-                <h5>Starting from</h5>
+                <h5>{t('Starting from')}</h5>
                 <h3>{data.price}</h3>
-                <h5>per employee per month</h5>
+                <h5>{t('per employee per month')}</h5>
               </div>
               <hr />
-              <h4>Includes</h4>
+              <h4>{t('Includes')}</h4>
               <ul>
                 {data.include.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-              <button className="peo-pricing-btn">Let’s Talk</button>
+              <button className="peo-pricing-btn">{t('Let’s Talk')}</button>
             </div>
           ))}
         </div>
@@ -63,8 +65,8 @@ function PricingPeoEor() {
 
       {/* Resources and Articles Section */}
       <div className="peo-resources">
-        <h2>Resources</h2>
-        <h1>Resources and Articles</h1>
+        <h2>{t('Resources')}</h2>
+        <h1>{t('Resources and Articles')}</h1>
         <div className="peo-resource-cards">
           {peoResources.map((ele, index) => (
             <>
@@ -95,7 +97,7 @@ function PricingPeoEor() {
           ))}
         </div>
         <button className="peoResource-btn">
-          <a href="/resources">See Our Resources</a>
+          <a href="/resources">{t('See Our Resources')}</a>
         </button>
       </div>
     </div>
