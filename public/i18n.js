@@ -19,6 +19,7 @@ const resources = {
       "Hindi": "Hindi",
       "French": "French",
       "Welcome to Ten HR Consulting":"Welcome to Ten HR Consulting",
+      // Resources Page data
     }
   },
   hi: {
