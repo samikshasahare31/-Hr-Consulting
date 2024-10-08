@@ -38,14 +38,8 @@ function App() {
           <Route path="/pricing/hrConsulting" element={< PricHrConsulting/>}  />
           <Route path="/pricing/managedServices" element={<PricingManagedServices />} />
 
-         
-         
         </Routes>
       </BrowserRouter>
-
-
-
-
 
     </>
   );
