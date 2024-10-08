@@ -1,11 +1,11 @@
 import React from 'react'
 
-function AboutUs() {
+function JobVac() {
   return (
     <div>
-      <h1>about</h1>
+      <h1>jobss123</h1>
     </div>
   )
 }
 
-export default AboutUs
+export default JobVac

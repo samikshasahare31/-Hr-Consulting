@@ -70,10 +70,10 @@ function Navbar() {
                 </div>
                 {isServicesDropdownOpen && (
                     <ul className="w-48 md:absolute md:mt-10 bg-white shadow-lg rounded-lg">
-                        <li><a>{t('PEO&EoR')}</a></li>
-                        <li><a>{t('Recruitment')}</a></li>
-                        <li><a>{t('HR Consulting')}</a></li>
-                        <li><a>{t('Managed Services')}</a></li>
+                        <li><a href='/services/peo&eor'>{t('PEO&EoR')}</a></li>
+                        <li><a href='/services/recruitment'>{t('Recruitment')}</a></li>
+                        <li><a href='/services/hrConsulting'>{t('HR Consulting')}</a></li>
+                        <li><a href='/services/managedServices'>{t('Managed Services')}</a></li>
                     </ul>
                 )}
             </li>
@@ -87,22 +87,22 @@ function Navbar() {
                 </div>
                 {isPricingDropdownOpen && (
                     <ul className="w-48 md:absolute md:mt-10 bg-white shadow-lg rounded-lg">
-                        <li><a>{t('PEO&EoR')}</a></li>
-                        <li><a>{t('Recruitment')}</a></li>
-                        <li><a>{t('HR Consulting')}</a></li>
-                        <li><a>{t('Managed Services')}</a></li>
+                        <li><a href='/pricing/peo&eor'>{t('PEO&EoR')}</a></li>
+                        <li><a href='/pricing/recruitment'>{t('Recruitment')}</a></li>
+                        <li><a href='/pricing/hrConsulting'>{t('HR Consulting')}</a></li>
+                        <li><a href='/pricing/managedServices'>{t('Managed Services')}</a></li>
                     </ul>
                 )}
             </li>
 
             <li>
-                <a href="/">{t('Resources')}</a>
+                <a href="/resources">{t('Resources')}</a>
             </li>
             <li>
-                <a>{t('Contact Us')}</a>
+                <a href='contactUs'>{t('Contact Us')}</a>
             </li>
             <li>
-                <a>{t('About')}</a>
+                <a href='/aboutUs'>{t('About')}</a>
             </li>
 
             <li ref={languageDropdownRef}>
@@ -134,7 +134,7 @@ function Navbar() {
 
     return (
         <>
-            <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
+            <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 bg-white ${
                 sticky ? 'sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out' : ''
             }`}>
                 <div className="navbar">
@@ -170,7 +170,7 @@ function Navbar() {
                         )}
                     </div>
                     <div className="navbar-start">
-                        <a className="text-1xl md:text-2xl font-bold cursor-pointer">{t('TEN HR Consulting')}</a>
+                        <a href='/' className="text-1xl md:text-2xl font-bold cursor-pointer">{t('TEN HR Consulting')}</a>
                     </div>
 
                     <div className="navbar-end flex items-center">
@@ -178,7 +178,7 @@ function Navbar() {
                             <ul className="menu menu-horizontal px-1">{navItems}</ul>
                         </div>
                         <div className="">
-                            <a className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer">
+                            <a href='/jobVacancies' className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer">
                                 {t('Job Vacancies')}
                             </a>
                         </div>
