@@ -6,6 +6,35 @@ import rightArrow from "../../../assets/images/right-arrow.svg";
 import PricingPeoEor from "../../pricing/peo&eor/PeoEor";
 
 function PeoEor() {
+  const peoResources = [
+    {
+      id: 0,
+      img: "https://recruitindo.com/wp-content/uploads/2023/12/eliminate.png",
+      article: "Articles",
+      resources: "Resources",
+      title:
+        "The Ultimate Guide to Executive Search in Indonesia: Analysing the Financial and Cultural Impact of Wrong Hires",
+      text: "Introduction In today’s competitive business landscape, finding and retaining top executive talent is crucial for the",
+    },
+    {
+      id: 1,
+      img: "https://recruitindo.com/wp-content/uploads/2023/12/recruitindo-by-number-1024x682.jpeg",
+      article: "Articles",
+      resources: "Resources",
+      title:
+        "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
+      text: "Introduction In the age of globalisation and digital transformation, the ability to manage remote teams effectively",
+    },
+    {
+      id: 2,
+      img: "https://recruitindo.com/wp-content/uploads/2024/01/search-solution-1024x768.jpeg",
+      article: "Articles",
+      resources: " ",
+      title:
+        "Strategic Executive Search Solutions for Indonesia’s Top Businesses",
+      text: "In today’s fiercely competitive business landscape, finding the right talent to lead your organisation is more",
+    },
+  ];
   return (
     <div className="peo-container">
       {/* Main Section */}
@@ -71,6 +100,44 @@ function PeoEor() {
 
       {/* Pricing PEO EOR */}
       <PricingPeoEor />
+
+      {/* Resources and Articles Section */}
+      <div className="peo-resources">
+        <h2>Resources</h2>
+        <h1>Resources and Articles</h1>
+        <div className="peo-resource-cards">
+          {peoResources.map((ele, index) => (
+            <>
+              <div key={index} className="peo-resource-card">
+                <img src={ele.img} alt="" />
+                <div className="peo-resource-card-btn">
+                  <button className="peo-resource-article-btn">
+                    {" "}
+                    {ele.article}{" "}
+                  </button>
+                  {ele.resources === " " ? (
+                    " "
+                  ) : (
+                    <>
+                      ,{" "}
+                      <button className="peo-resources-btn">
+                        {ele.resources}
+                      </button>
+                    </>
+                  )}
+                </div>
+                <div className="peo-resource-card-text">
+                  <h4>{ele.title} </h4>
+                  <p> {ele.text}</p>
+                </div>
+              </div>
+            </>
+          ))}
+        </div>
+        <button className="peoResource-btn">
+          <a href="/resources">See Our Resources</a>
+        </button>
+      </div>
     </div>
   );
 }

@@ -176,6 +176,80 @@
   transition: background 1.5s ease;
 }
 
+/*                                      Resources and Articles Styles */
+.peo-resources {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.peo-resources h1 {
+  color: #002863;
+}
+
+.peo-resource-cards {
+  width: 80%;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.peo-resource-card {
+  width: 32%;
+}
+
+.peo-resource-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.peo-resource-card-btn {
+  margin: 10px 0 10px 10px;
+}
+
+.peo-resource-article-btn {
+  margin-right: 5px;
+}
+
+.peo-resource-article-btn,
+.peo-resources-btn {
+  padding: 6px 12px;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background-color: #d9d9ee;
+}
+
+.peo-resource-card-text {
+  padding: 10px;
+}
+
+.peo-resource-card-text h4 {
+  font-weight: 500;
+}
+
+.peo-resource-card-text p {
+  margin-top: 15px;
+  color: #86868a;
+}
+
+.peoResource-btn {
+  width: 10%;
+  text-align: center;
+  background-color: gold;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 0;
+  text-decoration: none;
+}
+
+.peoResource-btn a {
+  text-decoration: none;
+}
+
 /*                                     Responsive Styles */
 @media (max-width: 1200px) {
   .peo-main {
@@ -193,6 +267,10 @@
   .peo-main-contant h1 {
     font-size: 2rem;
     line-height: 3rem;
+  }
+
+  .peoResource-btn {
+    width: 15%;
   }
 }
 
@@ -224,6 +302,14 @@
   .peo-benefit-card h2 {
     font-size: 1.25rem;
   }
+
+  .peo-resource-cards {
+    width: 95%;
+  }
+
+  .peo-resources h1 {
+    font-size: 1.75rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -254,6 +340,22 @@
 
   .peo-benefit h1 {
     font-size: 1.5rem;
+  }
+
+  .peo-resource-cards {
+    gap: 1rem;
+  }
+
+  .peo-resource-card {
+    width: 48%;
+  }
+
+  .peo-resources h1 {
+    font-size: 1.5rem;
+  }
+
+  .peoResource-btn {
+    width: 20%;
   }
 }
 
@@ -300,5 +402,13 @@
 
   .peo-benefit-card p {
     font-size: 18px;
+  }
+
+  .peo-resource-card {
+    width: 100%;
+  }
+
+  .peoResource-btn {
+    width: 40%;
   }
 }
