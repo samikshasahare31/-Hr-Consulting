@@ -184,7 +184,6 @@
 
   .peo-main-image {
     width: 48%;
-    text-align: center;
   }
 
   .peo-main-contant {
@@ -201,6 +200,30 @@
   .peo-main-contant {
     padding-top: 0;
   }
+
+  .peo-solution-cards {
+    width: 95%;
+  }
+
+  .peo-solution h1 {
+    font-size: 1.75rem;
+  }
+
+  .peo-solution-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .peo-benefit-cards {
+    width: 95%;
+  }
+
+  .peo-benefit h1 {
+    font-size: 1.75rem;
+  }
+
+  .peo-benefit-card h2 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -212,7 +235,70 @@
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
+
+  .peo-solution-card {
+    width: 100%;
+  }
+
+  .peo-solution-card img {
+    width: 10%;
+  }
+
+  .peo-solution h1 {
+    font-size: 1.5rem;
+  }
+
+  .peo-benefit-card {
+    width: 48%;
+  }
+
+  .peo-benefit h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .peo-main {
+    flex-wrap: wrap;
+  }
+
+  .peo-main-image {
+    width: 98%;
+  }
+
+  .peo-main-contant {
+    width: 98%;
+  }
+
+  .peo-solution h1 {
+    width: 90%;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .peo-solution-card h2 {
+    font-size: 18px;
+  }
+
+  .peo-solution-card p {
+    font-size: 18px;
+  }
+
+  .peo-benefit h1 {
+    width: 90%;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .peo-benefit-card {
+    width: 100%;
+  }
+
+  .peo-benefit-card h2 {
+    font-size: 18px;
+  }
+
+  .peo-benefit-card p {
+    font-size: 18px;
+  }
 }
