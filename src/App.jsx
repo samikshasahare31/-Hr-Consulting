@@ -18,6 +18,7 @@ import Calculator from "./components/calculator/Calculator";
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../public/i18n'; 
 import Footer from "./components/Footer";
+import ApplyTalent from "./components/services/applyTalent/ApplyTalent";
 
 
 function App() {
@@ -33,7 +34,6 @@ function App() {
           <Route path="/jobVacancies" element={<JobVac />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/calculator" element={<Calculator/>}/>
 
           <Route path="/services/peo&eor" element={<PeoEor />} />
           <Route path="/services/recruitment" element={<Recruitment />} />
@@ -45,11 +45,13 @@ function App() {
 
           <Route path="/pricing/peo&eor" element={<PricingPeoEor />} />
           <Route path="/pricing/recruitment" element={<PricingRecruitment />} />
+          <Route path="/applyTalent" element={<ApplyTalent />} />
           <Route path="/pricing/hrConsulting" element={<PricHrConsulting />} />
           <Route
             path="/pricing/managedServices"
             element={<PricingManagedServices />}
           />
+          <Route path="/calculator" element={<Calculator/>}/>
         </Routes>
       </BrowserRouter>
       </I18nextProvider>

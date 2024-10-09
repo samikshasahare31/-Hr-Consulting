@@ -1,8 +1,8 @@
-import proBenefit1 from "../images/proBenefit1.PNG";
-import proBenefit2 from "../images/proBenefit2.WEBP";
-import proBenefit3 from "../images/proBenefit3.JPG";
-import proBenefit4 from "../images/proBenefit4.JPG";
-import proBenefit5 from "../images/proBenefit5.JPG";
+import proBenefit1 from "../images/proBenefit1.png";
+import proBenefit2 from "../images/proBenefit2.webp";
+import proBenefit3 from "../images/proBenefit3.jpg";
+import proBenefit4 from "../images/proBenefit4.jpg";
+import proBenefit5 from "../images/proBenefit5.jpg";
 
 export const peoBenefits = [
   {

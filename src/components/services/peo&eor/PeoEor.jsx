@@ -1,6 +1,6 @@
 import React from "react";
 import "./PeoEor.css";
-import peoMainImage from "../../../assets/images/peo-main-image.JPG";
+import peoMainImage from "../../../assets/images/peo-main-image.jpg";
 import { peoSolutions } from "../../../assets/data/peoSolution";
 import { peoBenefits } from "../../../assets/data/peoBenefit";
 import { peoPricing } from "../../../assets/data/peoPricing";
