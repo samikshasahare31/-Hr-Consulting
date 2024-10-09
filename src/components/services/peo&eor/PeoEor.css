@@ -7,6 +7,7 @@
 .peo-main {
   width: 80%;
   margin: 4rem auto;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -17,7 +18,10 @@
 }
 
 .peo-main-image img {
-  width: 100%;
+  width: 90%;
+  height: 80%;
+  margin: 1rem auto;
+  border-radius: 10px;
 }
 
 .peo-main-contant {
@@ -66,7 +70,6 @@
 .peo-solution h1 {
   color: #002863;
 }
-
 
 .peo-solution-cards {
   width: 80%;
@@ -153,7 +156,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-image: url("https://recruitindo.com/wp-content/uploads/2023/12/save-time.jpeg");
+  background-image: url("../../../assets/images/proBenefit6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -495,6 +498,7 @@
 
   .peo-main-contant {
     width: 98%;
+    margin: 0 auto;
   }
 
   .peo-solution h1 {
@@ -555,4 +559,3 @@
     width: 40%;
   }
 }
-
