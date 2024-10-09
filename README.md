@@ -13,7 +13,7 @@ Currently, two official plugins are available:
 To clone this repository to your local environment, run the following command in your terminal:
 
 ```bash
-git clone(https://github.com/Vikas24Chauhan/TEN-HR-Consulting,git)
+git clone https://github.com/Vikas24Chauhan/TEN-HR-Consulting.git
 cd TEN-HR-Consulting
 ```
 
