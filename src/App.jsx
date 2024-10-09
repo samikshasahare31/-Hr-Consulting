@@ -17,6 +17,7 @@ import PricingRecruitment from "./components/pricing/recruitment/PricingRecruitm
 import Calculator from "./components/calculator/Calculator";
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../public/i18n'; 
+import Footer from "./Footer";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </I18nextProvider>
+      <Footer/>
     </>
   );
 }
