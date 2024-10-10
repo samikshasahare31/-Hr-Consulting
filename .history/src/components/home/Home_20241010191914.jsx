@@ -92,9 +92,9 @@ function Home() {
               </div>
               <h1>One platform for hiring Interns</h1>
               <p>
-                Hire your team in India immediately without forming a company.
-                We help businesses comply with regulations and streamline their
-                HR processes in Remote Network.
+                Hire your team in India immediately without forming a
+                company. We help businesses comply with regulations and
+                streamline their HR processes in Remote Network.
               </p>
               <p className='scroll-instruction'>
                 <svg

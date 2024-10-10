@@ -90,11 +90,11 @@ function Home() {
                 <img src='/src/assets/images/icon-avatar.png' alt='Avatars' />
                 <p>Join over 250+ businesses that have grown with us</p>
               </div>
-              <h1>One platform for hiring Interns</h1>
+              <h1>One platform for hiring In</h1>
               <p>
-                Hire your team in India immediately without forming a company.
-                We help businesses comply with regulations and streamline their
-                HR processes in Remote Network.
+                Hire your team in Indonesia immediately without forming a
+                company. We help businesses comply with regulations and
+                streamline their HR processes.
               </p>
               <p className='scroll-instruction'>
                 <svg
