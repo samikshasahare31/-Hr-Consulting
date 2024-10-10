@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./slider.css";
+import "./major.css";
 
 const MajorBrandsSlider = [
   {

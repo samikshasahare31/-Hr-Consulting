@@ -2,6 +2,9 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 
+
+
+
 const slider = [
   {
     image: "/src/assets/images/peo-eor.jpeg",
