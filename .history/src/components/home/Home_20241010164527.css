@@ -669,9 +669,6 @@ textarea {
     margin-top: 20px; /* Space between button and image */
     width: 100%; /* Make the image responsive */
   }
-  .icon-text-list-item {
-    padding: 10px;
-  }
 }
 @media (min-width: 768px) {
   .partner-content {

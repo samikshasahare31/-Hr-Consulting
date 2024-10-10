@@ -671,6 +671,7 @@ textarea {
   }
   .icon-text-list-item {
     padding: 10px;
+    flex: 0 0 calc(49.33% - 10px);
   }
 }
 @media (min-width: 768px) {
