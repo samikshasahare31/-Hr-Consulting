@@ -47,6 +47,8 @@
   flex: 1; /* Make this section flexible */
   margin-right: 2rem; /* Space on the right */
   padding-top: 100px;
+  padding: 0 30px;
+  width: 50%;
 }
 
 .avatar-section {
