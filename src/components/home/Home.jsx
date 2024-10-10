@@ -365,8 +365,6 @@ function Home() {
                 HR Consulting Services / Ad-hoc HR Services
               </li>
             </div>
-            {/* <div className='icon-text-row'></div>
-            <div className='icon-text-row'></div> */}
           </ul>
 
           <button className='schedule-btn'>Schedule Now →</button>

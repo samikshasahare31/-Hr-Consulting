@@ -4,6 +4,7 @@
   flex-direction: column;
   height: 900px; /* Ensure the main container takes the full height */
   overflow: hidden; /* Hide any overflow from absolute elements */
+  width: auto;
 }
 
 .main-container::before {
@@ -198,6 +199,8 @@ textarea {
 }
 .services-section {
   padding: 10px;
+  width: 80%;
+  margin: 0 auto;
 }
 .services-section h3 {
   padding: 20px;
@@ -455,7 +458,7 @@ textarea {
   justify-content: space-between; /* Adjust if necessary */
   background-color: #1d3b6b;
   border-radius: 30px;
-  padding: 20px;
+  padding: 40px;
   height: auto;
   color: white;
 }
