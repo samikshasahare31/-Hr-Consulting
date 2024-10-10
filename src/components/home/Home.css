@@ -45,10 +45,11 @@
 
 .text-section {
   flex: 1; /* Make this section flexible */
-  margin-right: 2rem; /* Space on the right */
+  margin-right: 1rem 0;
   padding-top: 100px;
-  padding: 0 30px;
+  padding: 0 40px;
   width: 50%;
+  font-size: 20px;
 }
 
 .avatar-section {
@@ -63,7 +64,7 @@
 }
 
 .text-section h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: #1d3b6b;
   margin: 1rem 0;
 }

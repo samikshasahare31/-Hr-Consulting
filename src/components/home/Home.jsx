@@ -6,7 +6,11 @@ import COSTSVG from "./COSTSVG";
 import COMPLIANCESVG from "./COMPLIANCESVG";
 import CHECKLISTSVG from "./CHECKLISTSVG";
 import MajorBrandsSlider from "./majorbrandsslider";
+<<<<<<< HEAD
 import { useTranslation } from 'react-i18next';
+=======
+import FAQSection from "../FAQ/FAQSection";
+>>>>>>> 58b8f67cf9c71760aa0d1c6e2201a4ab2771454a
 function Home() {
   const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
@@ -354,6 +358,7 @@ function Home() {
         <h2>{t('We Work With Major Brands Across the World')}</h2>
         <MajorBrandsSlider className='brand-slider' />
       </div>
+      <FAQSection />
     </section>
   );
 }
