@@ -317,7 +317,6 @@ textarea {
   font-size: 22px;
   padding-left: 10px;
   padding-top: 25px;
-  font-weight: bold;
 }
 .partner-image-container {
   margin: 20px;
@@ -370,7 +369,7 @@ textarea {
   line-height: 1.2; /* Adjust line height for better spacing */
   font-size: 20px;
   padding-top: 20px;
-  font-weight: bold;
+  font-weight: ;
 }
 
 .cost-description {
