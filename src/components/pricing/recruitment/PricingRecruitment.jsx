@@ -10,6 +10,10 @@ const PricingRecruitment = () => {
     navigate('/applyTalent'); 
   };
 
+  const handleMoreResourcesClick = () => {
+    navigate('/resources');  
+  };
+
   
   return (
     <section>
@@ -35,6 +39,41 @@ const PricingRecruitment = () => {
           </ul>
           <p className="annual-compensation-note">1) The annual compensation package encompasses the 13-month THR (Religious Festive Allowance), ensuring a comprehensive financial benefit for employees.</p>
           <p className="annual-compensation-note">2) Our goal is to simplify your recruitment process, offering clarity and confidence in our pricing structure while delivering exceptional talent solutions tailored to your needs.</p>
+        </div>
+      </div>
+
+
+       {/* Resources and Articles Section */}
+       <div className="resources-articles-section">
+        <h3 className="resources-heading">Resources</h3>
+        <h2 className="resources-title">Resources & Articles</h2>
+        <div className="articles-container">
+          <div className="article">
+            <img src="https://recruitindo.com/wp-content/uploads/2024/01/financial-benefits-1024x688.jpeg" alt="PEO/EOR Guide" className="article-image" />
+            <h3 className="article-title">Unlocking the Benefits of PEO/EOR Services for Businesses in Indonesia</h3>
+            <p className="article-description">
+              Discover how PEO/EOR services can streamline operations and save costs for businesses expanding in Indonesia.
+            </p>
+          </div>
+          <div className="article">
+            <img src="https://recruitindo.com/wp-content/uploads/2024/01/Peo-tech-company-1024x683.jpeg" alt="Tech Expansion" className="article-image" />
+            <h3 className="article-title">Tech Expansion to Indonesia: Key Strategies for Success</h3>
+            <p className="article-description">
+              Learn how tech companies can leverage local talent and resources to successfully enter the Indonesian market.
+            </p>
+          </div>
+          <div className="article">
+            <img src="https://recruitindo.com/wp-content/uploads/2024/01/peo-provider-1024x683.jpeg" alt="Choosing a PEO" className="article-image" />
+            <h3 className="article-title">How to Select the Right PEO Provider for Your Business in Indonesia</h3>
+            <p className="article-description">
+              Get tips on selecting a PEO provider that aligns with your business goals and ensures compliance with local regulations.
+            </p>
+          </div>
+        </div>
+        <div className="more-resources-button-container">
+          <button className="more-resources-button" onClick={handleMoreResourcesClick}>
+            More Resources
+          </button>
         </div>
       </div>
     </section>

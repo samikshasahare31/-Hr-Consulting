@@ -13,6 +13,10 @@ const Recruitment = () => {
   const handleUploadCVClick = () => {
     navigate('/applyTalent'); 
   };
+
+  const handleMoreResourcesClick = () => {
+    navigate('/resources');  
+  };
   
   return (
     <section>
@@ -119,7 +123,44 @@ const Recruitment = () => {
           <p className="annual-compensation-note">Additional benefits, such as healthcare, retirement contributions, and other allowances, are not included in the stated percentage but can be negotiated separately. This ensures flexibility to meet both employer and candidate expectations.</p>
         </div>
       </div>
-    </section>
+
+      <div>Contact US </div>
+
+      {/* Resources and Articles Section */}
+      <div className="resources-articles-section">
+        <h3 className="resources-heading">Resources</h3>
+        <h2 className="resources-title">Explore Our Insights & Guides</h2>
+      <div className="articles-container">
+        <div className="article">
+            <img src="https://recruitindo.com/wp-content/uploads/2024/01/financial-benefits-1024x688.jpeg" alt="Talent Acquisition Guide" className="article-image" />
+            <h3 className="article-title">Maximizing Talent Acquisition in Indonesia: A Comprehensive Guide</h3>
+            <p className="article-description">
+              Learn key strategies for acquiring top talent in Indonesia, from recruitment tips to navigating local hiring practices.
+            </p>
+        </div>
+        <div className="article">
+            <img src="https://recruitindo.com/wp-content/uploads/2024/01/Peo-tech-company-1024x683.jpeg" alt="HR Compliance" className="article-image" />
+            <h3 className="article-title">Ensuring HR Compliance in Indonesia: What You Need to Know</h3>
+            <p className="article-description">
+              Discover the essential steps businesses must take to remain compliant with Indonesia's labor laws and regulations.
+            </p>
+        </div>
+        <div className="article">
+            <img src="https://recruitindo.com/wp-content/uploads/2024/01/peo-provider-1024x683.jpeg" alt="Hiring in Southeast Asia" className="article-image" />
+            <h3 className="article-title">The Future of Hiring in Southeast Asia: Trends and Predictions</h3>
+            <p className="article-description">
+              Stay ahead of the curve with insights into the future trends shaping the hiring landscape across Southeast Asia.
+            </p>
+        </div>
+      </div>
+
+      <div className="more-resources-button-container">
+        <button className="more-resources-button" onClick={handleMoreResourcesClick}>
+          More Resources
+        </button>
+      </div>
+    </div>
+  </section>
   );
 };
 

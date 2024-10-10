@@ -20,21 +20,21 @@ body {
   
 .recruitment-heading {
     font-size: 1.2rem;
-    color: #e79522;
+    color: #f19410;
     margin-bottom: 1rem;
     font-weight: 500;
 }
   
 .recruitment-title {
     font-size: 2.2rem;
-    color: #4893b6;
+    color: #357fa1;
     margin-bottom: 1.5rem;
     font-weight: bold;
 }
   
 .recruitment-description {
     font-size: 1.2rem;
-    color: #8b8c8f;
+    color: #6f7072;
     margin-bottom: 2rem;
 }
   
@@ -53,12 +53,12 @@ body {
   
 .schedule-button {
     background-color: #e79522;
-    color: #fff;
+    color: #163d4e;
 }
   
 .apply-button {
-    background-color: #4893b6;
-    color: #fff;
+    background-color: #205a75;
+    color: #ebb76e;
 }
   
 .recruitment-image img {
@@ -211,10 +211,11 @@ body {
     flex: 1;
     padding-left: 2rem;
     margin-top: 2.7rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 0 rgba(0, 0, 0, 0); 
 }
 
 .pricing-details h3 {
+    color: rgb(83, 82, 82);
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -229,15 +230,88 @@ body {
     font-size: 1rem;
     margin-left: 8%;
     margin-bottom: 0.5rem;
-    color: #949699;
+    color: #6f7072;
 }
 
 .annual-compensation-note {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 12%;
-    color: #949699;
+    color: #6f7072;
     padding-right: 5%;
 } 
+
+/* Resources and Articles Section */
+
+.resources-heading {
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+    color: #333; 
+}
+
+.resources-articles-section {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.resources-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.article {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.article-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.article-description {
+    font-size: 1rem;
+    color: #6f7072;
+}
+
+.more-resources-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.more-resources-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e79522;
+    color: rgb(21, 43, 102);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.more-resources-button:hover {
+    background-color: #d17f1a;
+}
+
 
 /* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 768px) {
@@ -346,5 +420,19 @@ body {
     .upload-cv-button {
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+/* Resources-section */
+
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .article {
+        margin-bottom: 1.5rem;
+    }
+
+    .more-resources-button {
+        width: 50%;
     }
 }

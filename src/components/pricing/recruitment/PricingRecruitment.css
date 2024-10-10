@@ -69,10 +69,11 @@ body {
     flex: 1;
     padding-left: 2rem;
     margin-top: 2.7rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 0 rgba(0, 0, 0, 0); 
 }
 
 .pricing-details h3 {
+    color: rgb(83, 82, 82);
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 500;
@@ -88,14 +89,85 @@ body {
     font-size: 1rem;
     margin-left: 8%;
     margin-bottom: 0.5rem;
-    color: #949699;
+    color: #6f7072;
 }
 
 .annual-compensation-note {
     font-size: 0.8rem;
     margin-top: 12%;
-    color: #949699;
+    color: #6f7072;
 } 
+
+/* Resources and Articles Section */
+.resources-heading {
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+    color: #333; 
+} 
+
+.resources-articles-section {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.resources-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.article {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.article-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.article-description {
+    font-size: 1rem;
+    color: #6f7072;
+}
+
+.more-resources-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.more-resources-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e79522;
+    color: rgb(21, 43, 102);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.more-resources-button:hover {
+    background-color: #d17f1a;
+}
 
 @media screen and (max-width: 768px) {
     .pricing-container {
@@ -109,13 +181,21 @@ body {
         padding: 1.5rem;
     }
 
-    .pricing-details {
-        margin-top: 2rem;
-    }
-
     .get-started-button,
     .upload-cv-button {
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .article {
+        margin-bottom: 1.5rem;
+    }
+
+    .more-resources-button {
+        width: 50%;
     }
 }
