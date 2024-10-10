@@ -6,19 +6,19 @@ const MajorBrandsSlider = [
     image: "/src/assets/images/hanjin.jpeg",
   },
   {
-    image: "/src/assets/images/rakamin-akademy.jpeg",
+    image: "/src/assets/rakamin-akademy.jpeg",
   },
   {
-    image: "/src/assets/images/makerlab.jpeg",
+    image: "/src/assets/makerlab.jpeg",
   },
   {
-    image: "/src/assets/images/pvn.jpeg",
+    image: "/src/assets/pvn.jpeg",
   },
   {
-    image: "/src/assets/images/xmh.jpeg",
+    image: "/src/assets/xmh.jpeg",
   },
   {
-    image: "/src/assets/images/Lamont-capital.jpeg",
+    image: "/src/assets/Lamont-capital.jpeg",
   },
 ];
 
