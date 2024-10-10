@@ -1,0 +1,695 @@
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 900px; /* Ensure the main container takes the full height */
+  overflow: hidden; /* Hide any overflow from absolute elements */
+}
+
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%; /* Right 20% */
+  height: 100%; /* Full height */
+  background-color: orange; /* Background color */
+  z-index: 0; /* Ensure it's behind the content */
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Adjust the gap between the fields */
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; /* Center the form */
+  padding: 2rem;
+  min-height: 100vh; /* Ensure the form container takes the full height */
+  font-family: Arial, sans-serif;
+  position: relative; /* Ensure it positions correctly */
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.text-section {
+  flex: 1; /* Make this section flexible */
+  margin-right: 2rem; /* Space on the right */
+  padding-top: 100px;
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-section img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  color: #1d3b6b;
+  margin: 1rem 0;
+}
+
+.text-section p {
+  font-size: 1rem;
+  color: #606060;
+  line-height: 1.6;
+}
+
+.scroll-instruction {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+.form-background {
+  padding: 2rem; /* Add padding around the form section */
+  display: flex;
+  justify-content: center;
+}
+/*form Section*/
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width */
+  max-width: 800px; /* Maximum width for the form */
+  margin: 20px auto; /* Center the form and add vertical spacing */
+  padding: 20px; /* Add padding to the form container */
+  border-radius: 8px; /* Rounded corners for the form container */
+  background-color: #fff; /* Background color for the form */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Aligns children to occupy full width */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Align label and input vertically */
+  width: 48%; /* Adjust width as necessary for spacing */
+}
+
+.form-group label {
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px; /* Adjust padding */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width for inputs */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resize */
+}
+/* Specific styles for single text boxes to increase width */
+.form-section .form-group:not(.form-row .form-group) {
+  width: 100%; /* Full width for single text boxes */
+}
+.submit-button {
+  padding: 10px 15px; /* Button padding */
+  background-color: orange; /* Button color */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  margin-top: 10px; /* Space above button */
+}
+
+/* Slider.css */
+.slider-container {
+  position: relative;
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+  background-color: #f9f9f9; /* Light background for the slider */
+  border-radius: 10px; /* Rounded corners for the slider */
+  padding: 10px; /* Padding around the slider */
+}
+
+.slider-content {
+  display: flex; /* Use flexbox for layout */
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.slide {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center items */
+  justify-content: flex-start; /* Align items to the top */
+  text-align: center; /* Center the text */
+  padding: 30px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width */
+  width: 400px; /* Each slide takes full width */
+  background-color: #ffffff; /* White background for each slide */
+  border-radius: 10px; /* Rounded corners for each slide */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 0 5px; /* Margin for spacing between slides */
+  height: auto;
+}
+
+.slide img {
+  width: 350px; /* Make images responsive to the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for images */
+  max-height: 200px; /* Optional max height for images */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.slide h3 {
+  font-size: 25px; /* Title font size */
+  margin: 10px 0; /* Margin for spacing */
+  color: #333; /* Color for the title */
+}
+
+.slide p {
+  font-size: 16px; /* Description font size */
+  color: #666; /* Color for the description */
+  line-height: 1.2; /* Improve line spacing for readability */
+  margin: 5px 0; /* Margin for spacing */
+  padding: 0px; /* Add padding for descriptions */
+  flex-grow: 1;
+}
+
+/* Add hover effects for buttons */
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+.services-section {
+  padding: 10px;
+}
+.services-section h3 {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.services-section h2 {
+  padding-left: 20px;
+  font-size: 20px;
+}
+/* Button styles */
+
+.learn-more {
+  background-color: gold; /* Gold background color */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  padding: 10px 20px;
+  margin-top: 10px; /* Space above the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition effect for hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.learn-more:hover {
+  background-color: darkgoldenrod; /* Darker gold on hover */
+}
+
+.dots-container {
+  text-align: center; /* Center the dots */
+  margin-top: 10px; /* Space above the dots */
+}
+
+.dot {
+  display: inline-block; /* Inline display for dots */
+  width: 10px; /* Dot width */
+  height: 10px; /* Dot height */
+  border-radius: 50%; /* Circular dots */
+  background-color: gray; /* Default dot color */
+  margin: 0 5px; /* Space between dots */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.dot.active {
+  background-color: gold; /* Color for the active dot */
+}
+/* Button styles for previous and next arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000; /* Ensure buttons are above other content */
+}
+
+.prev {
+  left: 10px; /* Position left */
+}
+
+.next {
+  right: 10px; /* Position right */
+}
+
+/*partner section */
+
+.partner-section {
+  padding: 20px; /* Add padding to the section */
+}
+
+.partner-content {
+  display: flex; /* Use flexbox layout for a two-column design */
+  align-items: flex-start; /* Align items at the start */
+  padding-top: 25px;
+  margin-left: 50px;
+}
+
+.partner-text {
+  flex: 1; /* Allow text to take the first column */
+  padding-right: 20px; /* Space between text and image */
+}
+
+.partner-description {
+  margin: 0; /* Remove default margin */
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 15px;
+  padding-bottom: 25px;
+}
+
+.partner-image-container {
+  flex: 1; /* Allow image container to take the second column */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  flex-direction: column;
+}
+.partner-icon {
+  padding: 20px; /* Add padding around the SVG */
+  display: block; /* Ensures the SVG behaves like a block element */
+  margin: 20px auto; /* Center the SVG if desired */
+}
+.partner-image {
+  max-width: 100%; /* Set max width to fill available space */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.partner-title,
+.partner-subtitle {
+  margin-bottom: 10px; /* Space between titles */
+  text-align: center;
+}
+.partner-expertise {
+  font-size: 22px;
+  padding-left: 10px;
+  padding-top: 25px;
+}
+.partner-image-container {
+  margin: 20px;
+}
+.partner-icon {
+  padding-bottom: 20px;
+}
+
+/*cost*/
+
+.cost-content {
+  display: flex; /* Use flexbox for a horizontal layout */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px; /* Add some padding around the content */
+}
+
+.cost-image-container {
+  flex: 0 0 50%; /* Fixed width for the image container */
+  max-width: 50%; /* Ensure the image does not exceed 50% of the width */
+}
+
+.cost-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.cost-text {
+  flex: 1; /* Allow text to take the remaining space */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align content at the start */
+  padding-left: 20px; /* Add space between the image and text */
+}
+
+.cost-left {
+  display: flex; /* Use flexbox to arrange icon and title */
+  align-items: center; /* Center align the icon and title vertically */
+  margin-bottom: 10px; /* Space below the cost expertise */
+}
+
+.cost-icon {
+  padding: 20px; /* Add padding around the SVG */
+  display: block; /* Ensures the SVG behaves like a block element */
+  margin: 20px auto;
+}
+
+.cost-expertise {
+  margin-right: 15px; /* Remove default margin */
+  line-height: 1.2; /* Adjust line height for better spacing */
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.cost-description {
+  line-height: 1.5; /* Improve readability */
+  margin: 0; /* Remove default margin */
+  margin-top: 10px; /* Add space above description */
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 10px;
+}
+/* New CSS rule to ensure expertise is below the SVG */
+.cost-left {
+  flex-direction: column; /* Stack icon and title vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+/*compliance*/
+
+.compliance-section {
+  padding: 20px; /* Add padding to the section */
+}
+
+.compliance-content {
+  display: flex; /* Use flexbox layout for a two-column design */
+  align-items: flex-start; /* Align items at the start */
+  padding-top: 25px;
+  margin-left: 50px;
+}
+
+.compliance-text {
+  flex: 1; /* Allow text to take the first column */
+  padding-right: 20px; /* Space between text and image */
+}
+
+.compliance-description {
+  margin: 0; /* Remove default margin */
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 15px;
+  padding-bottom: 25px;
+}
+
+.compliance-image-container {
+  flex: 1; /* Allow image container to take the second column */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+.compliance-icon {
+  padding: 20px; /* Add padding around the SVG */
+  display: block; /* Ensures the SVG behaves like a block element */
+  margin: 20px auto; /* Center the SVG if desired */
+}
+.compliance-image {
+  max-width: 100%; /* Set max width to fill available space */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.compliance-title,
+.compliance-subtitle {
+  margin-bottom: 10px; /* Space between titles */
+  text-align: center;
+}
+.compliance-expertise {
+  font-size: 22px;
+  padding-left: 10px;
+  padding-top: 25px;
+}
+.compliance-image-container {
+  margin: 20px;
+}
+.compliance-icon {
+  padding-bottom: 20px;
+}
+
+/*one-stop*/
+
+.one-stop {
+  display: flex;
+  justify-content: space-between; /* Adjust if necessary */
+  background-color: #1d3b6b;
+  border-radius: 30px;
+  padding: 20px;
+  height: auto;
+}
+.one-stop h2 {
+  color: white;
+  font-size: 30px;
+  padding: 30px;
+  font-weight: bold;
+}
+.one-stop-text {
+  flex: 1; /* Allow text section to take available space */
+  padding-left: 40px;
+  font-size: 16px;
+}
+
+.one-stop-description {
+  margin-bottom: 20px; /* Add spacing below the description */
+  padding-top: 20px;
+  line-height: 1.8;
+}
+
+.icon-text-list {
+  display: flex;
+  list-style-type: none; /* Remove bullet points */
+  flex-direction: column; /* Arrange rows vertically */
+  padding: 0px;
+}
+
+.icon-text-row {
+  display: flex; /* Create a row layout */
+  justify-content: space-between; /* Space items evenly */
+  margin-bottom: 16px; /* Space between rows */
+}
+
+.icon-text-list-item {
+  display: flex;
+  align-items: center; /* Align checklist SVG with text */
+  flex: 1; /* Allow equal space for each item */
+  margin-right: 10px; /* Add margin to the right for spacing */
+  padding-right: 10px;
+  line-height: 1.6;
+}
+.li .icon-text-list-item {
+  margin-left: auto;
+  padding: auto;
+}
+/* Remove margin from the last item in each row */
+.icon-text-row .icon-text-list-item:last-child {
+  margin-right: 0;
+}
+
+.schedule-btn {
+  margin-top: 20px; /* Add spacing above the button */
+  padding: 10px 20px; /* Add padding inside the button */
+  background-color: #ff9a00; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.schedule-btn:hover {
+  background-color: #e68a00; /* Darker shade on hover */
+}
+
+.one-stop-image {
+  max-width: 100%; /* Make sure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+.Brands-container h2 {
+  text-align: center;
+  padding: 30px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens less than 768px */
+@media (max-width: 768px) {
+  .slider-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to each slide when scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .slider-content {
+    display: flex; /* Keep flex layout */
+    flex-direction: row; /* Keep slides in a row */
+    scroll-snap-align: start; /* Align each slide to start */
+  }
+
+  .slide {
+    width: 100vw; /* Full viewport width for mobile */
+    flex-shrink: 0; /* Prevent slides from shrinking */
+    margin: 0; /* Remove margin to avoid space issues */
+    height: auto; /* Allow height to adjust based on content */
+    scroll-snap-align: start; /* Align each slide */
+  }
+
+  .slide img {
+    width: 100%; /* Make images responsive to the container */
+    max-height: 200px; /* Maintain max height */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+  }
+
+  .slide h3 {
+    font-size: 1.8rem; /* Smaller title font size */
+    margin-top: 10px; /* Space above title */
+    text-align: center; /* Center title text */
+  }
+
+  .slide p {
+    font-size: 0.8rem; /* Smaller description font size */
+    margin-top: 10px; /* Space above description */
+    text-align: center; /* Center description text */
+  }
+
+  /* Ensure buttons are responsive */
+  .learn-more {
+    padding: 8px 16px; /* Adjust padding for mobile */
+  }
+  .main-container {
+    background-color: none;
+    flex-direction: column; /* Stack content vertically on small screens */
+    padding: 0px; /* Reduce padding */
+    height: auto;
+  }
+  .text-section {
+    padding-top: 50px; /* Adjust top padding if necessary */
+  }
+  .content {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+  .form-section {
+    order: 1; /* Ensures it comes after scroll instruction */
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: none;
+    height: auto;
+    box-shadow: none;
+  }
+  .scroll-instruction {
+    order: 0; /* Ensure scroll instruction comes first */
+    margin-bottom: 1rem;
+  }
+  .form-container {
+    background-color: white;
+    z-index: 1;
+  }
+  .partner-content,
+  .compliance-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partner-image-container,
+  .compliance-image-container {
+    order: 1; /* Ensure the image appears above the text */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .partner-text,
+  .compliance-text {
+    order: 2; /* Ensure the text appears below the image */
+    width: 100%;
+  }
+
+  .cost-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cost-image-container {
+    order: 1; /* Ensure the image appears above the text */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cost-text {
+    order: 2; /* Ensure the text appears below the image */
+    width: 100%;
+    padding: 30px;
+  }
+  .cost-left {
+    align-items: center;
+  }
+  .one-stop {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .one-stop-text {
+    padding-right: 0;
+    text-align: center; /* Center the text on smaller screens */
+  }
+
+  .icon-text-row {
+    flex-direction: column; /* Stack checklist items vertically */
+    align-items: flex-start; /* Align left */
+    width: 100%;
+  }
+
+  .one-stop-image {
+    margin-top: 20px; /* Space between button and image */
+    width: 100%; /* Make the image responsive */
+  }
+}
+@media (min-width: 768px) {
+  .partner-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .partner-text {
+    width: 60%; /* Text takes 60% width */
+    margin-left: 20px;
+  }
+
+  .partner-image-container {
+    display: flex;
+    max-width: 40%; /* Optional: set a max width for the image */
+    flex-wrap: wrap;
+  }
+  .icon-text-row {
+    display: flex; /* Each row is a flex container */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap to next row */
+  }
+
+  .icon-text-list-item {
+    padding: 10px;
+    flex: 0 0 calc(49.33% - 10px);
+  }
+}

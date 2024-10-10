@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+}
+
+/* Pricing Section */
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+    margin: 8%;
+    border-radius: 10px;
+    background-color: transparent; 
+}
+
+.pricing {
+    color: #949699;
+    font-weight: 500;
+}
+
+.pricing-content {
+    background-color: #0a3668;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem; 
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+
+}
+
+.pricing-title {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.pricing-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #949699;
+}
+
+.get-started-button,
+.upload-cv-button {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e79522; 
+    color: white;
+    display: block;
+    width: 160px;
+}
+
+.upload-cv-button {
+    background-color: transparent;
+    border: 2px solid #e79522;
+    color: #e79522;
+}
+
+.pricing-details {
+    flex: 1;
+    padding-left: 2rem;
+    margin-top: 2.7rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 0 rgba(0, 0, 0, 0); 
+}
+
+.pricing-details h3 {
+    color: rgb(83, 82, 82);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.pricing-details ul {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-details ul li {
+    font-size: 1rem;
+    margin-left: 8%;
+    margin-bottom: 0.5rem;
+    color: #6f7072;
+}
+
+.annual-compensation-note {
+    font-size: 0.8rem;
+    margin-top: 12%;
+    color: #6f7072;
+} 
+
+/* Resources and Articles Section */
+.resources-heading {
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+    color: #333; 
+} 
+
+.resources-articles-section {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.resources-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.article {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.article-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.article-description {
+    font-size: 1rem;
+    color: #6f7072;
+}
+
+.more-resources-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.more-resources-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e79522;
+    color: rgb(21, 43, 102);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.more-resources-button:hover {
+    background-color: #d17f1a;
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    .pricing-content, .pricing-details {
+        width: 100%;
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    .get-started-button,
+    .upload-cv-button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .article {
+        margin-bottom: 1.5rem;
+    }
+
+    .more-resources-button {
+        width: 50%;
+    }
+}
