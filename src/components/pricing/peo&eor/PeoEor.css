@@ -14,12 +14,15 @@
 }
 
 .peo-pricing h2 {
-  opacity: 60%;
+  opacity: 70%;
+  font-size: 1.25rem;
   color: white;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .peo-pricing h1 {
+  font-size: 2rem;
+  font-weight: 600;
   color: white;
   padding-bottom: 4rem;
 }
@@ -39,6 +42,7 @@
 .peo-pricing-card h3 {
   color: #002863;
   font-size: 1.5rem;
+  font-weight: 600;
   text-align: center;
   padding-top: 2rem;
 }
@@ -46,7 +50,7 @@
 .peo-pricing-card-price {
   margin: 1.5rem;
   padding: 1.5rem;
-  background-color: lightgray;
+  background-color: rgb(235, 233, 233);
   border-radius: 10px;
   line-height: 2.25rem;
 }
@@ -58,11 +62,13 @@
 
 .peo-pricing-card-price h5 {
   font-size: 1.25rem;
-  font-weight: 100;
+  font-weight: 400;
+  color: #7a7979;
 }
 
 .peo-pricing-card h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin: 2rem 0 1rem 2rem;
   color: #002863;
 }
@@ -76,6 +82,7 @@
   position: relative;
   padding-left: 4rem;
   line-height: 2rem;
+  color: #7a7979;
 }
 
 .peo-pricing-card ul li::before {
@@ -98,7 +105,8 @@
 .peo-pricing-btn {
   width: 20%;
   text-align: center;
-  background-color: gold;
+  background-color: #e79522;
+  color: white;
   padding: 10px 0;
   border-radius: 5px;
   border: 0;
@@ -115,14 +123,16 @@
   padding: 2rem 0;
 }
 
-.peo-resources h2{
+.peo-resources h2 {
+  font-size: 1.25rem;
   color: #050505;
   font-weight: 900;
 }
 .peo-resources h1 {
+  font-size: 2rem;
+  font-weight: 600;
   color: #002863;
 }
-
 
 .peo-resource-cards {
   width: 80%;
@@ -223,6 +233,10 @@
     width: 22px;
     height: 22px;
     margin-left: 1.5rem;
+  }
+
+  .peo-pricing-btn {
+    width: 30%;
   }
 
   .peo-resource-cards {
