@@ -6,6 +6,7 @@ import COSTSVG from "./COSTSVG";
 import COMPLIANCESVG from "./COMPLIANCESVG";
 import CHECKLISTSVG from "./CHECKLISTSVG";
 import MajorBrandsSlider from "./majorbrandsslider";
+import FAQSection from "../FAQ/FAQSection";
 function Home() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -381,6 +382,7 @@ function Home() {
         <h2>We Work With Major Brands Across the World</h2>
         <MajorBrandsSlider className='brand-slider' />
       </div>
+      <FAQSection />
     </section>
   );
 }
