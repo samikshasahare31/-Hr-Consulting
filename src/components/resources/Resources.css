@@ -31,11 +31,11 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
-  gap: 35px;
   justify-content: center;
 }
 .card {
   width: 360px;
+  margin: 0 10px;
   height: 480px;
 }
 .card img {
@@ -92,4 +92,51 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+@media (max-width: 1171px) {
+  .resource-header h1 {
+    font-size: 2rem;
+  }
+  .resource-header p {
+    font-size: 0.9rem;
+  }
+  .resource-section {
+    width: 100%;
+    flex-direction: column;
+  }
+  .card {
+    width: 45%;
+    margin: 0 10px;
+    height: 100%;
+  }
+  .resource-card-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .resource-section {
+    width: 100%;
+  }
+}
+@media (max-width: 775px) {
+  .resource-header {
+    padding-left: 30px;
+  }
+  .resource-header h1 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .resource-header p {
+    font-size: 0.8rem;
+  }
+  .card {
+    width: 90%;
+    height: 100%;
+  }
+  .resource-section {
+    height: 100%;
+  }
 }

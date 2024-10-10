@@ -1,4 +1,4 @@
-import "./resources.css";
+import "./Resources.css";
 import { cardLists } from "../../assets/data/cardLists";
 import { useState } from "react";
 

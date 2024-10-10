@@ -15,81 +15,37 @@ import PricingManagedServices from "./components/pricing/managedServices/Pricing
 import PricpeoEor from "./components/pricing/peo&eor/PricpeoEor";
 import PricingRecruitment from "./components/pricing/recruitment/PricingRecruitment";
 
-
 function App() {
   return (
     <>
       <BrowserRouter>
-          <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/jobVacancies" element={<JobVac/>} />
+          <Route path="/jobVacancies" element={<JobVac />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/resources" element={<Resources />} />
 
           <Route path="/services/peo&eor" element={<PeoEor />} />
           <Route path="/services/recruitment" element={<Recruitment />} />
           <Route path="/services/hrConsulting" element={<HrConsulting />} />
-          <Route path="/services/managedServices" element={<ManagedServices />} />
+          <Route
+            path="/services/managedServices"
+            element={<ManagedServices />}
+          />
 
           <Route path="/pricing/peo&eor" element={<PricpeoEor />} />
-          <Route path="/pricing/recruitment" element={<PricingRecruitment/>} />
-          <Route path="/pricing/hrConsulting" element={< PricHrConsulting/>}  />
-          <Route path="/pricing/managedServices" element={<PricingManagedServices />} />
-
+          <Route path="/pricing/recruitment" element={<PricingRecruitment />} />
+          <Route path="/pricing/hrConsulting" element={<PricHrConsulting />} />
+          <Route
+            path="/pricing/managedServices"
+            element={<PricingManagedServices />}
+          />
         </Routes>
       </BrowserRouter>
-
     </>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 
