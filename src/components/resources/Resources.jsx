@@ -1,8 +1,10 @@
 import "./Resources.css";
 import { cardLists } from "../../assets/data/cardLists";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Resources = () => {
+  const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 9;
 
@@ -29,10 +31,9 @@ const Resources = () => {
   return (
     <>
       <section className="resource-header">
-        <h1>Resources</h1>
+        <h1>{t('Resources')}</h1>
         <p>
-          Learn more about employment, best practices in HR, and <br /> relevant
-          laws and regulations for HR in Indonesia
+          {t('Learn more about employment, best practices in HR, and')} <br /> {t('relevant laws and regulations for HR in Indonesia')}
         </p>
       </section>
 
@@ -43,19 +44,19 @@ const Resources = () => {
               <div key={index} className="card">
                 <img src={ele.img} alt="" />
                 <div className="card-btn">
-                  <button className="article-btn"> {ele.article} </button>
+                  <button className="article-btn"> {t(ele.article)} </button>
                   {ele.resources === " " ? (
                     " "
                   ) : (
                     <>
                       ,
-                      <button className="resources-btn">{ele.resources}</button>
+                      <button className="resources-btn">{t(ele.resources)}</button>
                     </>
                   )}
                 </div>
                 <div className="card-text">
-                  <h4>{ele.title} </h4>
-                  <p> {ele.text}</p>
+                  <h4>{t(ele.title)} </h4>
+                  <p> {t(ele.text)}</p>
                 </div>
               </div>
             </>

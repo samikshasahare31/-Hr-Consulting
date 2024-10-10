@@ -82,8 +82,8 @@ function PeoEor() {
           {peoSolutions.map((data) => (
             <div key={data.id} className="peo-solution-card">
               <img src={data.image} alt="" />
-              <h2>{data.name}</h2>
-              <p>{data.desc}</p>
+              <h2>{t(data.name)}</h2>
+              <p>{t(data.desc)}</p>
             </div>
           ))}
         </div>
@@ -99,14 +99,15 @@ function PeoEor() {
               {data.id != peoBenefits.length ? (
                 <>
                   <img src={data.image} alt="" />
-                  <h2>{data.name}</h2>
-                  <p>{data.desc}</p>
+                 
+                  <h2>{t(data.name)}</h2> 
+                  <p>{t(data.desc)}</p>
                 </>
               ) : (
                 <>
                   <div className="peo-benefit-unique">
-                    <h2>{data.name}</h2>
-                    <p>{data.desc}</p>
+                    <h2>{t(data.name)}</h2>
+                    <p>{t(data.desc)}</p>
                     <img
                       onClick={handleclick}
                       src={rightArrow}
@@ -127,7 +128,7 @@ function PeoEor() {
         <div className="peo-pricing-cards">
           {peoPricing.map((data) => (
             <div key={data.id} className="peo-pricing-card">
-              <h3>{data.name}</h3>
+              <h3>{t(data.name)}</h3>
               <div className="peo-pricing-card-price">
                 <h5>{t("Starting from")}</h5>
                 <h3>{data.price}</h3>
@@ -137,7 +138,7 @@ function PeoEor() {
               <h4>{t("Includes")}</h4>
               <ul>
                 {data.include.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>{t(item)}</li>
                 ))}
               </ul>
               <button className="peo-pricing-btn">{t("Let’s Talk")}</button>
@@ -180,7 +181,7 @@ function PeoEor() {
           ))}
         </div>
         <button className="peoResource-btn">
-          <a href="/resources">Our Resources</a>
+          <a href="/resources">{t('Our Resources')}</a>
         </button>
       </div>
     </div>

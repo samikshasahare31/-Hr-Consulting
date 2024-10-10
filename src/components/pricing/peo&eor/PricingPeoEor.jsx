@@ -44,7 +44,7 @@ function PricingPeoEor() {
         <div className="peo-pricing-cards">
           {peoPricing.map((data) => (
             <div key={data.id} className="peo-pricing-card">
-              <h3>{data.name}</h3>
+              <h3>{t(data.name)}</h3>
               <div className="peo-pricing-card-price">
                 <h5>{t("Starting from")}</h5>
                 <h3>{data.price}</h3>
@@ -54,7 +54,7 @@ function PricingPeoEor() {
               <h4>{t("Includes")}</h4>
               <ul>
                 {data.include.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>{t(item)}</li>
                 ))}
               </ul>
               <button className="peo-pricing-btn">{t("Let’s Talk")}</button>
@@ -75,7 +75,7 @@ function PricingPeoEor() {
                 <div className="peo-resource-card-btn">
                   <button className="peo-resource-article-btn">
                     {" "}
-                    {ele.article}{" "}
+                    {t(ele.article)}{" "}
                   </button>
                   {ele.resources === " " ? (
                     " "
@@ -83,21 +83,21 @@ function PricingPeoEor() {
                     <>
                       ,{" "}
                       <button className="peo-resources-btn">
-                        {ele.resources}
+                        {t(ele.resources)}
                       </button>
                     </>
                   )}
                 </div>
                 <div className="peo-resource-card-text">
-                  <h4>{ele.title} </h4>
-                  <p> {ele.text}</p>
+                  <h4>{t(ele.title)} </h4>
+                  <p> {t(ele.text)}</p>
                 </div>
               </div>
             </>
           ))}
         </div>
         <button className="peoResource-btn">
-          <a href="/resources">Our Resources</a>
+          <a href="/resources">{t('Our Resources')}</a>
         </button>
       </div>
     </div>

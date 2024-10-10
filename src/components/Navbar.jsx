@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function Navbar() {
-    const { t, i18n } = useTranslation(); // Hook for translations
+    const { t, i18n } = useTranslation();
     const [sticky, setSticky] = useState(false);
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
     const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -84,7 +84,7 @@ function Navbar() {
                 </div>
                 {isServicesDropdownOpen && (
                     <ul className="w-48 md:absolute md:mt-10 bg-white shadow-lg rounded-lg">
-                        <li><a href='/services/peo&eor'>{t('PEO&EoR')}</a></li>
+                        <li><a href='/services/peo&eor'>{t('PEO & EoR')}</a></li>
                         <li><a href='/services/recruitment'>{t('Recruitment')}</a></li>
                         <li><a href='/services/hrConsulting'>{t('HR Consulting')}</a></li>
                         <li><a href='/services/managedServices'>{t('Managed Services')}</a></li>
@@ -101,7 +101,7 @@ function Navbar() {
                 </div>
                 {isPricingDropdownOpen && (
                     <ul className="w-48 md:absolute md:mt-10 bg-white shadow-lg rounded-lg">
-                        <li><a href='/pricing/peo&eor'>{t('PEO&EoR')}</a></li>
+                        <li><a href='/pricing/peo&eor'>{t('PEO & EoR')}</a></li>
                         <li><a href='/pricing/recruitment'>{t('Recruitment')}</a></li>
                         <li><a href='/pricing/hrConsulting'>{t('HR Consulting')}</a></li>
                         <li><a href='/pricing/managedServices'>{t('Managed Services')}</a></li>
@@ -140,7 +140,7 @@ function Navbar() {
                                 {t('Hindi')}
                             </a>
                         </li>
-                        <li><a onClick={() => changeLanguage('fr')}>{t('French')}</a></li>
+                        {/* <li><a onClick={() => changeLanguage('fr')}>{t('French')}</a></li> */}
                     </ul>
                 )}
             </li>

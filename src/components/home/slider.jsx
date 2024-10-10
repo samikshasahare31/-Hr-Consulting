@@ -1,11 +1,12 @@
-// Slider.js
+
 import { useState, useEffect } from "react";
 import "./Home.css";
+import { useTranslation } from 'react-i18next';
 
 const slider = [
   {
     image: "/src/assets/images/peo-eor.jpeg",
-    title: "PEO EOR",
+    title: "PEO & EOR",
     description:
       "Ten Hr consulting is a leading Professional Employer Organization (PEO), Recruitment, and HR consulting firm in Indonesia.",
     learnMoreLink: "https://recruitindo.com/peo-eor/",
@@ -46,6 +47,7 @@ const slider = [
 ];
 
 function Slider() {
+  const { t, i18n } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   let imagesToShow = 3; // Number of images to show at a time
   if (window.innerWidth <= 700) {
@@ -97,16 +99,20 @@ function Slider() {
             style={{ width: `${100 / imagesToShow}%` }} // Adjust width for each slide
           >
             <img src={item.image} alt={item.title} />
-            <h3>{item.title}</h3>
+            {/* <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <p>{item.secondDescription}</p>
+            <p>{item.secondDescription}</p> */}
+
+            <h3>{t(item.title)}</h3>
+            <p>{t(item.description)}</p>
+            <p>{t(item.secondDescription)}</p>
             <button
               className='learn-more'
               onClick={() =>
                 item.learnMoreLink && window.open(item.learnMoreLink, "_blank")
               }
             >
-              Learn More <span>→</span>
+              {t('Learn More')} <span>→</span>
             </button>
           </div>
         ))}
