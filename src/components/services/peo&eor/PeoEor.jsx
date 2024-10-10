@@ -3,10 +3,10 @@ import "./PeoEor.css";
 import peoMainImage from "../../../assets/images/peo-main-image.jpg";
 import { peoSolutions } from "../../../assets/data/peoSolution";
 import { peoBenefits } from "../../../assets/data/peoBenefit";
+import { peoPricing } from "../../../assets/data/peoPricing";
 import rightArrow from "../../../assets/images/right-arrow.svg";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import PricingPeoEor from "../../pricing/peo&eor/PricingPeoEor";
 
 function PeoEor() {
   const { t } = useTranslation();
@@ -121,7 +121,30 @@ function PeoEor() {
       </div>
 
       {/* Pricing PEO EOR */}
-      <PricingPeoEor />
+      <div className="peo-pricing">
+        <h2>{t("PRICING")}</h2>
+        <h1>{t("PEO / EOR Price Sheet")}</h1>
+        <div className="peo-pricing-cards">
+          {peoPricing.map((data) => (
+            <div key={data.id} className="peo-pricing-card">
+              <h3>{data.name}</h3>
+              <div className="peo-pricing-card-price">
+                <h5>{t("Starting from")}</h5>
+                <h3>{data.price}</h3>
+                <h5>{t("per employee per month")}</h5>
+              </div>
+              <hr />
+              <h4>{t("Includes")}</h4>
+              <ul>
+                {data.include.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+              <button className="peo-pricing-btn">{t("Let’s Talk")}</button>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Resources and Articles Section */}
       <div className="peo-resources">
