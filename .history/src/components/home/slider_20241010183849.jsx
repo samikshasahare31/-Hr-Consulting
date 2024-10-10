@@ -25,7 +25,7 @@ const slider = [
     description:
       "Our HR consulting services help you streamline your HR processes and improve employee engagement.",
     secondDescription: "We specialize in compliance and efficiency.",
-    learnMoreLink:"https://recruitindo.com/hr-consulting/",
+    learnMoreLink:"https://recruitindo.com/hr-consulting/"
   },
   {
     image: "/src/assets/images/managed-services.jpeg",

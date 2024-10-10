@@ -17,7 +17,7 @@ const slider = [
       "We provide top-tier recruitment services to find the best talent for your business.",
     secondDescription:
       "Our approach is designed to match you with the right candidates.",
-    learnMoreLink: "https://recruitindo.com/recruitment/",
+    learnMoreLink: "#",
   },
   {
     image: "/src/assets/images/hr-consulting.jpeg",
@@ -25,7 +25,6 @@ const slider = [
     description:
       "Our HR consulting services help you streamline your HR processes and improve employee engagement.",
     secondDescription: "We specialize in compliance and efficiency.",
-    learnMoreLink:"https://recruitindo.com/hr-consulting/",
   },
   {
     image: "/src/assets/images/managed-services.jpeg",
