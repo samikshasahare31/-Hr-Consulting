@@ -27,7 +27,7 @@ const slider = [
     secondDescription: "We specialize in compliance and efficiency.",
   },
   {
-    image: "/src/assets/images/managed-services.jpeg",
+    image: "/src/assets/managed-services.jpeg",
     title: "Managed Services",
     description:
       "We offer comprehensive managed services to optimize your HR functions.",
@@ -35,7 +35,7 @@ const slider = [
     learnMoreLink: "https://recruitindo.com/managed-services", // Added link for managed services
   },
   {
-    image: "/src/assets/images/payroll-procesing.jpeg",
+    image: "/src/assets/payroll-procesing.jpeg",
     title: "Payroll Processing",
     description:
       "Let us handle your payroll processing to ensure accuracy and compliance.",

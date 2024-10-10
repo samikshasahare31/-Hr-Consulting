@@ -35,7 +35,7 @@ const slider = [
     learnMoreLink: "https://recruitindo.com/managed-services", // Added link for managed services
   },
   {
-    image: "/src/assets/images/payroll-procesing.jpeg",
+    image: "/src/assets/payroll-procesing.jpeg",
     title: "Payroll Processing",
     description:
       "Let us handle your payroll processing to ensure accuracy and compliance.",

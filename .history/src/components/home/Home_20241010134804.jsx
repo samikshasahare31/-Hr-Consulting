@@ -87,7 +87,7 @@ function Home() {
           <div className='content'>
             <div className='text-section'>
               <div className='avatar-section'>
-                <img src='/src/assets/images/icon-avatar.png' alt='Avatars' />
+                <img src='/src/assets/icon-avatar.png' alt='Avatars' />
                 <p>Join over 250+ businesses that have grown with us</p>
               </div>
               <h1>One platform for hiring Indonesian teams</h1>

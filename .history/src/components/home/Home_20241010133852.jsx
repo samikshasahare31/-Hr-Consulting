@@ -87,7 +87,7 @@ function Home() {
           <div className='content'>
             <div className='text-section'>
               <div className='avatar-section'>
-                <img src='/src/assets/images/icon-avatar.png' alt='Avatars' />
+                <img src='/src/assets/icon-avatar.png' alt='Avatars' />
                 <p>Join over 250+ businesses that have grown with us</p>
               </div>
               <h1>One platform for hiring Indonesian teams</h1>
@@ -268,7 +268,7 @@ function Home() {
             </div>
             <div className='partner-image-container'>
               <img
-                src='/src/assets/images/Expert-local-knowledge.jpeg'
+                src='/src/assets/Expert-local-knowledge.jpeg'
                 alt='Expert local knowledge in Indonesia'
                 className='partner-image'
               />
@@ -278,7 +278,7 @@ function Home() {
           <div className='cost-content'>
             <div className='cost-image-container'>
               <img
-                src='/src/assets/images/cost-effective-solutions.jpg'
+                src='/src/assets/cost-effective-solutions.jpg'
                 alt='cost'
                 className='cost-image'
               />
@@ -317,7 +317,7 @@ function Home() {
             </div>
             <div className='compliance-image-container'>
               <img
-                src='/src/assets/images/compliance.jpeg'
+                src='/src/assets/compliance.jpeg'
                 alt='Expert local knowledge in Indonesia'
                 className='partner-image'
               />
@@ -372,7 +372,7 @@ function Home() {
         </div>
 
         <img
-          src='/src/assets/images/one-stop-hr-services-for-your-business.jpeg'
+          src='/src/assets/one-stop-hr-services-for-your-business.jpeg'
           alt='HR Service'
           className='one-stop-image'
         />
