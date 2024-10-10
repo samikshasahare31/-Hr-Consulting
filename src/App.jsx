@@ -15,47 +15,51 @@ import PricingManagedServices from "./components/pricing/managedServices/Pricing
 import PricingPeoEor from "./components/pricing/peo&eor/PricingPeoEor";
 import PricingRecruitment from "./components/pricing/recruitment/PricingRecruitment";
 import Calculator from "./components/calculator/Calculator";
-import { I18nextProvider } from 'react-i18next';
-import i18n from '../public/i18n'; 
+import { I18nextProvider } from "react-i18next";
+import i18n from "../public/i18n";
 import Footer from "./components/Footer";
 import ApplyTalent from "./components/services/applyTalent/ApplyTalent";
-
 
 function App() {
   return (
     <>
-     <I18nextProvider i18n={i18n}>
-      <BrowserRouter>
-    
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/jobVacancies" element={<JobVac />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/resources" element={<Resources />} />
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/jobVacancies" element={<JobVac />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/resources" element={<Resources />} />
 
-          <Route path="/services/peo&eor" element={<PeoEor />} />
-          <Route path="/services/recruitment" element={<Recruitment />} />
-          <Route path="/services/hrConsulting" element={<HrConsulting />} />
-          <Route
-            path="/services/managedServices"
-            element={<ManagedServices />}
-          />
+            <Route path="/services/peo&eor" element={<PeoEor />} />
+            <Route path="/services/recruitment" element={<Recruitment />} />
+            <Route path="/services/hrConsulting" element={<HrConsulting />} />
+            <Route
+              path="/services/managedServices"
+              element={<ManagedServices />}
+            />
 
-          <Route path="/pricing/peo&eor" element={<PricingPeoEor />} />
-          <Route path="/pricing/recruitment" element={<PricingRecruitment />} />
-          <Route path="/applyTalent" element={<ApplyTalent />} />
-          <Route path="/pricing/hrConsulting" element={<PricHrConsulting />} />
-          <Route
-            path="/pricing/managedServices"
-            element={<PricingManagedServices />}
-          />
-          <Route path="/calculator" element={<Calculator/>}/>
-        </Routes>
-      </BrowserRouter>
+            <Route path="/pricing/peo&eor" element={<PricingPeoEor />} />
+            <Route
+              path="/pricing/recruitment"
+              element={<PricingRecruitment />}
+            />
+            <Route path="/applyTalent" element={<ApplyTalent />} />
+            <Route
+              path="/pricing/hrConsulting"
+              element={<PricHrConsulting />}
+            />
+            <Route
+              path="/pricing/managedServices"
+              element={<PricingManagedServices />}
+            />
+            <Route path="/calculator" element={<Calculator />} />
+          </Routes>
+        </BrowserRouter>
       </I18nextProvider>
-      <Footer/>
+      <Footer />
     </>
   );
 }
