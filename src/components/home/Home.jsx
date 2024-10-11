@@ -6,11 +6,10 @@ import COSTSVG from "./COSTSVG";
 import COMPLIANCESVG from "./COMPLIANCESVG";
 import CHECKLISTSVG from "./CHECKLISTSVG";
 import MajorBrandsSlider from "./majorbrandsslider";
-<<<<<<< HEAD
-import { useTranslation } from 'react-i18next';
-=======
+import { useTranslation } from "react-i18next";
+
 import FAQSection from "../FAQ/FAQSection";
->>>>>>> 58b8f67cf9c71760aa0d1c6e2201a4ab2771454a
+
 function Home() {
   const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
@@ -94,10 +93,14 @@ function Home() {
             <div className='text-section'>
               <div className='avatar-section'>
                 <img src='/src/assets/images/icon-avatar.png' alt='Avatars' />
-                <p>{t('Join over 250+ businesses that have grown with us')}</p>
+                <p>{t("Join over 250+ businesses that have grown with us")}</p>
               </div>
-              <h1>{t('One platform for hiring Interns')}</h1>
-              <p>{t('Hire your team in India immediately without forming a company. We help businesses comply with regulations and streamline their HR processes in Remote Network.')}</p>
+              <h1>{t("One platform for hiring Interns")}</h1>
+              <p>
+                {t(
+                  "Hire your team in India immediately without forming a company. We help businesses comply with regulations and streamline their HR processes in Remote Network."
+                )}
+              </p>
               <p className='scroll-instruction'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -120,7 +123,7 @@ function Home() {
                     className='two_elementor_element'
                   ></path>
                 </svg>
-               {t(' scroll to learn more')}
+                {t(" scroll to learn more")}
               </p>
               <path
                 d='M7.99967 3.3335C7.82286 3.3335 7.65329 3.40373 7.52827 3.52876C7.40325 3.65378 7.33301 3.82335 7.33301 4.00016V6.66683C7.33301 6.84364 7.40325 7.01321 7.52827 7.13823C7.65329 7.26326 7.82286 7.3335 7.99967 7.3335C8.17649 7.3335 8.34605 7.26326 8.47108 7.13823C8.5961 7.01321 8.66634 6.84364 8.66634 6.66683V4.00016C8.66634 3.82335 8.5961 3.65378 8.47108 3.52876C8.34605 3.40373 8.17649 3.3335 7.99967 3.3335Z'
@@ -133,7 +136,7 @@ function Home() {
                 <form onSubmit={handleSubmit}>
                   <div className='form-row'>
                     <div className='form-group'>
-                      <label>{t('First Name *')}</label>
+                      <label>{t("First Name *")}</label>
                       <input
                         type='text'
                         name='firstName'
@@ -144,7 +147,7 @@ function Home() {
                     </div>
 
                     <div className='form-group'>
-                      <label>{t('Last Name *')}</label>
+                      <label>{t("Last Name *")}</label>
                       <input
                         type='text'
                         name='lastName'
@@ -156,7 +159,7 @@ function Home() {
                   </div>
 
                   <div className='form-group'>
-                    <label>{t('Email *')}</label>
+                    <label>{t("Email *")}</label>
                     <input
                       type='email'
                       name='email'
@@ -168,7 +171,7 @@ function Home() {
 
                   <div className='form-row'>
                     <div className='form-group'>
-                      <label>{t('Country Code *')}</label>
+                      <label>{t("Country Code *")}</label>
                       <select
                         name='countryCode'
                         value={formData.countryCode}
@@ -181,7 +184,7 @@ function Home() {
                     </div>
 
                     <div className='form-group'>
-                      <label>{t('Personal Telephone *')}</label>
+                      <label>{t("Personal Telephone *")}</label>
                       <input
                         type='tel'
                         name='phone'
@@ -193,7 +196,7 @@ function Home() {
                   </div>
 
                   <div className='form-group'>
-                    <label>{t('Company *')}</label>
+                    <label>{t("Company *")}</label>
                     <input
                       type='text'
                       name='company'
@@ -204,24 +207,30 @@ function Home() {
                   </div>
 
                   <div className='form-group'>
-                    <label>{t('Reason for inquiry *')}</label>
+                    <label>{t("Reason for inquiry *")}</label>
                     <select
                       name='inquiry'
                       value={formData.inquiry}
                       onChange={handleChange}
                       required
                     >
-                      <option value='PEO & EoR'>{t('PEO & EoR')}</option>
-                      <option value='Recruitment'>{t('Recruitment')}</option>
-                      <option value='HR Consulting'>{t('HR Consulting')}</option>
-                      <option value='Payroll Payment'>{t('Payroll Payment')}</option>
-                      <option value='Managed Services'>{t('Managed Services')}</option>
+                      <option value='PEO & EoR'>{t("PEO & EoR")}</option>
+                      <option value='Recruitment'>{t("Recruitment")}</option>
+                      <option value='HR Consulting'>
+                        {t("HR Consulting")}
+                      </option>
+                      <option value='Payroll Payment'>
+                        {t("Payroll Payment")}
+                      </option>
+                      <option value='Managed Services'>
+                        {t("Managed Services")}
+                      </option>
                       {/* Add more options here */}
                     </select>
                   </div>
 
                   <div className='form-group'>
-                    <label>{t('How can we help you ?')}</label>
+                    <label>{t("How can we help you ?")}</label>
                     <textarea
                       name='message'
                       value={formData.message}
@@ -229,7 +238,7 @@ function Home() {
                     ></textarea>
                   </div>
                   <button type='submit' className='submit-button'>
-                    {t('Submit Enquiry')}
+                    {t("Submit Enquiry")}
                   </button>
                   {formStatus && <p>{formStatus}</p>}
                 </form>
@@ -242,25 +251,30 @@ function Home() {
       {/* Services Section  */}
 
       <div className='services-section'>
-        <h2>{t('WHAT WE DO')}</h2>
-        <h3>{t('Comprehensive HR and PEO/EoR solutions')}</h3>
+        <h2>{t("WHAT WE DO")}</h2>
+        <h3>{t("Comprehensive HR and PEO/EoR solutions")}</h3>
         <div className='slider'>
           <Slider />
         </div>
         {/*partner section*/}
 
         <div className='partner-section'>
-          <h2 className='partner-title'>{t('WHY PARTNER WITH US')}</h2>
+          <h2 className='partner-title'>{t("WHY PARTNER WITH US")}</h2>
           {/* <h3 className='partner-subtitle'>Why Partner with Us</h3> */}
 
           <div className='partner-content'>
             <div className='partner-text'>
               <div className='partner-right'>
                 <GLOBESVG className='partner-icon' />
-                <h4 className='partner-expertise'>{t('Expert Local Knowledge')}</h4>
+                <h4 className='partner-expertise'>
+                  {t("Expert Local Knowledge")}
+                </h4>
               </div>
               <p className='partner-description'>
-                {t(`We are local experts who provide on-the-ground support and guidance in Indonesia. From HR specialists to legal advisors, weare equipped to handle any challenge your operation may face. Our local presence means we're always here to support your business with a deep understanding of the Indonesian business climate. Benefit from our expertise and established networks to ensure your Indonesian venture is successful.`)}    </p>
+                {t(
+                  `We are local experts who provide on-the-ground support and guidance in Indonesia. From HR specialists to legal advisors, weare equipped to handle any challenge your operation may face. Our local presence means we're always here to support your business with a deep understanding of the Indonesian business climate. Benefit from our expertise and established networks to ensure your Indonesian venture is successful.`
+                )}{" "}
+              </p>
             </div>
             <div className='partner-image-container'>
               <img
@@ -282,10 +296,15 @@ function Home() {
             <div className='cost-text'>
               <div className='cost-left'>
                 <COSTSVG className='cost-icon' />
-                <h4 className='cost-expertise'>{t('Cost-Effective Solutions')}</h4>
+                <h4 className='cost-expertise'>
+                  {t("Cost-Effective Solutions")}
+                </h4>
               </div>
               <p className='cost-description'>
-                {t('Avoid the big expenses and long waits that come with starting a new company in Indonesia. With our help, you can get to work quickly and cut down on legal and setup costs. Put your money and effort into growing your business instead of getting tangled up in complicated paperwork.')}             </p>
+                {t(
+                  "Avoid the big expenses and long waits that come with starting a new company in Indonesia. With our help, you can get to work quickly and cut down on legal and setup costs. Put your money and effort into growing your business instead of getting tangled up in complicated paperwork."
+                )}{" "}
+              </p>
             </div>
           </div>
 
@@ -293,10 +312,13 @@ function Home() {
             <div className='compliance-text'>
               <div className='compliance-right'>
                 <COMPLIANCESVG className='compliance-icon' />
-                <h4 className='compliance-expertise'>{t('100% Compliance')}</h4>
+                <h4 className='compliance-expertise'>{t("100% Compliance")}</h4>
               </div>
               <p className='compliance-description'>
-                {t(`Indonesia's legal environment is unique, with regulations that can be intricate and often change. With our EOR service, you gain access to our in-depth knowledge of Indonesian labor laws, tax regulations, and compliance requirements. We act as your legal buffer, minimizing risks and protecting your business interests. Our team stays abreast of the latest legal updates, providing peace of mind that your operations are always compliant and your business integrity remains intact.`)}              </p>
+                {t(
+                  `Indonesia's legal environment is unique, with regulations that can be intricate and often change. With our EOR service, you gain access to our in-depth knowledge of Indonesian labor laws, tax regulations, and compliance requirements. We act as your legal buffer, minimizing risks and protecting your business interests. Our team stays abreast of the latest legal updates, providing peace of mind that your operations are always compliant and your business integrity remains intact.`
+                )}{" "}
+              </p>
             </div>
             <div className='compliance-image-container'>
               <img
@@ -311,40 +333,43 @@ function Home() {
 
       <div className='one-stop'>
         <div className='one-stop-text'>
-          <h2>{t('One-stop HR Service For Your Business')}</h2>
+          <h2>{t("One-stop HR Service For Your Business")}</h2>
           <p className='one-stop-description'>
-           {t(' HR Consulting now assists you in providing HR Management services starting from PEO services. Our fees are competitively priced, saving you money compared to other service providers. We don’t just offer company incorporation HR services; we are your business partner.')}          </p>
+            {t(
+              " HR Consulting now assists you in providing HR Management services starting from PEO services. Our fees are competitively priced, saving you money compared to other service providers. We don’t just offer company incorporation HR services; we are your business partner."
+            )}{" "}
+          </p>
 
           <ul className='icon-text-list'>
             <div className='icon-text-row'>
               <li className='icon-text-list-item'>
                 <CHECKLISTSVG />
-                {t('Regulatory and Tax Compliance')}
+                {t("Regulatory and Tax Compliance")}
               </li>
               <li className='icon-text-list-item'>
                 <CHECKLISTSVG />
-                {t('Work Permits')}
+                {t("Work Permits")}
               </li>
               <li className='icon-text-list-item'>
                 <CHECKLISTSVG />
-                {t('Payroll Processing')}
+                {t("Payroll Processing")}
               </li>
               <li className='icon-text-list-item'>
                 <CHECKLISTSVG />
-                {t('Talent recruitment')}
+                {t("Talent recruitment")}
               </li>
               <li className='icon-text-list-item'>
                 <CHECKLISTSVG />
-                {t('Employee onboarding and off-boarding')}
+                {t("Employee onboarding and off-boarding")}
               </li>
               <li className='icon-text-list-item'>
                 <CHECKLISTSVG />
-                {t('HR Consulting Services / Ad-hoc HR Services')}
+                {t("HR Consulting Services / Ad-hoc HR Services")}
               </li>
             </div>
           </ul>
 
-          <button className='schedule-btn'>{t('Schedule Now')} →</button>
+          <button className='schedule-btn'>{t("Schedule Now")} →</button>
         </div>
 
         <img
@@ -355,7 +380,7 @@ function Home() {
       </div>
 
       <div className='Brands-container'>
-        <h2>{t('We Work With Major Brands Across the World')}</h2>
+        <h2>{t("We Work With Major Brands Across the World")}</h2>
         <MajorBrandsSlider className='brand-slider' />
       </div>
       <FAQSection />
