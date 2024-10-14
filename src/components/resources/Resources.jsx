@@ -31,9 +31,10 @@ const Resources = () => {
   return (
     <>
       <section className="resource-header">
-        <h1>{t('Resources')}</h1>
+        <h1>{t("Resources")}</h1>
         <p>
-          {t('Learn more about employment, best practices in HR, and')} <br /> {t('relevant laws and regulations for HR in Indonesia')}
+          {t("Learn more about employment, best practices in HR, and")} <br />
+          {t("relevant laws and regulations for HR in India")}
         </p>
       </section>
 
@@ -50,7 +51,9 @@ const Resources = () => {
                   ) : (
                     <>
                       ,
-                      <button className="resources-btn">{t(ele.resources)}</button>
+                      <button className="resources-btn">
+                        {t(ele.resources)}
+                      </button>
                     </>
                   )}
                 </div>
