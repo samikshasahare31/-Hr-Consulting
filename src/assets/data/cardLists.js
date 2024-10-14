@@ -5,8 +5,8 @@ export const cardLists = [
     article: "Articles",
     resources: "Resources",
     title:
-      "The Ultimate Guide to Executive Search in Indonesia: Analysing the Financial and Cultural Impact of Wrong Hires",
-    text: "Introduction In today’s competitive business landscape, finding and retaining top executive talent is crucial for the",
+      "The Complete Handbook of Executive Search in India: Examining the Economic and Cultural Effects of Poor Hiring",
+    text: "Overview Finding and keeping top executive talent is essential for the competitive corporate environment of today.",
   },
   {
     id: 1,
@@ -14,17 +14,16 @@ export const cardLists = [
     article: "Articles",
     resources: "Resources",
     title:
-      "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
-    text: "Introduction In the age of globalisation and digital transformation, the ability to manage remote teams effectively",
+      "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies",
+    text: "Overview In the era of digital change and globalization, the capacity to efficiently lead remote teams",
   },
   {
     id: 2,
     img: "https://recruitindo.com/wp-content/uploads/2024/01/search-solution-1024x768.jpeg",
     article: "Articles",
     resources: " ",
-    title:
-      "Strategic Executive Search Solutions for Indonesia’s Top Businesses",
-    text: "In today’s fiercely competitive business landscape, finding the right talent to lead your organisation is more",
+    title: "Strategic Executive Search Services for Leading Companies in India",
+    text: "Finding the proper people to run your company in the highly competitive business world of today is more",
   },
   {
     id: 3,
@@ -32,16 +31,16 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
-    text: "Introduction In the age of globalization and digital transformation, the ability to manage remote teams effectively",
+      "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies",
+    text: "Overview The capacity to efficiently lead distant teams in the era of globalization and digital transformation",
   },
   {
     id: 4,
     img: "https://recruitindo.com/wp-content/uploads/2024/01/emerging-trends-1024x683.jpeg",
     article: "Articles",
     resources: " ",
-    title: "Emerging Trends in Indonesia’s Executive Recruitment",
-    text: "As Indonesia’s business landscape evolves, so do the trends in executive recruitment. These emerging trends are",
+    title: "New Developments in Executive Hiring in India",
+    text: "The trends in executive recruiting change along with the business environment in India. These new developments are",
   },
   {
     id: 5,
@@ -49,17 +48,16 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Strategic Executive Search Solutions for Indonesia’s Top Businesses: Customized Approaches for Success",
-    text: "Indonesia, an emerging market with a dynamic economy, houses a multitude of businesses that continue to",
+      "India's Strategic Executive Search Services Leading Companies: Tailored Strategies for Achievement",
+    text: "India is a developing market with a thriving economy that is home to several companies that are still",
   },
   {
     id: 6,
     img: "https://recruitindo.com/wp-content/uploads/2024/01/impact-1024x683.jpeg",
     article: "Articles",
     resources: " ",
-    title:
-      "Strategic Executive Search Solutions for Indonesia’s Top Businesses: Customized Approaches for Success",
-    text: "Indonesia, an emerging market with a dynamic economy, houses a multitude of businesses that continue to",
+    title: "The Effect of Executive Placements on Indian Business Growth",
+    text: "A thriving economy with enormous potential, India has emerged as a major location for corporate growth. As many",
   },
   {
     id: 7,
@@ -67,8 +65,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Strategic Executive Search Solutions for Indonesia’s Top Businesses: Customized Approaches for Success",
-    text: "Indonesia, an emerging market with a dynamic economy, houses a multitude of businesses that continue to",
+      "India's Strategic Executive Search Services Top Companies: Using Cultural Alignment to Unlock Success",
+    text: "Top firms recognize the need of making strategic decisions in the highly competitive Indian business environment.",
   },
   {
     id: 8,
@@ -76,8 +74,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Strategic Executive Search Solutions for Indonesia’s Top Businesses",
-    text: "In today's fiercely competitive business landscape, finding the right talent to lead your organization is more",
+      "Strategic Executive Recruiting Services for Leading Indian Companies",
+    text: "Finding the proper people to run your company in the highly competitive business environment of today is more",
   },
   {
     id: 9,
@@ -85,17 +83,16 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Strategic Executive Search Solutions for Indonesia’s Top Businesses: Navigating Indonesia’s Executive Talent Market",
-    text: "Indonesia, the world's largest archipelago, is not only renowned for its diverse cultures and scenic beauty",
+      "Managing India's Executive Talent Market with Strategic Executive Search Solutions for Leading Indai Companies",
+    text: "The biggest archipelago in the world, India, is well-known for more than just its many cultures and breathtaking scenery.",
   },
   {
     id: 10,
     img: "https://recruitindo.com/wp-content/uploads/2024/01/navigating-1024x682.jpeg",
     article: "Articles",
     resources: " ",
-    title:
-      "Navigating Indonesian Labor Laws in Executive Recruitment: A Comprehensive Guide",
-    text: "Indonesia, with its strategic location and booming economy, is fast becoming a top choice for businesses",
+    title: "A Complete Guide to Managing Indian Labor Laws in Executive Hiring",
+    text: "India is quickly becoming as a top business destination due to its advantageous location and thriving economy.",
   },
   {
     id: 11,
@@ -103,8 +100,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "The Ultimate Guide to Business Expansion in Indonesia with PEO/EOR Services",
-    text: "Introduction Expanding your business into new international markets can be a lucrative venture, and Indonesia is",
+      "The Complete Manual for Using PEO/EOR Services for Business Expansion in India",
+    text: "Overview It may be quite profitable to expand your company into new foreign markets, and India is",
   },
   {
     id: 12,
@@ -112,8 +109,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "PEO vs. Traditional Business Setup in Indonesia: A Comparative Analysis",
-    text: "When it comes to expanding your business in Indonesia, understanding the landscape is essential. With its",
+      "A Comparative Study of Traditional and PEO Business Structures in India",
+    text: "Knowing the Indian market is crucial if you want to grow your company there. With its",
   },
   {
     id: 13,
@@ -121,8 +118,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "The Ultimate Guide to Business Expansion in Indonesia with PEO/EOR Services (A Simple Explanation for Business Leaders)",
-    text: "Expanding a business into foreign territories can be an exciting venture. For many enterprises, Indonesia is",
+      "The Complete Guide to PEO/EOR Services for Business Expansion in India (A Clear Overview for Business Leaders)",
+    text: "International business expansion may be a thrilling endeavor. For several businesses, India is",
   },
   {
     id: 14,
@@ -130,8 +127,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
-    text: "In the age of globalization and digital transformation, the ability to manage remote teams effectively has",
+      "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies",
+    text: "Effective remote team management has become more important in the era of globalization and digital change.",
   },
   {
     id: 15,
@@ -139,25 +136,24 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Deep Dive: Case Study on Expanding a Tech Company to Indonesia with a PEO",
-    text: "In the fast-evolving world of business, Indonesia stands out as an untapped goldmine for tech companies.",
+      "In-Depth: Case Study on Using PEOs to Expand a Tech Company to India",
+    text: "India is an unexplored goldmine for tech businesses in the rapidly changing commercial environment.",
   },
   {
     id: 16,
     img: "https://recruitindo.com/wp-content/uploads/2024/01/peo-provider-1024x683.jpeg",
     article: "Articles",
     resources: " ",
-    title:
-      "Checklist for Businesses: How to Choose a PEO/EOR Provider in Indonesia",
-    text: "Navigating the employment landscape in Indonesia can be daunting for any business, especially for foreign companies.",
+    title: "Checklist for Companies: How to Pick an Indian PEO/EOR Provider.",
+    text: "Any firm, especially international ones, may find it difficult to navigate India's job market.",
   },
   {
     id: 17,
     img: "https://recruitindo.com/wp-content/uploads/2024/01/peo-1024x683.jpeg",
     article: "Articles",
     resources: " ",
-    title: "The Comprehensive Guide to PEO/EOR Services in Indonesia",
-    text: "In today's rapidly evolving business landscape, companies often seek streamlined solutions to manage their human resources",
+    title: "The Complete Guide to Indian PEO/EOR Services",
+    text: "Businesses frequently look for simplified ways to manage their human resources in the quickly changing business environment of today.",
   },
   {
     id: 18,
@@ -165,8 +161,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "The Comprehensive Guide to PEO/EOR Services in Indonesia: Unveiling the Financial Benefits",
-    text: "Indonesia, with its vibrant culture, growing economy, and a vast potential market, attracts a myriad of",
+      "The Complete Handbook of PEO/EOR Services in India: Revealing the Monetary Gains",
+    text: "India's dynamic culture, expanding economy, and sizable potential market draw a wide range of",
   },
   {
     id: 19,
@@ -174,8 +170,8 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "The Comprehensive Guide to PEO/EOR Services in Indonesia: Unlocking Cost Savings Analysis",
-    text: "In the rapidly evolving landscape of global business, companies are continually seeking ways to expand their",
+      "The Complete Handbook of PEO/EOR Services in India: Unlocking Analysis of Cost Savings",
+    text: "In the ever changing world of international business, businesses are always looking for methods to increase their",
   },
   {
     id: 20,
@@ -183,7 +179,7 @@ export const cardLists = [
     article: "Articles",
     resources: " ",
     title:
-      "Detailed Analysis of Key Regulations: A Deep Dive into Indonesian Labor Laws",
-    text: "As Indonesia emerges as a vibrant business hub in Southeast Asia, the complexities of its employment",
+      "A Comprehensive Examination of Important Provisions: An In-Depth Look at Indian Labor Laws",
+    text: "The difficulties of finding work in India, which is becoming a thriving economic hub in Southeast Asia,",
   },
 ];
