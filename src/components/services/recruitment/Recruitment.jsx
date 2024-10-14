@@ -119,8 +119,10 @@ const Recruitment = () => {
             <li>Ongoing Recruiter Assistance</li>
             <li>Post-hire Support and Consultation</li>
           </ul>
-          <p className="annual-compensation-note">1) Note: Annual compensation includes base salary, bonuses, and the 13-month THR (Religious Festive Allowance) as applicable.</p>
-          <p className="annual-compensation-note">Additional benefits, such as healthcare, retirement contributions, and other allowances, are not included in the stated percentage but can be negotiated separately. This ensures flexibility to meet both employer and candidate expectations.</p>
+          <div className="annual-compensation-note">
+          <p >1) Note: Annual compensation includes base salary, bonuses, and the 13-month THR (Religious Festive Allowance) as applicable.</p>
+          <p >2) Additional benefits, such as healthcare, retirement contributions, and other allowances, are not included in the stated percentage but can be negotiated separately. This ensures flexibility to meet both employer and candidate expectations.</p>
+          </div>
         </div>
       </div>
 

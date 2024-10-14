@@ -148,32 +148,43 @@ body {
     margin-top: 0.3rem; 
 }
 
-/* Pricing Section */
+/* Recruitment Services Pricing Section */
+
 .pricing-container {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     color: white;
-    margin: 8%;
-    border-radius: 10px;
-    background-color: transparent; /* Background color for the whole section */
+    background-color: transparent;
+    align-items: stretch; 
+    height: auto; /* Can set a specific height if needed */
+    min-height: 500px;
 }
 
-.pricing {
-    color: #949699;
-}
-
-.pricing-content {
-    background-color: #0a3668;
-    flex: 1;
-    text-align: left;
+.pricing-content,
+.pricing-details {
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem; 
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px;
+    padding: 2rem;
+    background-color: #0a3668;
+    box-sizing: border-box;
+    height: auto; /* Can set a specific height if needed */
+    min-height: 300px;}
 
+.pricing-content {
+    text-align: left;
+    margin-top: 2.8rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.pricing-details {
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .pricing-title {
@@ -195,7 +206,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #e79522; 
+    background-color: #e79522;
     color: white;
     display: block;
     width: 160px;
@@ -207,17 +218,10 @@ body {
     color: #e79522;
 }
 
-.pricing-details {
-    flex: 1;
-    padding-left: 2rem;
-    margin-top: 2.7rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 0 rgba(0, 0, 0, 0); 
-}
-
 .pricing-details h3 {
-    color: rgb(83, 82, 82);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    color: #5f5e5e !important; /* Forces the style to apply */
+    font-size: 1.3rem !important;
+    margin-bottom: 1.2rem !important;
 }
 
 .pricing-details ul {
@@ -234,11 +238,13 @@ body {
 }
 
 .annual-compensation-note {
-    font-size: 0.9rem;
-    margin-top: 12%;
+    font-size: 1rem;
+    margin-top: 5%;
     color: #6f7072;
     padding-right: 5%;
-} 
+    margin-bottom: 5%;
+
+}
 
 /* Resources and Articles Section */
 
@@ -399,6 +405,7 @@ body {
     /* services-pricing-section */
     .pricing-container {
         flex-direction: column;
+        border-radius: none;
     }
 
     .pricing-content {
@@ -414,6 +421,9 @@ body {
         width: 100%;
         margin: 0;
         padding: 1.5rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
     }
 
     .get-started-button,
