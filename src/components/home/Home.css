@@ -705,9 +705,18 @@ textarea {
     justify-content: space-between; /* Space items evenly */
     flex-wrap: wrap; /* Allow items to wrap to next row */
   }
-
   .icon-text-list-item {
-    padding: 20px;
-    flex: 0 0 calc(49.33% - 10px);
+    padding: 10px;
+    margin-right: 0px;
+    flex: 0 0 calc(47.33% - 10px);
+  }
+  .icon-text-list-item {
+    padding: 10px;
+    margin-right: 0px;
+    flex: 0 0 calc(47.33% - 10px);
+  }
+  .icon-text-row .icon-text-list-item:last-child svg {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
   }
 }
