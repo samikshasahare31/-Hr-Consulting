@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { IoMdClose, IoMdArrowDropdown } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
-  const { t, i18n } = useTranslation(); 
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState({});
   const [selectedLanguage, setSelectedLanguage] = useState(() => {
@@ -13,11 +13,11 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
     return storedLanguage ? storedLanguage : "English";
   });
 
-  const dropdownRefs = useRef({}); 
+  const dropdownRefs = useRef({});
 
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage === "English" ? "en" : "hi");
-    localStorage.setItem("language", selectedLanguage); 
+    localStorage.setItem("language", selectedLanguage);
   }, [selectedLanguage, i18n]);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
         !dropdownRefs.current["mobileServices"]?.contains(event.target) &&
         !dropdownRefs.current["mobilePricing"]?.contains(event.target) &&
         !dropdownRefs.current["mobileLanguage"]?.contains(event.target);
-        
+
       if (isOutsideDropdown) {
         setDropdownOpen({}); // Close all dropdowns
       }
@@ -82,7 +82,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               to="/aboutUs"
               className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
             >
-              {t("About")} 
+              {t("About")}
             </Link>
 
             {/* Services Dropdown */}
@@ -109,28 +109,35 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("services")}
                   >
-                    {t("PEO & EoR")} 
+                    {t("PEO & EoR")}
                   </Link>
                   <Link
                     to="/services/recruitment"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("services")}
                   >
-                    {t("Recruitment")} 
+                    {t("Recruitment")}
                   </Link>
                   <Link
                     to="/services/hrConsulting"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("services")}
                   >
-                    {t("HR Consulting")} 
+                    {t("HR Consulting")}
+                  </Link>
+                  <Link
+                    to="/services/payrollProcessing"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("services")}
+                  >
+                    {t("Payroll Processing")}
                   </Link>
                   <Link
                     to="/services/managedServices"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("services")}
                   >
-                    {t("Managed Services")} 
+                    {t("Managed Services")}
                   </Link>
                 </div>
               )}
@@ -160,7 +167,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("pricing")}
                   >
-                    {t("PEO & EoR")} 
+                    {t("PEO & EoR")}
                   </Link>
                   <Link
                     to="/pricing/recruitment"
@@ -174,14 +181,21 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("pricing")}
                   >
-                    {t("HR Consulting")} 
+                    {t("HR Consulting")}
+                  </Link>
+                  <Link
+                    to="/pricing/payrollProcessing"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("pricing")}
+                  >
+                    {t("Payroll Processing")}
                   </Link>
                   <Link
                     to="/pricing/managedServices"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("pricing")}
                   >
-                    {t("Managed Services")} 
+                    {t("Managed Services")}
                   </Link>
                 </div>
               )}
@@ -191,19 +205,19 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               to="/calculator"
               className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
             >
-              {t("Calculator")} 
+              {t("Calculator")}
             </Link>
             <Link
               to="/resources"
               className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
             >
-              {t("Resources")} 
+              {t("Resources")}
             </Link>
             <Link
               to="/contactUs"
               className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
             >
-              {t("Contact Us")} 
+              {t("Contact Us")}
             </Link>
 
             {/* Language Selector */}
@@ -223,23 +237,23 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     onClick={() => handleLanguageChange("English")}
                     className="block w-full text-left px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   >
-                    {t('English')}
+                    {t("English")}
                   </button>
                   <button
                     onClick={() => handleLanguageChange("हिंदी")}
                     className="block w-full text-left px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   >
-                    {t('Hindi')}
+                    {t("Hindi")}
                   </button>
                 </div>
               )}
             </div>
             <Link
-            to="/jobVacancies"
-            className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer"
-          >
-            {t("Job Vacancies")} 
-          </Link>
+              to="/jobVacancies"
+              className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer"
+            >
+              {t("Job Vacancies")}
+            </Link>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -258,9 +272,8 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
         </div>
       </div>
 
-
-    {/* Mobile menu */}
-        <div
+      {/* Mobile menu */}
+      <div
         className={`fixed top-0 right-0 h-full w-64 bg-base-100 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden z-40`}
@@ -272,7 +285,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               className="text-black font-bold text-xl  m-3"
               onClick={toggleMenu}
             >
-              {t('TEN HR Consulting')}
+              {t("TEN HR Consulting")}
             </Link>
           </div>
           <div className="flex items-center justify-end">
@@ -294,14 +307,14 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
             className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
             onClick={toggleMenu}
           >
-            {t('About')}
+            {t("About")}
           </Link>
           <div className="relative">
             <button
               onClick={() => toggleDropdown("mobileServices")}
               className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium w-full text-left focus:outline-none"
             >
-             {t('Services')}
+              {t("Services")}
               <IoMdArrowDropdown
                 className={`inline-block ml-2 transition-transform ${
                   dropdownOpen["mobileServices"] ? "rotate-180" : "rotate-0"
@@ -319,28 +332,28 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('PEO & EoR')}
+                  {t("PEO & EoR")}
                 </Link>
                 <Link
                   to="/services/recruitment"
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('Recruitment')}
+                  {t("Recruitment")}
                 </Link>
                 <Link
                   to="/services/hrConsulting"
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('HR Consulting')}
+                  {t("HR Consulting")}
                 </Link>
                 <Link
                   to="/services/managedServices"
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('Managed Services')}
+                  {t("Managed Services")}
                 </Link>
               </div>
             )}
@@ -350,7 +363,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               onClick={() => toggleDropdown("mobilePricing")}
               className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium w-full text-left focus:outline-none"
             >
-              {t('Pricing')}
+              {t("Pricing")}
               <IoMdArrowDropdown
                 className={`inline-block ml-2 transition-transform ${
                   dropdownOpen["mobilePricing"] ? "rotate-180" : "rotate-0"
@@ -368,28 +381,28 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('PEO & EoR')}
+                  {t("PEO & EoR")}
                 </Link>
                 <Link
                   to="/pricing/recruitment"
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('Recruitment')}
+                  {t("Recruitment")}
                 </Link>
                 <Link
                   to="/pricing/hrConsulting"
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('HR Consulting')}
+                  {t("HR Consulting")}
                 </Link>
                 <Link
                   to="/pricing/managedServices"
                   className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   onClick={toggleMenu}
                 >
-                  {t('Managed Services')}
+                  {t("Managed Services")}
                 </Link>
               </div>
             )}
@@ -399,51 +412,51 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
             to="/calculator"
             className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
           >
-            {t('Calculator')}
+            {t("Calculator")}
           </Link>
           <Link
             to="/resources"
             className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
           >
-            {t('Resources')}
+            {t("Resources")}
           </Link>
           <Link
             to="/contactUs"
             className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
           >
-            {t('Contact Us')}
+            {t("Contact Us")}
           </Link>
 
           <div className="relative">
-              <button
-                onClick={() => toggleDropdown("mobileLanguage")}
-                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block w-full px-3 py-2 rounded-md text-base font-medium flex"
-              >
-                {selectedLanguage} 
-                <IoMdArrowDropdown />
-              </button>
-              {dropdownOpen["mobileLanguage"] && (
-                <div className="mt-1 space-y-1">
-                  <button
-                    onClick={() => handleLanguageChange("English")}
-                    className="block w-full text-left px-4 py-2 text-base text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  >
-                    {t('English')}
-                  </button>
-                  <button
-                    onClick={() => handleLanguageChange("हिंदी")}
-                    className="block w-full text-left px-4 py-2 text-base text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  >
-                    {t('Hindi')}
-                  </button>
-                </div>
-              )}
-            </div>
+            <button
+              onClick={() => toggleDropdown("mobileLanguage")}
+              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block w-full px-3 py-2 rounded-md text-base font-medium flex"
+            >
+              {selectedLanguage}
+              <IoMdArrowDropdown />
+            </button>
+            {dropdownOpen["mobileLanguage"] && (
+              <div className="mt-1 space-y-1">
+                <button
+                  onClick={() => handleLanguageChange("English")}
+                  className="block w-full text-left px-4 py-2 text-base text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                >
+                  {t("English")}
+                </button>
+                <button
+                  onClick={() => handleLanguageChange("हिंदी")}
+                  className="block w-full text-left px-4 py-2 text-base text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                >
+                  {t("Hindi")}
+                </button>
+              </div>
+            )}
+          </div>
           <Link
             to="/jobVacancies"
             className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
           >
-            {t('Job Vacancies')}
+            {t("Job Vacancies")}
           </Link>
         </div>
       </div>
