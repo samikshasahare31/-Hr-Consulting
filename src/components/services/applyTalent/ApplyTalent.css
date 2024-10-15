@@ -12,7 +12,7 @@ body {
     color: white;
     text-align: start;
     position: relative; 
-    opacity: 1; /* Control the overall container opacity */
+    opacity: 1; 
 }
 
 .apply-content {
@@ -21,7 +21,7 @@ body {
     padding: 8%; 
     opacity: 0.9; 
     z-index: 2;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     position: relative;
 }
 
@@ -42,7 +42,7 @@ body {
     color: #122233;
     position: relative; 
     z-index: 2; 
-    font-weight: 600;
+    font-weight: 600;/* Control the overall container opacity */
 }
 
 .apply-title {
@@ -79,7 +79,7 @@ body {
 .upload-steps {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;/* Control the overall container opacity */
     flex-wrap: wrap;
     position: relative;
 }
@@ -174,7 +174,7 @@ body {
         gap: 1rem;
         flex-basis: 100%;
         margin-left: 0;
-    }
+    }/* Control the overall container opacity */
 
     .step-icon {
         margin-bottom: 1rem;
