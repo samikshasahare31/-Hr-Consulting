@@ -35,26 +35,26 @@ function App() {
             <Route path="/contactUs" element={<ContactUs />} />
             <Route path="/resources" element={<Resources />} />
 
-            <Route path="/peo&eor" element={<PeoEor />} />
-            <Route path="/recruitment" element={<Recruitment />} />
-            <Route path="/hrConsulting" element={<HrConsulting />} />
+            <Route path="/services/peo&eor" element={<PeoEor />} />
+            <Route path="/services/recruitment" element={<Recruitment />} />
+            <Route path="/services/hrConsulting" element={<HrConsulting />} />
             <Route
-              path="/managedServices"
+              path="/services/managedServices"
               element={<ManagedServices />}
             />
 
-            <Route path="/peo&eor" element={<PricingPeoEor />} />
+            <Route path="/pricing/peo&eor" element={<PricingPeoEor />} />
             <Route
-              path="/recruitment"
+              path="/pricing/recruitment"
               element={<PricingRecruitment />}
             />
             <Route path="/applyTalent" element={<ApplyTalent />} />
             <Route
-              path="/hrConsulting"
+              path="/pricing/hrConsulting"
               element={<PricHrConsulting />}
             />
             <Route
-              path="/managedServices"
+              path="/pricing/managedServices"
               element={<PricingManagedServices />}
             />
             <Route path="/calculator" element={<Calculator />} />
