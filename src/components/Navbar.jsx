@@ -8,8 +8,6 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
   const { t, i18n } = useTranslation(); 
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState({});
-
- 
   const [selectedLanguage, setSelectedLanguage] = useState(() => {
     const storedLanguage = localStorage.getItem("language");
     return storedLanguage ? storedLanguage : "English";
@@ -21,6 +19,27 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
     i18n.changeLanguage(selectedLanguage === "English" ? "en" : "hi");
     localStorage.setItem("language", selectedLanguage); 
   }, [selectedLanguage, i18n]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const isOutsideDropdown =
+        !dropdownRefs.current["services"]?.contains(event.target) &&
+        !dropdownRefs.current["pricing"]?.contains(event.target) &&
+        !dropdownRefs.current["language"]?.contains(event.target) &&
+        !dropdownRefs.current["mobileServices"]?.contains(event.target) &&
+        !dropdownRefs.current["mobilePricing"]?.contains(event.target) &&
+        !dropdownRefs.current["mobileLanguage"]?.contains(event.target);
+        
+      if (isOutsideDropdown) {
+        setDropdownOpen({}); // Close all dropdowns
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMenu = () => {
     if (isSidebarOpen) {
@@ -38,6 +57,13 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
 
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
+  };
+
+  const handleLinkClick = (dropdownKey) => {
+    setDropdownOpen((prevState) => ({
+      ...prevState,
+      [dropdownKey]: false, // Close the dropdown when a link is clicked
+    }));
   };
 
   return (
@@ -59,19 +85,15 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               {t("About")} 
             </Link>
 
+            {/* Services Dropdown */}
             <div className="relative flex items-center">
-              <Link
-                to="/#"
-                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                {t("Services")} 
-              </Link>
               <button
                 onClick={() => toggleDropdown("services")}
-                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-2 py-2 rounded-md text-sm font-medium focus:outline-none"
+                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
               >
+                {t("Services")}
                 <IoMdArrowDropdown
-                  className={`transition-transform ${
+                  className={`inline-block ml-2 transition-transform ${
                     dropdownOpen["services"] ? "rotate-180" : "rotate-0"
                   }`}
                   aria-hidden="true"
@@ -85,24 +107,28 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   <Link
                     to="/services/peo&eor"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("services")}
                   >
                     {t("PEO & EoR")} 
                   </Link>
                   <Link
                     to="/services/recruitment"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("services")}
                   >
                     {t("Recruitment")} 
                   </Link>
                   <Link
                     to="/services/hrConsulting"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("services")}
                   >
                     {t("HR Consulting")} 
                   </Link>
                   <Link
                     to="/services/managedServices"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("services")}
                   >
                     {t("Managed Services")} 
                   </Link>
@@ -110,19 +136,15 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               )}
             </div>
 
+            {/* Pricing Dropdown */}
             <div className="relative flex items-center">
-              <Link
-                to="/#"
-                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                {t("Pricing")} 
-              </Link>
               <button
                 onClick={() => toggleDropdown("pricing")}
-                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-2 py-2 rounded-md text-sm font-medium focus:outline-none"
+                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
               >
+                {t("Pricing")}
                 <IoMdArrowDropdown
-                  className={`transition-transform ${
+                  className={`inline-block ml-2 transition-transform ${
                     dropdownOpen["pricing"] ? "rotate-180" : "rotate-0"
                   }`}
                   aria-hidden="true"
@@ -136,24 +158,28 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   <Link
                     to="/pricing/peo&eor"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("pricing")}
                   >
                     {t("PEO & EoR")} 
                   </Link>
                   <Link
                     to="/pricing/recruitment"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("pricing")}
                   >
                     {t("Recruitment")}
                   </Link>
                   <Link
                     to="/pricing/hrConsulting"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("pricing")}
                   >
                     {t("HR Consulting")} 
                   </Link>
                   <Link
                     to="/pricing/managedServices"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("pricing")}
                   >
                     {t("Managed Services")} 
                   </Link>
@@ -180,7 +206,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               {t("Contact Us")} 
             </Link>
 
-
+            {/* Language Selector */}
             <div className="relative flex items-center ">
               <button
                 onClick={() => toggleDropdown("language")}
@@ -208,23 +234,25 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                 </div>
               )}
             </div>
-
             <Link
-              to="/jobVacancies"
-              className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer"
-            >
-              {t("Job Vacancies")} 
-            </Link>
-
-            
+            to="/jobVacancies"
+            className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer"
+          >
+            {t("Job Vacancies")} 
+          </Link>
           </div>
-
-          <div className="md:hidden">
+          <div className="-mr-2 flex md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-black hover:bg-orange-200 px-3 py-2 rounded-md text-sm font-medium"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-200 focus:ring-black-500"
+              aria-controls="mobile-menu"
+              aria-expanded={isOpen}
             >
-              <FaBarsStaggered />
+              {isOpen ? (
+                <IoMdClose className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <FaBarsStaggered className="block h-6 w-6" aria-hidden="true" />
+              )}
             </button>
           </div>
         </div>

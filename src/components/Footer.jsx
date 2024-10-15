@@ -1,5 +1,7 @@
-import React from 'react'
-import './Footer.css'
+import React from 'react';
+import './Footer.css';
+import "./PrivacyPolicy";
+
 const Footer = () => {
   return (
    <>
@@ -25,7 +27,7 @@ const Footer = () => {
   <li><a href="#">Frequently Asked Questions</a></li>
   <li><a href="#">About Recruitindo</a></li>
   <li><a href="#">Terms of Service</a></li>
-  <li><a href="#">Privacy Policy</a></li>
+  <li><a href="/privacy-policy">Privacy Policy</a></li>
 </ul>
 </div>
 <div className="footer_links2">

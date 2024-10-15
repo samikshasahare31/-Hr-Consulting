@@ -20,6 +20,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "../public/i18n";
 import Footer from "./components/Footer";
 import ApplyTalent from "./components/services/applyTalent/ApplyTalent";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
               element={<PricingManagedServices />}
             />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+
           </Routes>
         </BrowserRouter>
       </I18nextProvider>
