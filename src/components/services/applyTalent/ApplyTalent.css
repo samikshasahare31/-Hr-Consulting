@@ -147,14 +147,12 @@ body {
 
 @media screen and (max-width: 768px) {
     .apply-heading{
-        margin-top: 10%;
+        margin-top: 5%;
     }
-    
     
     .apply-content {
         width: 100%;
         padding: 6%;
-        margin-top: 15%;
     }
 
     .upload-title {

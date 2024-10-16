@@ -184,7 +184,6 @@ body {
 @media screen and (max-width: 768px) {
     .pricing-container {
         flex-direction: column;
-        margin-top: 20%;
     }
 
     .pricing-content, .pricing-details {
