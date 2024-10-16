@@ -226,7 +226,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     {t("English")}
                   </button>
                   <button
-                    onClick={() => handleLanguageChange("Hindi")}
+                    onClick={() => handleLanguageChange("हिंदी")}
                     className="block w-full text-left px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   >
                     {t("Hindi")}
