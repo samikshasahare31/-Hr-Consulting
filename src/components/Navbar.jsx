@@ -132,6 +132,13 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   >
                     {t("Managed Services")}
                   </Link>
+                  <Link
+                    to="/services/payrollProcessing"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("services")}
+                  >
+                    {t("PayrollProcessing")}
+                  </Link>
                 </div>
               )}
             </div>
@@ -182,6 +189,13 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     onClick={() => handleLinkClick("pricing")}
                   >
                     {t("Managed Services")}
+                  </Link>
+                  <Link
+                    to="/pricing/payrollProcessing"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("pricing")}
+                  >
+                    {t("PayrollProcessing")}
                   </Link>
                 </div>
               )}
@@ -312,6 +326,13 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   >
                     {t("Managed Services")}
                   </Link>
+                  <Link
+                    to="/services/payrollProcessing"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobileServices")}
+                  >
+                    {t("PayrollProcessing")}
+                  </Link>
                 </div>
               )}
             </div>
@@ -360,6 +381,13 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     onClick={() => handleLinkClick("mobilePricing")}
                   >
                     {t("Managed Services")}
+                  </Link>
+                  <Link
+                    to="/pricing/payrollProcessing"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobilePricing")}
+                  >
+                    {t("PayrollProcessing")}
                   </Link>
                 </div>
               )}
