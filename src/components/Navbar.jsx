@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { IoMdClose, IoMdArrowDropdown } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
   const { t, i18n } = useTranslation();
@@ -77,7 +77,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               </Link>
             </div>
           </div>
-          <div className="hidden md:flex items-center ml-auto space-x-4 text-black">
+          <div className="flex items-center ml-auto space-x-4 text-black hidden lg:flex">
             <Link
               to="/aboutUs"
               className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
@@ -124,13 +124,6 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     onClick={() => handleLinkClick("services")}
                   >
                     {t("HR Consulting")}
-                  </Link>
-                  <Link
-                    to="/services/payrollProcessing"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("services")}
-                  >
-                    {t("Payroll Processing")}
                   </Link>
                   <Link
                     to="/services/managedServices"
@@ -184,13 +177,6 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     {t("HR Consulting")}
                   </Link>
                   <Link
-                    to="/pricing/payrollProcessing"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("pricing")}
-                  >
-                    {t("Payroll Processing")}
-                  </Link>
-                  <Link
                     to="/pricing/managedServices"
                     className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                     onClick={() => handleLinkClick("pricing")}
@@ -240,7 +226,7 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                     {t("English")}
                   </button>
                   <button
-                    onClick={() => handleLanguageChange("हिंदी")}
+                    onClick={() => handleLanguageChange("Hindi")}
                     className="block w-full text-left px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
                   >
                     {t("Hindi")}
@@ -249,217 +235,192 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
               )}
             </div>
             <Link
-              to="/jobVacancies"
-              className="btn btn-warning text-black px-4 md:px-12 py-2 rounded-md hover:text-white hover:bg-warning-600 duration-300 cursor-pointer"
-            >
-              {t("Job Vacancies")}
-            </Link>
+            to="/jobVacancies"
+            className="btn btn-warning text-black-300 hover:bg-warning-600 hover:text-white rounded-md text-sm font-small cursor-pointer"
+            // className=" text-black px-4 md:px-12 py-2 rounded-md hover:text-white  duration-300 cursor-pointer"
+          >
+            {t("Job Vacancies")} 
+          </Link>
+
           </div>
-          <div className="-mr-2 flex md:hidden">
+
+          {/* Mobile Menu Button */}
+          <div className="flex lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-200 focus:ring-black-500"
-              aria-controls="mobile-menu"
-              aria-expanded={isOpen}
+              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
             >
-              {isOpen ? (
-                <IoMdClose className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <FaBarsStaggered className="block h-6 w-6" aria-hidden="true" />
-              )}
+              {isOpen ? <IoMdClose size={24} /> : <FaBarsStaggered size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-base-100 transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out md:hidden z-40`}
-      >
-        <div className="flex items-center justify-between p-4 bg-base-100">
-          <div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden">
+          <div className="flex flex-col space-y-2 bg-base-100 p-4">
             <Link
-              to="/"
-              className="text-black font-bold text-xl  m-3"
-              onClick={toggleMenu}
+              to="/aboutUs"
+              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
             >
-              {t("TEN HR Consulting")}
+              {t("About")}
             </Link>
-          </div>
-          <div className="flex items-center justify-end">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="text-gray-400 hover:text-white hover:bg-gray-800 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded={isOpen}
-            >
-              <IoMdClose className="block h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-
-        <div className="p-4 text-black">
-          <Link
-            to="/aboutUs"
-            className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
-            onClick={toggleMenu}
-          >
-            {t("About")}
-          </Link>
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("mobileServices")}
-              className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium w-full text-left focus:outline-none"
-            >
-              {t("Services")}
-              <IoMdArrowDropdown
-                className={`inline-block ml-2 transition-transform ${
-                  dropdownOpen["mobileServices"] ? "rotate-180" : "rotate-0"
-                }`}
-                aria-hidden="true"
-              />
-            </button>
-            {dropdownOpen["mobileServices"] && (
-              <div
-                className="mt-1 w-full bg-base-100 rounded-md shadow-lg"
-                ref={(el) => (dropdownRefs.current["mobileServices"] = el)}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("mobileServices")}
+                className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium w-full text-left focus:outline-none"
               >
-                <Link
-                  to="/services/peo&eor"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
+                {t("Services")}
+                <IoMdArrowDropdown
+                  className={`inline-block ml-2 transition-transform ${
+                    dropdownOpen["mobileServices"] ? "rotate-180" : "rotate-0"
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
+              {dropdownOpen["mobileServices"] && (
+                <div
+                  className="mt-1 w-full bg-base-100 rounded-md shadow-lg"
+                  ref={(el) => (dropdownRefs.current["mobileServices"] = el)}
                 >
-                  {t("PEO & EoR")}
-                </Link>
-                <Link
-                  to="/services/recruitment"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
-                >
-                  {t("Recruitment")}
-                </Link>
-                <Link
-                  to="/services/hrConsulting"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
-                >
-                  {t("HR Consulting")}
-                </Link>
-                <Link
-                  to="/services/managedServices"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
-                >
-                  {t("Managed Services")}
-                </Link>
-              </div>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("mobilePricing")}
-              className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium w-full text-left focus:outline-none"
-            >
-              {t("Pricing")}
-              <IoMdArrowDropdown
-                className={`inline-block ml-2 transition-transform ${
-                  dropdownOpen["mobilePricing"] ? "rotate-180" : "rotate-0"
-                }`}
-                aria-hidden="true"
-              />
-            </button>
-            {dropdownOpen["mobilePricing"] && (
-              <div
-                className="mt-1 w-full bg-base-100 rounded-md shadow-lg"
-                ref={(el) => (dropdownRefs.current["mobilePricing"] = el)}
+                  <Link
+                    to="/services/peo&eor"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobileServices")}
+                  >
+                    {t("PEO & EoR")}
+                  </Link>
+                  <Link
+                    to="/services/recruitment"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobileServices")}
+                  >
+                    {t("Recruitment")}
+                  </Link>
+                  <Link
+                    to="/services/hrConsulting"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobileServices")}
+                  >
+                    {t("HR Consulting")}
+                  </Link>
+                  <Link
+                    to="/services/managedServices"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobileServices")}
+                  >
+                    {t("Managed Services")}
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("mobilePricing")}
+                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium flex"
               >
-                <Link
-                  to="/pricing/peo&eor"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
+                {t("Pricing")}
+                <IoMdArrowDropdown
+                  className={`inline-block ml-2 transition-transform ${
+                    dropdownOpen["mobilePricing"] ? "rotate-180" : "rotate-0"
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
+              {dropdownOpen["mobilePricing"] && (
+                <div
+                  className="bg-base-100 rounded-md shadow-lg mt-1 w-full"
+                  ref={(el) => (dropdownRefs.current["mobilePricing"] = el)}
                 >
-                  {t("PEO & EoR")}
-                </Link>
-                <Link
-                  to="/pricing/recruitment"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
-                >
-                  {t("Recruitment")}
-                </Link>
-                <Link
-                  to="/pricing/hrConsulting"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
-                >
-                  {t("HR Consulting")}
-                </Link>
-                <Link
-                  to="/pricing/managedServices"
-                  className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                  onClick={toggleMenu}
-                >
-                  {t("Managed Services")}
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link
-            to="/calculator"
-            className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            {t("Calculator")}
-          </Link>
-          <Link
-            to="/resources"
-            className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            {t("Resources")}
-          </Link>
-          <Link
-            to="/contactUs"
-            className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            {t("Contact Us")}
-          </Link>
-
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("mobileLanguage")}
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block w-full px-3 py-2 rounded-md text-base font-medium flex"
+                  <Link
+                    to="/pricing/peo&eor"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobilePricing")}
+                  >
+                    {t("PEO & EoR")}
+                  </Link>
+                  <Link
+                    to="/pricing/recruitment"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobilePricing")}
+                  >
+                    {t("Recruitment")}
+                  </Link>
+                  <Link
+                    to="/pricing/hrConsulting"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobilePricing")}
+                  >
+                    {t("HR Consulting")}
+                  </Link>
+                  <Link
+                    to="/pricing/managedServices"
+                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    onClick={() => handleLinkClick("mobilePricing")}
+                  >
+                    {t("Managed Services")}
+                  </Link>
+                </div>
+              )}
+            </div>
+            <Link
+              to="/calculator"
+              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
             >
-              {selectedLanguage}
-              <IoMdArrowDropdown />
-            </button>
-            {dropdownOpen["mobileLanguage"] && (
-              <div className="mt-1 space-y-1">
-                <button
-                  onClick={() => handleLanguageChange("English")}
-                  className="block w-full text-left px-4 py-2 text-base text-black-300 hover:bg-orange-200 hover:text-orange-600"
+              {t("Calculator")}
+            </Link>
+            <Link
+              to="/resources"
+              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {t("Resources")}
+            </Link>
+            <Link
+              to="/contactUs"
+              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {t("Contact Us")}
+            </Link>
+
+            {/* Language Selector */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("mobileLanguage")}
+                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium flex"
+              >
+                {selectedLanguage} <IoMdArrowDropdown />
+              </button>
+              {dropdownOpen["mobileLanguage"] && (
+                <div
+                  className="bg-base-100 rounded-md shadow-lg mt-1 w-full"
+                  ref={(el) => (dropdownRefs.current["mobileLanguage"] = el)}
                 >
-                  {t("English")}
-                </button>
-                <button
-                  onClick={() => handleLanguageChange("हिंदी")}
-                  className="block w-full text-left px-4 py-2 text-base text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                >
-                  {t("Hindi")}
-                </button>
-              </div>
-            )}
-          </div>
-          <Link
+                  <button
+                    onClick={() => handleLanguageChange("English")}
+                    className="block w-full text-left px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                  >
+                    {t("English")}
+                  </button>
+                  <button
+                    onClick={() => handleLanguageChange("हिंदी")}
+                    className="block w-full text-left px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                  >
+                    {t("Hindi")}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <Link
             to="/jobVacancies"
             className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
           >
-            {t("Job Vacancies")}
+            {t('Job Vacancies')}
           </Link>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
