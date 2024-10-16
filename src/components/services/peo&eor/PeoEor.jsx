@@ -7,6 +7,9 @@ import { peoPricing } from "../../../assets/data/peoPricing";
 import rightArrow from "../../../assets/images/right-arrow.svg";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import ServicesPEO1 from "../../../assets/images/ServicesPEO1.jpg";
+import ServicesPEO2 from "../../../assets/images/ServicesPEO2.jpg";
+import ServicesPEO3 from "../../../assets/images/ServicesPEO3.jpg";
 
 function PeoEor() {
   const { t } = useTranslation();
@@ -19,7 +22,7 @@ function PeoEor() {
   const peoResources = [
     {
       id: 0,
-      img: "https://recruitindo.com/wp-content/uploads/2023/12/eliminate.png",
+      img: ServicesPEO1,
       article: t("Articles"),
       resources: t("Resources"),
       title: t(
@@ -31,7 +34,7 @@ function PeoEor() {
     },
     {
       id: 1,
-      img: "https://recruitindo.com/wp-content/uploads/2023/12/recruitindo-by-number-1024x682.jpeg",
+      img: ServicesPEO2,
       article: t("Articles"),
       resources: t("Resources"),
       title: t(
@@ -43,7 +46,7 @@ function PeoEor() {
     },
     {
       id: 2,
-      img: "https://recruitindo.com/wp-content/uploads/2024/01/search-solution-1024x768.jpeg",
+      img: ServicesPEO3,
       article: t("Articles"),
       resources: t("Resources"),
       title: t(

@@ -2,13 +2,16 @@ import React from "react";
 import "./PeoEor.css";
 import { peoPricing } from "../../../assets/data/peoPricing";
 import { useTranslation } from "react-i18next";
+import PricingPEO1 from "../../../assets/images/PricingPEO1.png";
+import PricingPEO2 from "../../../assets/images/PricingPEO2.webp";
+import PricingPEO3 from "../../../assets/images/PricingPEO3.jpg";
 
 function PricingPeoEor() {
   const { t } = useTranslation();
   const peoResources = [
     {
       id: 0,
-      img: "https://recruitindo.com/wp-content/uploads/2023/12/Job-Vacancies-1024x576.jpg",
+      img: PricingPEO1,
       article: "Articles",
       resources: " ",
       title:
@@ -17,7 +20,7 @@ function PricingPeoEor() {
     },
     {
       id: 1,
-      img: "https://recruitindo.com/wp-content/uploads/2024/01/cytonn-photography-GJao3ZTX9gU-unsplash-1024x684.jpg",
+      img: PricingPEO2,
       article: "Articles",
       resources: " ",
       title:
@@ -26,7 +29,7 @@ function PricingPeoEor() {
     },
     {
       id: 2,
-      img: "https://recruitindo.com/wp-content/uploads/2024/01/impact-1024x683.jpeg",
+      img: PricingPEO3,
       article: "Articles",
       resources: " ",
       title: "The Effect of Executive Placements on Indian Business Growth",
