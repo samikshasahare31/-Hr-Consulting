@@ -1,195 +1,252 @@
-.pricing-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 72rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pricing-card {
-  flex: 1;
-  background-color: #1e3a8a;
-  color: white;
-  padding: 2rem;
-  border-radius: 1.5rem;
-}
-
-.pricing-card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.pricing-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.pricing-headline {
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: white;
-}
-
-.schedule-button {
-  background-color: #fb923c;
-  color: #1e3a8a;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.schedule-button:hover {
-  background-color: #f97316;
-}
-
-.pricing-illustration {
-  width: 12rem;
-  height: 12rem;
-  object-fit: contain;
-  margin-top: auto;
-}
-
-.pricing-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.pricing-description {
-  color: #4b5563;
-}
-
-.pricing-tier {
-  background-color: #f3f4f6;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-.pricing-tier-title {
-  font-size: 0.875rem;
-  color: #4b5563;
-}
-
-.pricing-tier-price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1e3a8a;
-}
-
-.pricing-tier-description {
-  font-size: 0.875rem;
-  color: #4b5563;
-}
-
-@media (min-width: 768px) {
-  .pricing-container {
-    flex-direction: row;
-  }
-}
-
-.pricing-card {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-}
-
-.pricing-card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.pricing-title {
-  font-size: 0.875rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0;
-  opacity: 0.8;
-}
-
-.pricing-headline {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.schedule-button {
-  background-color: #fbbf24;
-  color: #1e3a8a;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-
-.schedule-button:hover {
-  background-color: #f59e0b;
-}
-
-.schedule-button {
-  background-color: #ffbd59;
-  color: #1a237e;
+body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+}
+
+.payroll-landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-section {
+  flex: 1 1 400px;
+  margin-right: 40px;
+}
+
+.subtitle {
+  color: #1e3a8a;
+  font-size: 14px;
   font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  color: #1e3a8a;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  float: right;
+}
+
+.description {
+  color: #4b5563;
   font-size: 16px;
-  padding: 12px 20px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.schedule-button {
+  background-color: #f97316;
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .schedule-button:hover {
-  background-color: #ffb300;
+  background-color: #ea580c;
 }
 
-.schedule-button::after {
+.arrow {
   margin-left: 8px;
 }
 
-.contactt-button {
-  background-color: #ffbd59;
-  color: #1a237e;
-  width: 31.4%;
-  border: none;
-  padding: 12px 24px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
+.image-section {
+  flex: 1 1 600px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.payroll-progress {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
   align-items: center;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.contact-button:hover {
-  background-color: #ffbd59;
+.payroll-progress svg {
+  margin-left: 8px;
 }
 
-.contact-button .arrow {
-  margin-left: 10px;
+.payroll-list {
+  position: absolute;
+  bottom: -80px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+}
+
+.payroll-list h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: #1e3a8a;
+}
+
+.employee-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.employee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f97316;
+  margin-right: 12px;
+}
+
+.employee-name {
+  flex: 1;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.employee-amount {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.employee-card {
+  position: absolute;
+  top: 60px;
+  right: -80px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 240px;
+}
+
+.employee-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.employee-header .employee-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.employee-header .employee-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e3a8a;
+}
+
+.salary-info {
+  margin-bottom: 16px;
+}
+
+.salary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.salary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e3a8a;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .payroll-landing {
+    flex-direction: column;
+  }
+
+  .content-section {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .image-section {
+    margin-top: 60px;
+  }
+
+  .employee-card {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .payroll-list {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .schedule-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .payroll-progress {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .employee-card,
+  .payroll-list {
+    padding: 15px;
+  }
 }
 
 /* popup css */
+
 
 .popup-overlay {
   position: fixed;
@@ -233,6 +290,8 @@
   --color-gray-400: #9ca3af;
   --color-gray-700: #374151;
 }
+
+
 
 .container {
   max-width: 1200px;
@@ -378,6 +437,8 @@ select {
   width: 66.666667%;
 }
 
+
+
 /* Responsive design */
 @media (max-width: 768px) {
   .form-container {
@@ -399,7 +460,7 @@ textarea {
 }
 
 .required-field::after {
-  content: "*";
+  content: '*';
   color: red;
   margin-left: 2px;
 }
