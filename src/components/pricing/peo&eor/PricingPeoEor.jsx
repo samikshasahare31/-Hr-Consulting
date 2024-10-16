@@ -12,8 +12,8 @@ function PricingPeoEor() {
       article: "Articles",
       resources: " ",
       title:
-        "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
-      text: "Introduction In the age of globalization and digital transformation, the ability to manage remote teams effectively",
+        "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies",
+      text: "Overview The capacity to efficiently lead distant teams in the era of globalization and digital transformation.",
     },
     {
       id: 1,
@@ -21,17 +21,16 @@ function PricingPeoEor() {
       article: "Articles",
       resources: " ",
       title:
-        "Detailed Analysis of Key Regulations: A Deep Dive into Indonesian Labor Laws",
-      text: "As Indonesia emerges as a vibrant business hub in Southeast Asia, the complexities of its employment",
+        "A Comprehensive Examination of Important Provisions: An In-Depth Look at Indian Labor Laws",
+      text: "The difficulties of finding work in India, which is becoming a thriving economic hub in Southeast Asia.",
     },
     {
       id: 2,
       img: "https://recruitindo.com/wp-content/uploads/2024/01/impact-1024x683.jpeg",
       article: "Articles",
       resources: " ",
-      title:
-        "Strategic Executive Search Solutions for Indonesia’s Top Businesses: Customized Approaches for Success",
-      text: "Indonesia, an emerging market with a dynamic economy, houses a multitude of businesses that continue to",
+      title: "The Effect of Executive Placements on Indian Business Growth",
+      text: "A thriving economy with enormous potential, India has emerged as a major location for corporate growth. As many.",
     },
   ];
 
@@ -97,7 +96,7 @@ function PricingPeoEor() {
           ))}
         </div>
         <button className="peoResource-btn">
-          <a href="/resources">{t('Our Resources')}</a>
+          <a href="/resources">{t("Our Resources")}</a>
         </button>
       </div>
     </div>

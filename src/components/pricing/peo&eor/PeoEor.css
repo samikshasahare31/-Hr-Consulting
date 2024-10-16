@@ -1,7 +1,6 @@
 .peo-container {
   width: 100%;
   height: auto;
-  margin-top: 11vh;
 }
 
 .peo-pricing {
@@ -10,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
+  padding: 2rem 0 3rem 0;
 }
 
 .peo-pricing h2 {
@@ -216,9 +215,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .peo-pricing-cards {
-    width: 92.5%;
+    width: 95%;
+  }
+
+  .peo-pricing-card {
+    width: 49%;
   }
 
   .peo-pricing-card ul {
@@ -236,7 +239,8 @@
   }
 
   .peo-pricing-btn {
-    width: 30%;
+    width: 35%;
+    font-size: 1.25rem;
   }
 
   .peo-resource-cards {

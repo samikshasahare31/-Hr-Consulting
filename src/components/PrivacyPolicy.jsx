@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
 
       <h2 className="privacy-policy-section">Who We Are</h2>
       <p className="privacy-policy-text">
-        Welcome to HR Consultancy (referred to as "we," "our," or "us"). We are committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website: <a href="https://www.entrepreneurshipnetwork.net/">https://www.entrepreneurshipnetwork.net</a> or use our services. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.
+        Welcome to HR Consultancy (referred to as "we," "our," or "us"). We are committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website: <a href="https://www.entrepreneurshipnetwork.net/">www.entrepreneurshipnetwork.net</a> or use our services. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.
       </p>
 
       <h2 className="privacy-policy-section">Comments</h2>

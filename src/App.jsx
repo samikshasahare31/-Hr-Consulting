@@ -21,6 +21,8 @@ import i18n from "../public/i18n";
 import Footer from "./components/Footer";
 import ApplyTalent from "./components/services/applyTalent/ApplyTalent";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import PayrollProcessing from "./components/services/payrollProcessing/PayrollProcessing";
+import PricingPayrollProcessing from "./components/pricing/payrollProcessing/PricingPayrollProcessing";
 
 function App() {
   return (
@@ -39,6 +41,10 @@ function App() {
             <Route path="/services/recruitment" element={<Recruitment />} />
             <Route path="/services/hrConsulting" element={<HrConsulting />} />
             <Route
+              path="/services/payrollProcessing"
+              element={<PayrollProcessing />}
+            />
+            <Route
               path="/services/managedServices"
               element={<ManagedServices />}
             />
@@ -54,13 +60,15 @@ function App() {
               element={<PricHrConsulting />}
             />
             <Route
+              path="/pricing/payrollProcessing"
+              element={<PricingPayrollProcessing />}
+            />
+            <Route
               path="/pricing/managedServices"
               element={<PricingManagedServices />}
             />
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
-
           </Routes>
         </BrowserRouter>
       </I18nextProvider>
