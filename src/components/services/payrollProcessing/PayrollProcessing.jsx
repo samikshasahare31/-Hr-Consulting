@@ -5,7 +5,6 @@ import Cart2 from "./Cart2";
 import Pricing from "./Pricing";
 import Contact from "./Contact";
 // import Resources from "./Resources";
-import Footer from "../../Footer";
 
 function PayrollProcessing() {
   return (
@@ -43,12 +42,6 @@ function PayrollProcessing() {
       {/* Resources components */}
 
       <section>{/* <Resources /> */}</section>
-
-      {/* Footer components */}
-
-      <section>
-        <Footer />
-      </section>
     </>
   );
 }
