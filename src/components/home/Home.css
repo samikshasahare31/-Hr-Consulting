@@ -1,6 +1,8 @@
 .main-container {
   position: relative;
   display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  padding-right: 8%;
   flex-direction: column;
   height: 900px; /* Ensure the main container takes the full height */
   overflow: hidden; /* Hide any overflow from absolute elements */
@@ -17,6 +19,7 @@
   background-color: orange; /* Background color */
   z-index: 0; /* Ensure it's behind the content */
 }
+
 .form-row {
   display: flex;
   justify-content: space-between;
@@ -29,12 +32,10 @@
 
 .form-container {
   display: flex;
-  justify-content: center; /* Center the form */
-  padding: 2rem;
-  min-height: 100vh; /* Ensure the form container takes the full height */
-  font-family: Arial, sans-serif;
-  position: relative; /* Ensure it positions correctly */
-  z-index: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .content {
@@ -44,12 +45,9 @@
 }
 
 .text-section {
-  flex: 1; /* Make this section flexible */
-  margin-right: 1rem 0;
-  padding-top: 100px;
-  padding: 0 40px;
-  width: 40%;
-  font-size: 20px;
+  margin-top: 15%;
+  margin-left: 5rem;
+  flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
 .avatar-section {
@@ -66,13 +64,15 @@
 .text-section h1 {
   font-size: 3.2rem;
   color: #1d3b6b;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+  text-align: start;
 }
 
 .text-section p {
   font-size: 1rem;
   color: #606060;
   line-height: 1.6;
+  width: 80%;
 }
 
 .scroll-instruction {
@@ -81,20 +81,17 @@
   color: #a0a0a0;
 }
 .form-background {
-  padding: 2rem; /* Add padding around the form section */
-  display: flex;
-  justify-content: center;
+  flex: 1 1 35%; /* This will allow the form to shrink when needed */
+  max-width: 500px; /* Maximum width for form */
+  position: relative; /* Ensure the form is above the background */
+  z-index: 1; 
 }
 /*form Section*/
 
 .form-section {
-  display: flex;
-  flex-direction: column;
   width: 100%; /* Full width */
   max-width: 700px; /* Maximum width for the form */
-  margin: 20px auto; /* Center the form and add vertical spacing */
   padding: 20px; /* Add padding to the form container */
-  margin-right: 60px;
   border-radius: 8px; /* Rounded corners for the form container */
   background-color: #fff; /* Background color for the form */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -595,9 +592,10 @@ textarea {
     padding: 0px; /* Reduce padding */
     height: auto;
   }
-  .text-section {
-    padding-top: 50px; /* Adjust top padding if necessary */
+  .main-container::before {
+    background-color: transparent; /* Background color */
   }
+  
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
@@ -605,6 +603,7 @@ textarea {
     order: 1; /* Ensures it comes after scroll instruction */
     width: 100%; /* Full width on smaller screens */
     margin-top: 1rem;
+    margin-left: 2rem;
     padding: 1rem;
     background-color: none;
     height: auto;
@@ -615,8 +614,11 @@ textarea {
     margin-bottom: 1rem;
   }
   .form-container {
-    background-color: white;
-    z-index: 1;
+    flex-direction: column;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-top: 20px;
   }
   .partner-content,
   .compliance-content {
