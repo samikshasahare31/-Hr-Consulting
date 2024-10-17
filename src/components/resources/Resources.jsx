@@ -42,7 +42,7 @@ const Resources = () => {
         <div className="resource-card-section">
           {currentCards.map((ele, index) => (
             <>
-              <div key={index} className="card">
+              <div key={index} className="resource-card">
                 <img src={ele.img} alt="" />
                 <div className="card-btn">
                   <button className="article-btn"> {t(ele.article)} </button>
