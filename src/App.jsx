@@ -7,7 +7,7 @@ import AboutUs from "./components/aboutUs/AboutUs";
 import ContactUs from "./components/contactUs/ContactUs";
 import Resources from "./components/resources/Resources";
 import HrConsulting from "./components/services/hrConsulting/HrConsulting";
-import PricHrConsulting from "./components/pricing/hrConsulting/PricHrConsulting";
+import PricingHrConsulting from "./components/pricing/hrConsulting/PricingHrConsulting";
 import ManagedServices from "./components/services/managedServices/ManagedServices";
 import Recruitment from "./components/services/recruitment/Recruitment";
 import PeoEor from "./components/services/peo&eor/PeoEor";
@@ -58,7 +58,7 @@ function App() {
             <Route path="/applyTalent" element={<ApplyTalent />} />
             <Route
               path="/pricing/hrConsulting"
-              element={<PricHrConsulting />}
+              element={<PricingHrConsulting />}
             />
             <Route
               path="/pricing/payrollProcessing"
