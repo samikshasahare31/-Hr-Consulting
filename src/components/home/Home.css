@@ -733,6 +733,14 @@ textarea {
     padding: 10px; /* Add padding for spacing */
     font-size: 16px;
   }
+  .partner-image-container img,
+  .compliance-image-container img,
+  .cost-image-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    max-height: 100%; /* Limit height to prevent overflow */
+  }
 }
 @media (min-width: 768px) {
   .partner-content {
