@@ -3,13 +3,11 @@
   margin: 0 auto;
   padding: 1.5rem 0 3rem 0;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .content-section {
   width: 50%;
-  flex: 1 1 400px;
   margin: 0 40px;
 }
 
@@ -71,129 +69,17 @@
   margin: 0 auto;
 }
 
-.payroll-progress {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #1e3a8a;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.payroll-progress svg {
-  margin-left: 8px;
-}
-
-.payroll-list {
-  position: absolute;
-  bottom: -80px;
-  right: 20px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;
-}
-
-.payroll-list h3 {
-  margin: 0 0 16px;
-  font-size: 18px;
-  color: #1e3a8a;
-}
-
-.employee-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.employee-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #f97316;
-  margin-right: 12px;
-}
-
-.employee-name {
-  flex: 1;
-  font-size: 14px;
-  color: #4b5563;
-}
-
-.employee-amount {
-  font-weight: 600;
-  color: #1e3a8a;
-}
-
-.employee-card {
-  position: absolute;
-  top: 60px;
-  right: -80px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  width: 240px;
-}
-
-.employee-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.employee-header .employee-avatar {
-  width: 40px;
-  height: 40px;
-}
-
-.employee-header .employee-name {
-  font-weight: 600;
-  font-size: 16px;
-  color: #1e3a8a;
-}
-
-.salary-info {
-  margin-bottom: 16px;
-}
-
-.salary-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #4b5563;
-}
-
-.salary-total {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 16px;
-  color: #1e3a8a;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 12px;
-  margin-top: 12px;
-}
-
 @media (max-width: 1024px) {
   .payroll-landing {
-    flex-direction: column;
+    width: 95%;
   }
 
-  .content-section {
-    margin-right: 0;
-    margin-bottom: 40px;
+  .title {
+    font-size: 30px;
   }
 
-  .image-section {
-    margin-top: 60px;
+  .main-image {
+    width: 90%;
   }
 
   .employee-card {
@@ -209,7 +95,15 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .payroll-landing {
+    width: 97.5%;
+  }
+
+  .main-image {
+    width: 95%;
+  }
+
   .title {
     font-size: 28px;
   }
@@ -219,24 +113,53 @@
   }
 
   .schedule-button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .payroll-progress {
-    top: 10px;
-    right: 10px;
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  .employee-card,
-  .payroll-list {
-    padding: 15px;
+    width: 65%;
   }
 }
 
-/* popup css */
+@media (max-width: 550px) {
+  .payroll-landing {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .content-section {
+    width: 100%;
+  }
+
+  .content-section .title {
+    font-size: 21px;
+  }
+
+  .content-section .description {
+    font-size: 12px;
+  }
+
+  .payroll-landing .schedule-button {
+    width: 45%;
+  }
+
+  .image-section {
+    width: 100%;
+  }
+
+  .schedule-button {
+    width: 65%;
+  }
+}
+
+@media (max-width: 468px) {
+  .content-section {
+    margin: 0 15px;
+  }
+
+  .payroll-landing .schedule-button {
+    width: 50%;
+    font-size: 12px;
+  }
+}
+
+/*                                         popup css */
 
 .popup-overlay {
   position: fixed;
@@ -269,7 +192,7 @@
   cursor: pointer;
 }
 
-/* form css */
+/*                                          form css */
 
 :root {
   --color-primary: #1e3a8a;

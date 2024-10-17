@@ -37,10 +37,8 @@
 }
 
 .checkmark {
-  /* position: absolute; */
   top: 20px;
   right: 10px;
-  bottom: -20px;
   width: 40px;
   height: 40px;
   background-color: #ffbd59;
@@ -50,7 +48,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .feature-card h3 {
@@ -80,24 +78,49 @@
   color: #ffbd59;
   position: absolute;
   left: 0;
+  font-size: 1rem;
 }
 
 @media (max-width: 1024px) {
   .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
+    width: 92.5%;
+    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .feature-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  h1 {
-    font-size: 24px;
+  .payroll-expertise h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-grid {
+    width: 95%;
   }
 
-  .feature-card {
-    min-height: auto;
+  .feature-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .payroll-expertise h1 {
+    font-size: 1rem;
+  }
+
+  .checkmark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .feature-card h3 {
+    font-size: 15px;
+  }
+
+  .feature-card li {
+    font-size: 12px;
   }
 }
