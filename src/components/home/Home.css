@@ -348,7 +348,7 @@ textarea {
 
 .cost-image-container {
   flex: 0 0 50%; /* Fixed width for the image container */
-  max-width: 50%; /* Ensure the image does not exceed 50% of the width */
+  max-width: 100%; /* Ensure the image does not exceed 50% of the width */
 }
 
 .cost-image {
