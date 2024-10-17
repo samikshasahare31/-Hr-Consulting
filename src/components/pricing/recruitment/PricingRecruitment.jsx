@@ -17,19 +17,19 @@ const PricingRecruitment = () => {
   
   return (
     <section>
-      {/* Recruitment Services Pricing Section */}
+      {/* Recruitment  Pricing Section */}
 
-      <div className="pricing-container">
-        <div className="pricing-content">
-          <h3 className="pricing">PRICING</h3>
-          <h2 className="pricing-title">Transparent Recruitment Services Pricing</h2>
-          <p className="pricing-description">Our pricing structure is designed to provide value, charging between 15-20% of the annual compensation, which includes bonuses and incentives (excluding ESOP). This ensures you only pay for the quality talent we deliver.</p>
+      <div className="pricing-recruitment-container">
+        <div className="pricing-recruitment-content">
+          <h3 className="pricing-recruitment">PRICING</h3>
+          <h2 className="pricing-recruitment-title">Transparent Recruitment Services Pricing</h2>
+          <p className="pricing-recruitment-description">Our pricing structure is designed to provide value, charging between 15-20% of the annual compensation, which includes bonuses and incentives (excluding ESOP). This ensures you only pay for the quality talent we deliver.</p>
           <div className='button'>
-            <button className="get-started-button">Get Started</button>
-            <button className="upload-cv-button" onClick={handleUploadCVClick}>Upload CV</button>
+            <button className="pricing-recruitment-get-started-button">Get Started</button>
+            <button className="pricing-recruitment-upload-cv-button" onClick={handleUploadCVClick}>Upload CV</button>
           </div>
         </div>
-        <div className="pricing-details">
+        <div className="pricing-recruitment-details">
           <h3>Comprehensive Recruitment Services Included in Our Package:</h3>
           <ul>
             <li>Candidate Screening</li>
@@ -37,8 +37,8 @@ const PricingRecruitment = () => {
             <li>Background Verification</li>
             <li>Ongoing Recruiter Support</li>
           </ul>
-          <p className="annual-compensation-note">1) The annual compensation package encompasses the 13-month THR (Religious Festive Allowance), ensuring a comprehensive financial benefit for employees.</p>
-          <p className="annual-compensation-note">2) Our goal is to simplify your recruitment process, offering clarity and confidence in our pricing structure while delivering exceptional talent solutions tailored to your needs.</p>
+          <p className="pricing-recruitment-annual-compensation-note">1) The annual compensation package encompasses the 13-month THR (Religious Festive Allowance), ensuring a comprehensive financial benefit for employees.</p>
+          <p className="pricing-recruitment-annual-compensation-note">2) Our goal is to simplify your recruitment process, offering clarity and confidence in our pricing structure while delivering exceptional talent solutions tailored to your needs.</p>
         </div>
       </div>
 

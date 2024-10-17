@@ -7,6 +7,9 @@ import { peoPricing } from "../../../assets/data/peoPricing";
 import rightArrow from "../../../assets/images/right-arrow.svg";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import ServicesPEO1 from "../../../assets/images/ServicesPEO1.jpg";
+import ServicesPEO2 from "../../../assets/images/ServicesPEO2.jpg";
+import ServicesPEO3 from "../../../assets/images/ServicesPEO3.jpg";
 
 function PeoEor() {
   const { t } = useTranslation();
@@ -19,38 +22,38 @@ function PeoEor() {
   const peoResources = [
     {
       id: 0,
-      img: "https://recruitindo.com/wp-content/uploads/2023/12/eliminate.png",
+      img: ServicesPEO1,
       article: t("Articles"),
       resources: t("Resources"),
       title: t(
-        "The Ultimate Guide to Executive Search in Indonesia: Analysing the Financial and Cultural Impact of Wrong Hires"
+        "The Complete Handbook of Executive Search in India: Examining the Economic and Cultural Effects of Poor Hiring"
       ),
       text: t(
-        "Introduction In today’s competitive business landscape, finding and retaining top executive talent is crucial."
+        "Overview Finding and keeping top executive talent is essential for the competitive corporate environment of today."
       ),
     },
     {
       id: 1,
-      img: "https://recruitindo.com/wp-content/uploads/2023/12/recruitindo-by-number-1024x682.jpeg",
+      img: ServicesPEO2,
       article: t("Articles"),
       resources: t("Resources"),
       title: t(
-        "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services"
+        "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies"
       ),
       text: t(
-        "Introduction In the age of globalisation and digital transformation, the ability to manage remote teams effectively"
+        "Overview In the era of digital change and globalization, the capacity to efficiently lead remote teams."
       ),
     },
     {
       id: 2,
-      img: "https://recruitindo.com/wp-content/uploads/2024/01/search-solution-1024x768.jpeg",
+      img: ServicesPEO3,
       article: t("Articles"),
       resources: t("Resources"),
       title: t(
-        "Strategic Executive Search Solutions for Indonesia’s Top Businesses"
+        "Strategic Executive Search Services for Leading Companies in India"
       ),
       text: t(
-        "In today’s fiercely competitive business landscape, finding the right talent to lead your organisation is more"
+        "Finding the proper people to run your company in the highly competitive business world of today is more."
       ),
     },
   ];
@@ -99,8 +102,8 @@ function PeoEor() {
               {data.id != peoBenefits.length ? (
                 <>
                   <img src={data.image} alt="" />
-                 
-                  <h2>{t(data.name)}</h2> 
+
+                  <h2>{t(data.name)}</h2>
                   <p>{t(data.desc)}</p>
                 </>
               ) : (
@@ -181,7 +184,7 @@ function PeoEor() {
           ))}
         </div>
         <button className="peoResource-btn">
-          <a href="/resources">{t('Our Resources')}</a>
+          <a href="/resources">{t("Our Resources")}</a>
         </button>
       </div>
     </div>

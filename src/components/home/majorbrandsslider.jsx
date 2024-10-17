@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "./Slider.css";
+// import "./slider.css";
 import "./major.css";
 
 const MajorBrandsSlider = [

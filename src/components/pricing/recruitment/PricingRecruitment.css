@@ -5,99 +5,105 @@ body {
 }
 
 /* Pricing Section */
-.pricing-container {
+
+.pricing-recruitment {
+    color: #949699;
+    font-weight: 500;
+}
+.pricing-recruitment-container {
+    margin: 3rem;
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     color: white;
-    margin: 8%;
-    border-radius: 10px;
-    background-color: transparent; 
+    background-color: transparent;
+    align-items: stretch; 
+    min-height: 500px; 
 }
 
-.pricing {
-    color: #949699;
-    font-weight: 500;
-}
-
-.pricing-content {
-    background-color: #0a3668;
-    flex: 1;
-    text-align: left;
+.pricing-recruitment-content,
+.pricing-recruitment-details {
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem; 
+    padding: 2rem;
+    background-color: #0a3668;
+    box-sizing: border-box;
+}
+
+.pricing-recruitment-content {
+    background-color: #0a3668;
+    text-align: left;
     border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px;
-
 }
 
-.pricing-title {
+.pricing-recruitment-details {
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pricing-recruitment-title {
     font-size: 1.8rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
-    font-weight: bold;
 }
 
-.pricing-description {
+.pricing-recruitment-description {
     font-size: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     color: #949699;
 }
 
-.get-started-button,
-.upload-cv-button {
+.pricing-recruitment-get-started-button,
+.pricing-recruitment-upload-cv-button {
     padding: 0.75rem 1.5rem;
     margin-bottom: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #e79522; 
+    background-color: #e79522;
     color: white;
     display: block;
     width: 160px;
 }
 
-.upload-cv-button {
+.pricing-recruitment-upload-cv-button {
     background-color: transparent;
     border: 2px solid #e79522;
     color: #e79522;
 }
 
-.pricing-details {
-    flex: 1;
-    padding-left: 2rem;
-    margin-top: 2.7rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 0 rgba(0, 0, 0, 0); 
+.pricing-recruitment-details h3 {
+    color: #5f5e5e !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 1.2rem !important;
 }
 
-.pricing-details h3 {
-    color: rgb(83, 82, 82);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.pricing-details ul {
+.pricing-recruitment-details ul {
     list-style-type: disc;
     padding: 0;
     margin: 0;
 }
 
-.pricing-details ul li {
+.pricing-recruitment-details ul li {
     font-size: 1rem;
     margin-left: 8%;
     margin-bottom: 0.5rem;
     color: #6f7072;
 }
 
-.annual-compensation-note {
-    font-size: 0.8rem;
-    margin-top: 12%;
+.pricing-recruitment-annual-compensation-note {
+    font-size: 1rem;
+    margin-top: 5%;
     color: #6f7072;
-} 
-
+    padding-right: 5%;
+    margin-bottom: 5%;
+}
 /* Resources and Articles Section */
 .resources-heading {
     text-align: center;
@@ -170,19 +176,27 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .pricing-container {
+    .pricing-recruitment-container {
         flex-direction: column;
-        margin-top: 20%;
     }
 
-    .pricing-content, .pricing-details {
+    .pricing-recruitment-content, .pricing-recruitment-details {
         width: 100%;
         margin: 0;
         padding: 1.5rem;
     }
+    .pricing-recruitment-content {
+        border-top-left-radius: 10px; 
+        border-top-right-radius: 10px;
+    }
+    
+    .pricing-recruitment-details {
+        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 
-    .get-started-button,
-    .upload-cv-button {
+    .pricing-recruitment-get-started-button,
+    .pricing-recruitment-upload-cv-button {
         width: 100%;
         margin-bottom: 1rem;
     }

@@ -2,36 +2,38 @@ import React from "react";
 import "./PeoEor.css";
 import { peoPricing } from "../../../assets/data/peoPricing";
 import { useTranslation } from "react-i18next";
+import PricingPEO1 from "../../../assets/images/PricingPEO1.png";
+import PricingPEO2 from "../../../assets/images/PricingPEO2.webp";
+import PricingPEO3 from "../../../assets/images/PricingPEO3.jpg";
 
 function PricingPeoEor() {
   const { t } = useTranslation();
   const peoResources = [
     {
       id: 0,
-      img: "https://recruitindo.com/wp-content/uploads/2023/12/Job-Vacancies-1024x576.jpg",
+      img: PricingPEO1,
       article: "Articles",
       resources: " ",
       title:
-        "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
-      text: "Introduction In the age of globalization and digital transformation, the ability to manage remote teams effectively",
+        "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies",
+      text: "Overview The capacity to efficiently lead distant teams in the era of globalization and digital transformation.",
     },
     {
       id: 1,
-      img: "https://recruitindo.com/wp-content/uploads/2024/01/cytonn-photography-GJao3ZTX9gU-unsplash-1024x684.jpg",
+      img: PricingPEO2,
       article: "Articles",
       resources: " ",
       title:
-        "Detailed Analysis of Key Regulations: A Deep Dive into Indonesian Labor Laws",
-      text: "As Indonesia emerges as a vibrant business hub in Southeast Asia, the complexities of its employment",
+        "A Comprehensive Examination of Important Provisions: An In-Depth Look at Indian Labor Laws",
+      text: "The difficulties of finding work in India, which is becoming a thriving economic hub in Southeast Asia.",
     },
     {
       id: 2,
-      img: "https://recruitindo.com/wp-content/uploads/2024/01/impact-1024x683.jpeg",
+      img: PricingPEO3,
       article: "Articles",
       resources: " ",
-      title:
-        "Strategic Executive Search Solutions for Indonesia’s Top Businesses: Customized Approaches for Success",
-      text: "Indonesia, an emerging market with a dynamic economy, houses a multitude of businesses that continue to",
+      title: "The Effect of Executive Placements on Indian Business Growth",
+      text: "A thriving economy with enormous potential, India has emerged as a major location for corporate growth. As many.",
     },
   ];
 
@@ -97,7 +99,7 @@ function PricingPeoEor() {
           ))}
         </div>
         <button className="peoResource-btn">
-          <a href="/resources">{t('Our Resources')}</a>
+          <a href="/resources">{t("Our Resources")}</a>
         </button>
       </div>
     </div>

@@ -1,6 +1,8 @@
 .main-container {
   position: relative;
   display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  padding-right: 8%;
   flex-direction: column;
   height: 900px; /* Ensure the main container takes the full height */
   overflow: hidden; /* Hide any overflow from absolute elements */
@@ -17,6 +19,7 @@
   background-color: orange; /* Background color */
   z-index: 0; /* Ensure it's behind the content */
 }
+
 .form-row {
   display: flex;
   justify-content: space-between;
@@ -29,12 +32,10 @@
 
 .form-container {
   display: flex;
-  justify-content: center; /* Center the form */
-  padding: 2rem;
-  min-height: 100vh; /* Ensure the form container takes the full height */
-  font-family: Arial, sans-serif;
-  position: relative; /* Ensure it positions correctly */
-  z-index: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .content {
@@ -44,12 +45,9 @@
 }
 
 .text-section {
-  flex: 1; /* Make this section flexible */
-  margin-right: 1rem 0;
-  padding-top: 100px;
-  padding: 0 40px;
-  width: 50%;
-  font-size: 20px;
+  margin-top: 7%;
+  margin-left: 5rem;
+  flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
 .avatar-section {
@@ -66,33 +64,40 @@
 .text-section h1 {
   font-size: 3.2rem;
   color: #1d3b6b;
-  margin: 1rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: start;
 }
 
 .text-section p {
   font-size: 1rem;
   color: #606060;
   line-height: 1.6;
+  width: 80%;
 }
 
 .scroll-instruction {
   margin-top: 2rem;
+  display: flex;
   font-size: 0.9rem;
   color: #a0a0a0;
 }
+
+.two_elementor_element{
+  margin-top: 7px;
+  margin-right: 10px;
+}
 .form-background {
-  padding: 2rem; /* Add padding around the form section */
-  display: flex;
-  justify-content: center;
+  flex: 1 1 35%; /* This will allow the form to shrink when needed */
+  max-width: 500px; /* Maximum width for form */
+  position: relative; /* Ensure the form is above the background */
+  z-index: 1; 
 }
 /*form Section*/
 
 .form-section {
-  display: flex;
-  flex-direction: column;
   width: 100%; /* Full width */
-  max-width: 800px; /* Maximum width for the form */
-  margin: 20px auto; /* Center the form and add vertical spacing */
+  max-width: 700px; /* Maximum width for the form */
   padding: 20px; /* Add padding to the form container */
   border-radius: 8px; /* Rounded corners for the form container */
   background-color: #fff; /* Background color for the form */
@@ -145,7 +150,7 @@ textarea {
 .slider-container {
   position: relative;
   overflow: hidden; /* Hide overflow to prevent scrolling */
-  background-color: #f9f9f9; /* Light background for the slider */
+  background-color: transparent; /* Light background for the slider */
   border-radius: 10px; /* Rounded corners for the slider */
   padding: 10px; /* Padding around the slider */
 }
@@ -164,9 +169,9 @@ textarea {
   padding: 30px; /* Add padding for spacing */
   box-sizing: border-box; /* Include padding in width */
   width: 400px; /* Each slide takes full width */
-  background-color: #ffffff; /* White background for each slide */
+  background-color: white; /* White background for each slide */
   border-radius: 10px; /* Rounded corners for each slide */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 5px; /* Margin for spacing between slides */
   height: auto;
 }
@@ -214,6 +219,7 @@ textarea {
   padding-left: 20px;
   font-size: 20px;
 }
+
 /* Button styles */
 
 .learn-more {
@@ -593,29 +599,72 @@ textarea {
     padding: 0px; /* Reduce padding */
     height: auto;
   }
-  .text-section {
-    padding-top: 50px; /* Adjust top padding if necessary */
+  .main-container::before {
+    background-color: transparent; /* Background color */
   }
+  
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
+
+  .text-section{
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .text-section h1{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    font-size: 2.5rem;
+
+  }
+
+  .text-section p{
+    width: 100%;
+  }
+
   .form-section {
     order: 1; /* Ensures it comes after scroll instruction */
-    width: 100%; /* Full width on smaller screens */
-    margin-top: 1rem;
+    width: 80%; /* Full width on smaller screens */
+    margin: 2rem;
+    margin-top: 0.5rem;
     padding: 1rem;
     background-color: none;
     height: auto;
     box-shadow: none;
+    align-items: center;
   }
+
   .scroll-instruction {
     order: 0; /* Ensure scroll instruction comes first */
-    margin-bottom: 1rem;
+    margin: 1rem;
+    display: flex;
+    padding-top: 2rem;
   }
+
+  .two_elementor_element{
+    margin-top: 7px;
+    margin-right: 8px;
+  }
+
   .form-container {
-    background-color: white;
-    z-index: 1;
+    flex-direction: column;
   }
+  .form-background {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column; /* Stack the form inputs vertically */
+  }
+
+  .form-group {
+    width: 100%; /* Ensure form groups take full width */
+  }
+
   .partner-content,
   .compliance-content {
     display: flex;
@@ -716,7 +765,7 @@ textarea {
     flex: 0 0 calc(47.33% - 10px);
   }
   .icon-text-row .icon-text-list-item:last-child svg {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
+    width: 30px;
+    height: 30px; 
   }
 }

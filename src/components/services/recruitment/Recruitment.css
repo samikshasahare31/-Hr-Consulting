@@ -5,45 +5,45 @@ body {
 }
 
 /* Default Styles for Larger Screens */
-.recruitment-container {
+.services-recruitment-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    margin: 5%;
-    margin-top: 10%;
+    margin: 3rem;
 }
   
-.recruitment-content {
+.services-recruitment-content {
     max-width: 50%;
 }
   
-.recruitment-heading {
+.services-recruitment-heading {
     font-size: 1.2rem;
     color: #f19410;
     margin-bottom: 1rem;
     font-weight: 500;
 }
   
-.recruitment-title {
+.services-recruitment-title {
     font-size: 2.2rem;
     color: #357fa1;
     margin-bottom: 1.5rem;
     font-weight: bold;
+    text-align: start;
 }
   
-.recruitment-description {
+.services-recruitment-description {
     font-size: 1.2rem;
     color: #6f7072;
     margin-bottom: 2rem;
 }
   
-.recruitment-buttons {
+.services-recruitment-buttons {
     display: flex;
     gap: 1rem;
 }
   
-.schedule-button, .apply-button {
+.services-schedule-button, .services-apply-button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border: none;
@@ -51,28 +51,28 @@ body {
     border-radius: 5px;
 }
   
-.schedule-button {
+.services-schedule-button {
     background-color: #e79522;
     color: #163d4e;
 }
   
-.apply-button {
+.services-apply-button {
     background-color: #205a75;
     color: #ebb76e;
 }
   
-.recruitment-image img {
+.services-recruitment-image img {
     max-width: 100%;
     border-radius: 10px;
 }
   
 /* Recruitment Procedure */
-.procedure-container {
+.services-procedure-container {
     padding: 2rem;
     background-color: rgb(219, 217, 217);
 }
   
-.procedure-title {
+.services-procedure-title {
     font-size: 2rem;
     color: #1a2e44;
     text-align: center;
@@ -80,7 +80,7 @@ body {
     font-weight: bold;
 }
   
-.procedure-steps {
+.services-procedure-steps {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -88,7 +88,7 @@ body {
     position: relative;
 }
   
-.step {
+.services-step {
     display: flex;
     align-items: flex-start;
     margin-bottom: 1.5rem;
@@ -98,7 +98,7 @@ body {
     flex-direction: column; 
 }
 
-.step-icon {
+.services-step-icon {
     width: 40px;
     height: 40px;
     background-color: #f2981b;
@@ -112,7 +112,7 @@ body {
     margin-left: 45%;
 }
 
-.step-icon::after {
+.services-step-icon::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -124,121 +124,126 @@ body {
     margin-left: 15px; /* Extra space for the line, if needed */
 }
 
-.step:nth-child(3) .step-icon::after,
-.step:last-child .step-icon::after {
+.services-step:nth-child(3) .services-step-icon::after,
+.services-step:last-child .services-step-icon::after {
     display: none; /* Remove line after the 3rd and last step */
 }
 
-.step-content {
+.services-step-content {
     font-size: 1.1rem;
     margin: 25px;  
     text-align: center;
     margin-bottom: 20px;
 }
 
-.step-content h3 {
+.services-step-content h3 {
     color: #1a2e44;
     margin-bottom: 0.3rem; 
     font-weight: 600;
 }
 
-.step-content p {
+.services-step-content p {
     color: #4a4a4a;
     font-size: 1rem;
     margin-top: 0.3rem; 
 }
 
-/* Pricing Section */
-.pricing-container {
+/* Recruitment Services Pricing Section */
+.services-pricing-container {
+    margin: 3rem;
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     color: white;
-    margin: 8%;
-    border-radius: 10px;
-    background-color: transparent; /* Background color for the whole section */
+    background-color: transparent;
+    align-items: stretch; 
+    min-height: 500px; 
+}
+.services-pricing{
+    color: #acaaaa;
 }
 
-.pricing {
-    color: #949699;
-}
-
-.pricing-content {
-    background-color: #0a3668;
-    flex: 1;
-    text-align: left;
+.services-pricing-content,
+.services-pricing-details {
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem; 
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px;
-
+    padding: 2rem;
+    background-color: #0a3668;
+    box-sizing: border-box;
 }
 
-.pricing-title {
+.services-pricing-content {
+    text-align: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.services-pricing-details {
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.services-pricing-title {
     font-size: 1.8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.pricing-description {
+.services-pricing-description {
     font-size: 1rem;
     margin-bottom: 2rem;
     color: #949699;
 }
 
-.get-started-button,
-.upload-cv-button {
+.services-get-started-button,
+.services-upload-cv-button {
     padding: 0.75rem 1.5rem;
     margin-bottom: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #e79522; 
+    background-color: #e79522;
     color: white;
     display: block;
     width: 160px;
 }
 
-.upload-cv-button {
+.services-upload-cv-button {
     background-color: transparent;
     border: 2px solid #e79522;
     color: #e79522;
 }
 
-.pricing-details {
-    flex: 1;
-    padding-left: 2rem;
-    margin-top: 2.7rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 0 rgba(0, 0, 0, 0); 
+.services-pricing-details h3 {
+    color: #5f5e5e !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 1.2rem !important;
 }
 
-.pricing-details h3 {
-    color: rgb(83, 82, 82);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.pricing-details ul {
+.services-pricing-details ul {
     list-style-type: disc;
     padding: 0;
     margin: 0;
 }
 
-.pricing-details ul li {
+.services-pricing-details ul li {
     font-size: 1rem;
     margin-left: 8%;
     margin-bottom: 0.5rem;
     color: #6f7072;
 }
 
-.annual-compensation-note {
-    font-size: 0.9rem;
-    margin-top: 12%;
+.services-annual-compensation-note {
+    font-size: 1rem;
+    margin-top: 5%;
     color: #6f7072;
     padding-right: 5%;
-} 
+    margin-bottom: 5%;
+}
 
 /* Resources and Articles Section */
 
@@ -315,51 +320,55 @@ body {
 
 /* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 768px) {
-    .recruitment-container {
+    .services-recruitment-container {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 18%;
     }
 
-    .recruitment-content {
+    .services-recruitment-content {
         max-width: 100%;
     }
 
-    .recruitment-buttons {
+    .services-recruitment-image img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .services-recruitment-buttons {
         flex-direction: column;
-        width: 50%;
+        width: 70%;
         gap: 1rem;
     }
 
-    .schedule-button, .apply-button {
+    .services-schedule-button, .services-apply-button {
         width: 100%;
     }
 
-    .recruitment-image {
+    .services-recruitment-image {
         margin-top: 2.5rem;
         width: 100%;
         text-align: center;
     }
 
-    .recruitment-image img {
+    .services-recruitment-image img {
         margin: 20px;
         width: 100%;
         max-width: 500px;
     }
 
     /* Recruitment procedure responsive */
-    .procedure-title {
+    .services-procedure-title {
         text-align: start;
         font-size: 1.8rem;
         margin-top: 1.5rem;
     }
 
-    .procedure-steps {
+    .services-procedure-steps {
         flex-direction: column;
         position: relative;
     }
 
-    .step {
+    .services-step {
         flex-direction: row;
         align-items: flex-start;
         gap: 1rem;
@@ -367,12 +376,14 @@ body {
         margin-left: 0;
     }
 
-    .step-icon {
+    .services-step-icon {
         margin-bottom: 1rem;
+        margin-left: 0;
+
     }
 
     /* Yellow vertical line between the icons on mobile */
-    .step-icon::after {
+    .services-step-icon::after {
         content: '';
         position: absolute;
         top: 100%;
@@ -384,24 +395,25 @@ body {
         margin: 0;
     }
 
-    .step:last-child .step-icon::after {
+    .services-step:last-child .services-step-icon::after {
         display: none; /* Remove line after the last step */
     }
 
-    .step-content {
+    .services-step-content {
         padding-left: 0;
     }
 
-    .step-content h3 {
+    .services-step-content h3 {
         margin-bottom: 0.8rem; /* Reduced space between h3 and p */
     }
 
     /* services-pricing-section */
-    .pricing-container {
+    .services-pricing-container {
         flex-direction: column;
+        border-radius: none;
     }
 
-    .pricing-content {
+    .services-pricing-content {
         width: 100%;
         margin: 0;
         padding: 1.5rem;
@@ -409,16 +421,19 @@ body {
         border-top-right-radius: 10px; 
     }
 
-    .pricing-details {
+    .services-pricing-details {
         margin-top: 2rem;
         width: 100%;
         margin: 0;
         padding: 1.5rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
     }
 
-    .get-started-button,
-    .upload-cv-button {
-        width: 100%;
+    .services-get-started-button,
+    .services-upload-cv-button {
+        width: 70%;
         margin-bottom: 1rem;
     }
 
