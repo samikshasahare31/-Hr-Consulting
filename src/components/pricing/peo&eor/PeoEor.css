@@ -51,12 +51,12 @@
   padding: 1.5rem;
   background-color: rgb(235, 233, 233);
   border-radius: 10px;
-  line-height: 2.25rem;
 }
 
 .peo-pricing-card-price h3 {
   text-align: start;
   padding: 0;
+  line-height: 2.5rem;
 }
 
 .peo-pricing-card-price h5 {
