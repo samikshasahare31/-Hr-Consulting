@@ -83,7 +83,7 @@
   color: #a0a0a0;
 }
 
-.two_elementor_element{
+.two_elementor_element {
   margin-top: 7px;
   margin-right: 10px;
 }
@@ -91,7 +91,7 @@
   flex: 1 1 35%; /* This will allow the form to shrink when needed */
   max-width: 500px; /* Maximum width for form */
   position: relative; /* Ensure the form is above the background */
-  z-index: 1; 
+  z-index: 1;
 }
 /*form Section*/
 
@@ -453,9 +453,9 @@ textarea {
   padding-top: 25px;
   font-weight: bold;
 }
-.compliance-image-container {
+/* .compliance-image-container {
   margin: 20px;
-}
+} */
 .compliance-icon {
   padding-bottom: 20px;
 }
@@ -550,6 +550,7 @@ textarea {
 /* Media Queries for Responsive Design */
 
 /* For screens less than 768px */
+/* For screens less than 768px */
 @media (max-width: 768px) {
   .slider-container {
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -596,59 +597,28 @@ textarea {
   .main-container {
     background-color: none;
     flex-direction: column; /* Stack content vertically on small screens */
-    padding: 0px; /* Reduce padding */
+    padding: 10px; /* Reduce padding */
     height: auto;
   }
   .main-container::before {
     background-color: transparent; /* Background color */
   }
-  
+
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
-
-  .text-section{
-    margin-top: 3rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
-  .text-section h1{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    font-size: 2.5rem;
-
-  }
-
-  .text-section p{
-    width: 100%;
-  }
-
   .form-section {
-    order: 1; /* Ensures it comes after scroll instruction */
-    width: 80%; /* Full width on smaller screens */
-    margin: 2rem;
-    margin-top: 0.5rem;
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 1rem;
+    margin-left: 1rem;
     padding: 1rem;
     background-color: none;
     height: auto;
     box-shadow: none;
-    align-items: center;
   }
-
   .scroll-instruction {
-    order: 0; /* Ensure scroll instruction comes first */
-    margin: 1rem;
-    display: flex;
-    padding-top: 2rem;
+    margin-bottom: 1rem;
   }
-
-  .two_elementor_element{
-    margin-top: 7px;
-    margin-right: 8px;
-  }
-
   .form-container {
     flex-direction: column;
   }
@@ -656,56 +626,13 @@ textarea {
     max-width: 100%;
     margin-top: 20px;
   }
-  
-  .form-row {
-    flex-direction: column; /* Stack the form inputs vertically */
-  }
 
-  .form-group {
-    width: 100%; /* Ensure form groups take full width */
-  }
-
-  .partner-content,
-  .compliance-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .partner-image-container,
-  .compliance-image-container {
-    order: 1; /* Ensure the image appears above the text */
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .partner-text,
-  .compliance-text {
-    order: 2; /* Ensure the text appears below the image */
-    width: 100%;
-  }
-
-  .cost-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .cost-image-container {
-    order: 1; /* Ensure the image appears above the text */
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .cost-text {
-    order: 2; /* Ensure the text appears below the image */
-    width: 100%;
-    padding: 30px;
-  }
   .cost-left {
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   .one-stop {
     flex-direction: column; /* Stack elements vertically */
@@ -729,6 +656,81 @@ textarea {
   }
   .icon-text-list-item {
     padding: 10px;
+  }
+  .partner-image-container,
+  .compliance-image-container {
+    order: 1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .cost-image-container {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+  }
+
+  .partner-text,
+  .compliance-text,
+  .cost-text {
+    order: 2;
+    width: 100%;
+  }
+
+  .cost-content,
+  .partner-content,
+  .compliance-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px; /* Adjust based on your design */
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .cost-expertise {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .partner-expertise {
+    font-size: 1.5em;
+    margin-right: 20px;
+  }
+
+  .cost-description {
+    text-align: justify;
+    max-width: 600px; /* Makes the text block narrower to look better on mobile */
+    line-height: 1.6; /* Improves readability */
+    width: 100%;
+  }
+  .partner-description {
+    text-align: justify;
+    max-width: 500px; /* Makes the text block narrower to look better on mobile */
+    line-height: 1.5; /* Improves readability */
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .cost-icon,
+  .partner-icon {
+    width: 100%;
+  }
+  .compliance-icon {
+    width: 100%;
+  }
+  .compliance-description {
+    text-align: justify; /* Justify text for better alignment */
+    max-width: 500px; /* Limit width for better mobile readability */
+    line-height: 1.6; /* Improve readability with line spacing */
+    width: 100%; /* Ensure description takes full width */
+    margin: 0 auto; /* Center text */
+    padding: 10px; /* Add padding for spacing */
+    font-size: 16px;
   }
 }
 @media (min-width: 768px) {
@@ -765,7 +767,7 @@ textarea {
     flex: 0 0 calc(47.33% - 10px);
   }
   .icon-text-row .icon-text-list-item:last-child svg {
-    width: 30px;
-    height: 30px; 
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
   }
 }
