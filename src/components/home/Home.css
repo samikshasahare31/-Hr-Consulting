@@ -1,10 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 .main-container {
+  box-shadow: 1px;
   position: relative;
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   padding-right: 8%;
   flex-direction: column;
-  height: 900px; /* Ensure the main container takes the full height */
+  height: 820px; /* Ensure the main container takes the full height */
   overflow: hidden; /* Hide any overflow from absolute elements */
   width: auto;
 }
@@ -35,7 +39,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 20px;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .content {
@@ -45,8 +49,8 @@
 }
 
 .text-section {
-  margin: 7%;
-  /* margin-left: 5rem; */
+  margin: 8%;
+  margin-left: 5rem;
   flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
@@ -89,15 +93,15 @@
 }
 .form-background {
   flex: 1 1 35%;
-  max-width: 500px;
+  max-width: 600px;
   position: relative;
   z-index: 1;
 }
 
 .form-section {
   width: 100%;
-  max-width: 700px;
-  padding: 20px;
+  max-width: 600px;
+  height: auto;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -790,5 +794,40 @@ textarea {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure images cover the area without distortion */
     max-height: 100%; /* Limit height to prevent overflow */
+  }
+}
+@media (min-width: 768px) {
+  .partner-description,
+  .compliance-description,
+  .cost-description {
+    font-size: 16px;
+    margin-left: -15px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .partner-content {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    padding-right: -20px;
+  }
+  .form-container {
+    margin-right: 40px;
+    font-size: 12px;
+    width: 800px;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+  }
+  .form-section {
+    padding-right: 10px;
+    padding-right: 0px;
+    width: 400px;
+    height: auto;
   }
 }
