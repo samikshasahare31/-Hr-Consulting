@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-container {
   position: relative;
   display: flex;
@@ -467,10 +473,13 @@ textarea {
   justify-content: space-between; /* Adjust if necessary */
   background-color: #1d3b6b;
   border-radius: 30px;
-  padding: 40px;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
   height: auto;
   color: white;
 }
+
 .one-stop h2 {
   color: white;
   font-size: 30px;
@@ -517,10 +526,10 @@ textarea {
 }
 
 .icon-text-list-item svg {
-  height: 20px;
-  width: 20px;
-  margin-right: 8px;
-  object-fit: contain;
+  width: 24px; /* Default icon size */
+  height: 24px;
+  margin-right: 10px;
+  flex-shrink: 0; /* Ensures the SVG doesn't shrink */
 }
 
 .icon-text-list-item:nth-child(6) svg {
@@ -549,9 +558,12 @@ textarea {
 }
 
 .one-stop-image {
-  max-width: 100%; /* Make sure the image is responsive */
-  height: auto; /* Maintain aspect ratio */
+  width: 50%;
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
 }
+
 .Brands-container h2 {
   text-align: center;
   padding: 30px;
@@ -690,12 +702,17 @@ textarea {
   }
 
   .one-stop-image {
-    margin-top: 20px; /* Space between button and image */
-    width: 100%; /* Make the image responsive */
+    width: 80%;
+    margin-top: 20px;
   }
+
   .icon-text-list-item {
     padding-top: 10px;
     margin-top: 5px;
+  }
+  .icon-text-list-item svg {
+    width: 15px; /* Smaller icon size for mobile screens */
+    height: 15px;
   }
   .partner-image-container,
   .compliance-image-container {
