@@ -216,6 +216,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      
 
       {/* Render Schedule Form */}
       <ScheduleForm />
