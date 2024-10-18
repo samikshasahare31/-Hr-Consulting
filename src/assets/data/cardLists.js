@@ -1,7 +1,7 @@
 export const cardLists = [
   {
     id: 0,
-    img: "https://recruitindo.com/wp-content/uploads/2023/12/eliminate.png",
+    img: "https://www.teamly.com/blog/wp-content/uploads/2023/01/Team-Structure.png",
     article: "Articles",
     resources: "Resources",
     title:
@@ -36,7 +36,7 @@ export const cardLists = [
   },
   {
     id: 4,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/emerging-trends-1024x683.jpeg",
+    img: "https://career1.ca/wp-content/uploads/2022/10/pexels-kindel-media-7688339.jpg",
     article: "Articles",
     resources: " ",
     title: "New Developments in Executive Hiring in India",
@@ -53,7 +53,7 @@ export const cardLists = [
   },
   {
     id: 6,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/impact-1024x683.jpeg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiFW7TKxX8v0yIY9FI_x8myRw-5Zptqnuzp_kg0aXU58-qLan3nLUxKEZ_l6fuDEVLdEU&usqp=CAU",
     article: "Articles",
     resources: " ",
     title: "The Effect of Executive Placements on Indian Business Growth",
@@ -70,7 +70,7 @@ export const cardLists = [
   },
   {
     id: 8,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/search-solution-1024x768.jpeg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsoyyjtudOEiA8e5nfrYDo4zAbXU3oc7h8aIWeqGN2y48nupIaGUteA_bQD-C0-PEQY0Q&usqp=CAU",
     article: "Articles",
     resources: " ",
     title:
@@ -88,7 +88,7 @@ export const cardLists = [
   },
   {
     id: 10,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/navigating-1024x682.jpeg",
+    img: "https://media.licdn.com/dms/image/D4D12AQHJ2ER5c8DNcQ/article-cover_image-shrink_600_2000/0/1700464241305?e=2147483647&v=beta&t=ZknNrmtCZUW5Vu17jET7_sZqFav2nAE7eps8ZwitMgk",
     article: "Articles",
     resources: " ",
     title: "A Complete Guide to Managing Indian Labor Laws in Executive Hiring",
@@ -128,11 +128,11 @@ export const cardLists = [
     resources: " ",
     title:
       "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies",
-    text: "Effective remote team management has become more important in the era of globalization and digital change.",
+    text: "Effective remote team management has become more important in the era.",
   },
   {
     id: 15,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/Peo-tech-company-1024x683.jpeg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyUyIsmqj9vySCtKKCPZ5ln2oFgEaMcanww&s",
     article: "Articles",
     resources: " ",
     title:
@@ -149,7 +149,7 @@ export const cardLists = [
   },
   {
     id: 17,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/peo-1024x683.jpeg",
+    img: "https://globalpeoservices.com/wp-content/uploads/2022/05/dev-img1.jpg",
     article: "Articles",
     resources: " ",
     title: "The Complete Guide to Indian PEO/EOR Services",
@@ -166,7 +166,7 @@ export const cardLists = [
   },
   {
     id: 19,
-    img: "https://recruitindo.com/wp-content/uploads/2024/01/cost-saving-1-1024x683.jpeg",
+    img: "https://blogassets.airtel.in/wp-content/uploads/2024/07/Ways-to-use-Personal-Loans-for-Diverse-Financial-Needs-2.jpg",
     article: "Articles",
     resources: " ",
     title:

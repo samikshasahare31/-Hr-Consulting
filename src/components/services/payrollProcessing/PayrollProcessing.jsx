@@ -4,7 +4,7 @@ import Cart from "./Cart";
 import Cart2 from "./Cart2";
 import Pricing from "./Pricing";
 import Contact from "./Contact";
-// import Resources from "./Resources";
+import Resources from "./Resources";
 
 function PayrollProcessing() {
   return (
@@ -41,7 +41,9 @@ function PayrollProcessing() {
 
       {/* Resources components */}
 
-      <section>{/* <Resources /> */}</section>
+      <section>
+        <Resources />
+      </section>
     </>
   );
 }

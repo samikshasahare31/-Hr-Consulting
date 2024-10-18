@@ -1,212 +1,216 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: transparent;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: transparent;
 }
 
 /* Pricing Section */
 
-.pricing {
-    color: #949699;
-    font-weight: 500;
+.pricing-recruitment {
+  color: #949699;
+  font-weight: 500;
 }
-.pricing-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    color: white;
-    background-color: transparent;
-    align-items: stretch; 
-    height: auto; 
-    min-height: 500px; 
-    margin: 8%;
-    margin-top: 0;
-    border-radius: 10px;
+.pricing-recruitment-container {
+  margin: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: white;
+  background-color: transparent;
+  align-items: stretch;
+  min-height: 500px;
 }
 
-.pricing-content,
-.pricing-details {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem;
-    box-sizing: border-box;
-    min-height: 300px; 
+.pricing-recruitment-content,
+.pricing-recruitment-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #0a3668;
+  box-sizing: border-box;
 }
 
-.pricing-content {
-    background-color: #0a3668;
-    text-align: left;
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px;
+.pricing-recruitment-content {
+  background-color: #0a3668;
+  text-align: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.pricing-details {
-    background-color: transparent;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-left: 2rem;
-    margin-top: 2.8rem;
+.pricing-recruitment-details {
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.pricing-title {
-    font-size: 1.8rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
+.pricing-recruitment-title {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.pricing-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #949699;
+.pricing-recruitment-description {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #949699;
 }
 
-.get-started-button,
-.upload-cv-button {
-    padding: 0.75rem 1.5rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #e79522; 
-    color: white;
-    display: block;
-    width: 160px;
+.pricing-recruitment-get-started-button,
+.pricing-recruitment-upload-cv-button {
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e79522;
+  color: white;
+  display: block;
+  width: 160px;
 }
 
-.upload-cv-button {
-    background-color: transparent;
-    border: 2px solid #e79522;
-    color: #e79522;
+.pricing-recruitment-upload-cv-button {
+  background-color: transparent;
+  border: 2px solid #e79522;
+  color: #e79522;
 }
 
-.pricing-details h3 {
-    color: #5f5e5e;
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-    font-weight: 500;
+.pricing-recruitment-details h3 {
+  color: #5f5e5e !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 1.2rem !important;
 }
 
-.pricing-details ul {
-    list-style-type: disc;
-    padding: 0;
-    margin: 0;
+.pricing-recruitment-details ul {
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
 }
 
-.pricing-details ul li {
-    font-size: 1rem;
-    margin-left: 8%;
-    margin-bottom: 0.5rem;
-    color: #6f7072;
+.pricing-recruitment-details ul li {
+  font-size: 1rem;
+  margin-left: 8%;
+  margin-bottom: 0.5rem;
+  color: #6f7072;
 }
 
-.annual-compensation-note {
-    font-size: 0.9rem;
-    margin-top: 5%;
-    color: #6f7072;
-    padding-right: 5%;
-    margin-bottom: 5%;
+.pricing-recruitment-annual-compensation-note {
+  font-size: 1rem;
+  margin-top: 5%;
+  color: #6f7072;
+  padding-right: 5%;
+  margin-bottom: 5%;
 }
 /* Resources and Articles Section */
 .resources-heading {
-    text-align: center;
-    font-size: 1.5rem; 
-    margin-bottom: 1rem; 
-    color: #333; 
-} 
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
 
 .resources-articles-section {
-    padding: 2rem;
-    margin-top: 4rem;
+  padding: 2rem;
+  margin-top: 4rem;
 }
 
 .resources-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .articles-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .article {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 10px;
-    flex: 1;
-    text-align: center;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
 }
 
 .article-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .article-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .article-description {
-    font-size: 1rem;
-    color: #6f7072;
+  font-size: 1rem;
+  color: #6f7072;
 }
 
 .more-resources-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .more-resources-button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #e79522;
-    color: rgb(21, 43, 102);
-    cursor: pointer;
-    font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #e79522;
+  color: rgb(21, 43, 102);
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .more-resources-button:hover {
-    background-color: #d17f1a;
+  background-color: #d17f1a;
 }
 
 @media screen and (max-width: 768px) {
-    .pricing-container {
-        flex-direction: column;
-    }
+  .pricing-recruitment-container {
+    flex-direction: column;
+  }
 
-    .pricing-content, .pricing-details {
-        width: 100%;
-        margin: 0;
-        padding: 1.5rem;
-    }
+  .pricing-recruitment-content,
+  .pricing-recruitment-details {
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+  }
+  .pricing-recruitment-content {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 
-    .get-started-button,
-    .upload-cv-button {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
+  .pricing-recruitment-details {
+    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 
-    .articles-container {
-        flex-direction: column;
-    }
+  .pricing-recruitment-get-started-button,
+  .pricing-recruitment-upload-cv-button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 
-    .article {
-        margin-bottom: 1.5rem;
-    }
+  .articles-container {
+    flex-direction: column;
+  }
 
-    .more-resources-button {
-        width: 50%;
-    }
+  .article {
+    margin-bottom: 1.5rem;
+  }
+
+  .more-resources-button {
+    width: 50%;
+  }
 }

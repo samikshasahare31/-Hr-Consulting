@@ -1,8 +1,11 @@
 .main-container {
+  box-shadow: 1px;
   position: relative;
   display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  padding-right: 8%;
   flex-direction: column;
-  height: 900px; /* Ensure the main container takes the full height */
+  height: 820px; /* Ensure the main container takes the full height */
   overflow: hidden; /* Hide any overflow from absolute elements */
   width: auto;
 }
@@ -17,6 +20,7 @@
   background-color: orange; /* Background color */
   z-index: 0; /* Ensure it's behind the content */
 }
+
 .form-row {
   display: flex;
   justify-content: space-between;
@@ -29,12 +33,10 @@
 
 .form-container {
   display: flex;
-  justify-content: center; /* Center the form */
-  padding: 2rem;
-  min-height: 100vh; /* Ensure the form container takes the full height */
-  font-family: Arial, sans-serif;
-  position: relative; /* Ensure it positions correctly */
-  z-index: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .content {
@@ -44,12 +46,9 @@
 }
 
 .text-section {
-  flex: 1; /* Make this section flexible */
-  margin-right: 1rem 0;
-  padding-top: 100px;
-  padding: 0 40px;
-  width: 40%;
-  font-size: 20px;
+  margin: 8%;
+  margin-left: 5rem;
+  flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
 .avatar-section {
@@ -66,80 +65,87 @@
 .text-section h1 {
   font-size: 3.2rem;
   color: #1d3b6b;
-  margin: 1rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: start;
 }
 
 .text-section p {
   font-size: 1rem;
   color: #606060;
   line-height: 1.6;
+  width: 80%;
 }
 
 .scroll-instruction {
   margin-top: 2rem;
+  display: flex;
   font-size: 0.9rem;
   color: #a0a0a0;
 }
-.form-background {
-  padding: 2rem; /* Add padding around the form section */
-  display: flex;
-  justify-content: center;
+
+.two_elementor_element {
+  margin-top: 7px;
+  margin-right: 10px;
 }
-/*form Section*/
+.form-background {
+  flex: 1 1 35%;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+  height: 900px;
+}
 
 .form-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Full width */
-  max-width: 700px; /* Maximum width for the form */
-  margin: 20px auto; /* Center the form and add vertical spacing */
-  padding: 20px; /* Add padding to the form container */
-  margin-right: 60px;
-  border-radius: 8px; /* Rounded corners for the form container */
-  background-color: #fff; /* Background color for the form */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  background-color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-row {
   display: flex;
-  justify-content: space-between; /* Aligns children to occupy full width */
-  margin-bottom: 15px; /* Space between rows */
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .form-group {
   display: flex;
-  flex-direction: column; /* Align label and input vertically */
-  width: 48%; /* Adjust width as necessary for spacing */
+  flex-direction: column;
+  width: 48%;
 }
 
 .form-group label {
-  margin-bottom: 5px; /* Space between label and input */
+  margin-bottom: 5px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 10px; /* Adjust padding */
-  border: 1px solid #ccc; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  width: 100%; /* Full width for inputs */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
 }
 
 textarea {
-  resize: vertical; /* Allow vertical resize */
+  resize: vertical;
 }
-/* Specific styles for single text boxes to increase width */
+
 .form-section .form-group:not(.form-row .form-group) {
-  width: 100%; /* Full width for single text boxes */
+  width: 100%;
 }
+
 .submit-button {
-  padding: 10px 15px; /* Button padding */
-  background-color: orange; /* Button color */
-  color: #fff; /* Text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  margin-top: 10px; /* Space above button */
+  padding: 10px 15px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /* Slider.css */
@@ -344,7 +350,7 @@ textarea {
 
 .cost-image-container {
   flex: 0 0 50%; /* Fixed width for the image container */
-  max-width: 50%; /* Ensure the image does not exceed 50% of the width */
+  max-width: 100%; /* Ensure the image does not exceed 50% of the width */
 }
 
 .cost-image {
@@ -449,9 +455,9 @@ textarea {
   padding-top: 25px;
   font-weight: bold;
 }
-.compliance-image-container {
+/* .compliance-image-container {
   margin: 20px;
-}
+} */
 .compliance-icon {
   padding-bottom: 20px;
 }
@@ -463,10 +469,13 @@ textarea {
   justify-content: space-between; /* Adjust if necessary */
   background-color: #1d3b6b;
   border-radius: 30px;
-  padding: 40px;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
   height: auto;
   color: white;
 }
+
 .one-stop h2 {
   color: white;
   font-size: 30px;
@@ -491,28 +500,39 @@ textarea {
 .icon-text-list {
   display: flex;
   list-style-type: none; /* Remove bullet points */
-  flex-direction: column; /* Arrange rows vertically */
-  padding: 0px;
+  padding: 0;
 }
 
 .icon-text-row {
-  display: flex; /* Create a row layout */
-  justify-content: space-between; /* Space items evenly */
-  margin-bottom: 16px; /* Space between rows */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between the two columns */
+}
+
+.icon-text-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .icon-text-list-item {
   display: flex;
-  align-items: center; /* Align checklist SVG with text */
-  flex: 1; /* Allow equal space for each item */
-  margin-right: 10px; /* Add margin to the right for spacing */
-  padding-right: 10px;
-  line-height: 1.6;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 16px;
 }
-.li .icon-text-list-item {
-  margin-left: auto;
-  padding: auto;
+
+.icon-text-list-item svg {
+  width: 24px; /* Default icon size */
+  height: 24px;
+  margin-right: 10px;
+  flex-shrink: 0; /* Ensures the SVG doesn't shrink */
 }
+
+.icon-text-list-item:nth-child(6) svg {
+  height: 20px !important; /* Ensure the sixth SVG is the same size */
+  width: 20px !important; /* Force it to match the size of others */
+}
+
 /* Remove margin from the last item in each row */
 .icon-text-row .icon-text-list-item:last-child {
   margin-right: 0;
@@ -522,8 +542,9 @@ textarea {
   margin-top: 20px; /* Add spacing above the button */
   padding: 10px 20px; /* Add padding inside the button */
   background-color: #ff9a00; /* Button background color */
-  color: white; /* Button text color */
+  color: rgb(30, 49, 223); /* Button text color */
   border: none; /* Remove border */
+  font-weight: 500;
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
 }
@@ -533,9 +554,12 @@ textarea {
 }
 
 .one-stop-image {
-  max-width: 100%; /* Make sure the image is responsive */
-  height: auto; /* Maintain aspect ratio */
+  width: 50%;
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
 }
+
 .Brands-container h2 {
   text-align: center;
   padding: 30px;
@@ -546,11 +570,17 @@ textarea {
 /* Media Queries for Responsive Design */
 
 /* For screens less than 768px */
+/* For screens less than 768px */
 @media (max-width: 768px) {
   .slider-container {
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-snap-type: x mandatory; /* Snap to each slide when scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  .services-section {
+    margin: 10px;
+    width: fit-content;
+    align-items: center;
   }
 
   .slider-content {
@@ -592,133 +622,329 @@ textarea {
   .main-container {
     background-color: none;
     flex-direction: column; /* Stack content vertically on small screens */
-    padding: 0px; /* Reduce padding */
+    padding: 10px; /* Reduce padding */
     height: auto;
   }
-  .text-section {
-    padding-top: 50px; /* Adjust top padding if necessary */
+  .main-container::before {
+    background-color: transparent; /* Background color */
+  }
+
+  .text-section h1 {
+    width: fit-content;
+    font-size: 2.2rem;
+  }
+
+  .text-section p {
+    width: fit-content;
   }
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
   .form-section {
-    order: 1; /* Ensures it comes after scroll instruction */
-    width: 100%; /* Full width on smaller screens */
-    margin-top: 1rem;
+    width: 100%;
     padding: 1rem;
     background-color: none;
     height: auto;
     box-shadow: none;
   }
   .scroll-instruction {
-    order: 0; /* Ensure scroll instruction comes first */
     margin-bottom: 1rem;
   }
   .form-container {
-    background-color: white;
-    z-index: 1;
-  }
-  .partner-content,
-  .compliance-content {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-top: 20px;
   }
 
-  .partner-image-container,
-  .compliance-image-container {
-    order: 1; /* Ensure the image appears above the text */
-    width: 100%;
-    margin-bottom: 20px;
+  .form-row {
+    flex-direction: column; /* Change row to column layout */
   }
 
-  .partner-text,
-  .compliance-text {
-    order: 2; /* Ensure the text appears below the image */
-    width: 100%;
+  .form-group {
+    width: 100%; /* Make each form group take full width */
   }
 
-  .cost-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .cost-image-container {
-    order: 1; /* Ensure the image appears above the text */
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .cost-text {
-    order: 2; /* Ensure the text appears below the image */
-    width: 100%;
-    padding: 30px;
-  }
   .cost-left {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
+
   .one-stop {
     flex-direction: column; /* Stack elements vertically */
     align-items: center;
   }
 
   .one-stop-text {
-    padding-right: 0;
-    text-align: center; /* Center the text on smaller screens */
+    padding: 0;
+  }
+
+  .one-stop-text h2 {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .one-stop-description {
+    margin: 10px;
+    padding: 0;
+    margin-top: 20px;
   }
 
   .icon-text-row {
-    flex-direction: column; /* Stack checklist items vertically */
-    align-items: flex-start; /* Align left */
+    grid-template-columns: 1fr;
     width: 100%;
   }
 
   .one-stop-image {
-    margin-top: 20px; /* Space between button and image */
-    width: 100%; /* Make the image responsive */
+    width: 80%;
+    margin-top: 20px;
   }
+
   .icon-text-list-item {
+    padding-top: 10px;
+    margin-top: 5px;
+  }
+  .icon-text-list-item svg {
+    width: 15px; /* Smaller icon size for mobile screens */
+    height: 15px;
+  }
+  .partner-image-container,
+  .compliance-image-container {
+    order: 1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .cost-image-container {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+  }
+
+  .partner-text,
+  .compliance-text,
+  .cost-text {
+    order: 2;
+    width: 100%;
+  }
+  .partner-text {
+    padding: 0;
+  }
+
+  .cost-content,
+  .partner-content,
+  .compliance-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px; /* Adjust based on your design */
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .cost-expertise {
+    font-size: 1.35rem;
+    padding: 0;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .partner-expertise {
+    font-size: 1.35rem;
+    padding: 0;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .cost-text {
+    padding: 0;
+  }
+
+  .cost-description {
+    text-align: justify;
+    max-width: 600px; /* Makes the text block narrower to look better on mobile */
+    line-height: 1.6; /* Improves readability */
+    width: 100%;
+  }
+  .partner-description {
+    text-align: justify;
+    max-width: 500px; /* Makes the text block narrower to look better on mobile */
+    line-height: 1.5; /* Improves readability */
+    width: 100%;
+    margin: 0 auto;
     padding: 10px;
+  }
+
+  .cost-icon,
+  .partner-icon {
+    width: 100%;
+  }
+  .compliance-icon {
+    width: 100%;
+  }
+  .compliance-description {
+    text-align: justify; /* Justify text for better alignment */
+    max-width: 500px; /* Limit width for better mobile readability */
+    line-height: 1.6; /* Improve readability with line spacing */
+    width: 100%; /* Ensure description takes full width */
+    margin: 0 auto; /* Center text */
+    padding: 10px; /* Add padding for spacing */
+    font-size: 16px;
+  }
+  .partner-image-container img,
+  .compliance-image-container img,
+  .cost-image-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    max-height: 100%; /* Limit height to prevent overflow */
   }
 }
-@media (min-width: 768px) {
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    padding-right: 10px;
+    max-width: 100%;
+  }
+  .form-container {
+    margin-right: 40px;
+    font-size: 12px;
+    width: 800px;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description,
+  .cost-description {
+    font-size: 16px;
+    margin-left: -15px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
   .partner-content {
-    display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
   }
-
-  .partner-text {
-    width: 60%; /* Text takes 60% width */
-    margin-left: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    max-width: 100%;
   }
-
-  .partner-image-container {
-    display: flex;
-    max-width: 40%; /* Optional: set a max width for the image */
-    flex-wrap: wrap;
-  }
-  .icon-text-row {
-    display: flex; /* Each row is a flex container */
-    justify-content: space-between; /* Space items evenly */
-    flex-wrap: wrap; /* Allow items to wrap to next row */
-  }
-  .icon-text-list-item {
-    padding: 10px;
+  .form-container {
     margin-right: 0px;
-    flex: 0 0 calc(47.33% - 10px);
+    font-size: 12px;
+    width: 750px;
   }
-  .icon-text-list-item {
-    padding: 10px;
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description,
+  .cost-description {
+    font-size: 16px;
+    margin-left: -15px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .partner-content {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1279px) {
+  .main-container {
+    max-width: 100%;
+  }
+  .form-container {
     margin-right: 0px;
-    flex: 0 0 calc(47.33% - 10px);
+    font-size: 12px;
+    width: 750px;
   }
-  .icon-text-row .icon-text-list-item:last-child svg {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description,
+  .cost-description {
+    font-size: 16px;
+    margin-left: -15px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .partner-content {
+    flex-direction: row;
   }
 }
