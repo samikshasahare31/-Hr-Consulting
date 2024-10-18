@@ -621,13 +621,19 @@ textarea {
     background-color: transparent; /* Background color */
   }
 
+  .text-section h1{
+    width: fit-content;
+    font-size: 2.2rem;
+  }
+
+  .text-section p{
+    width: fit-content;
+  }
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
   .form-section {
-    width: 100%; /* Full width on smaller screens */
-    margin-top: 1rem;
-    margin-left: 1rem;
+    width: 100%; 
     padding: 1rem;
     background-color: none;
     height: auto;
@@ -654,19 +660,28 @@ textarea {
 
   .cost-left {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: start;
   }
+
   .one-stop {
     flex-direction: column; /* Stack elements vertically */
     align-items: center;
   }
 
   .one-stop-text {
-    padding-right: 0;
-    text-align: center; /* Center the text on smaller screens */
+    padding: 0;
+  }
+
+  .one-stop-text h2{
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .one-stop-description{
+    margin: 10px;
+    padding: 0;
+    margin-top: 20px;
   }
 
   .icon-text-row {
@@ -703,6 +718,9 @@ textarea {
     order: 2;
     width: 100%;
   }
+  .partner-text{
+    padding: 0;
+  }
 
   .cost-content,
   .partner-content,
@@ -717,15 +735,24 @@ textarea {
   }
 
   .cost-expertise {
-    text-align: left;
-    font-size: 1.5em;
-    margin: 0;
+    font-size: 1.35rem;
     padding: 0;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   .partner-expertise {
-    font-size: 1.5em;
-    margin-right: 20px;
+    font-size: 1.35rem;
+    padding: 0;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+  }
+
+  .cost-text{
+    padding: 0;
   }
 
   .cost-description {
@@ -766,43 +793,5 @@ textarea {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure images cover the area without distortion */
     max-height: 100%; /* Limit height to prevent overflow */
-  }
-}
-@media (min-width: 768px) {
-  .partner-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .partner-text {
-    width: 60%; /* Text takes 60% width */
-    margin-left: 20px;
-  }
-
-  .partner-image-container {
-    display: flex;
-    max-width: 40%; /* Optional: set a max width for the image */
-    flex-wrap: wrap;
-  }
-  .icon-text-row {
-    display: flex; /* Each row is a flex container */
-    justify-content: space-between; /* Space items evenly */
-    flex-wrap: wrap; /* Allow items to wrap to next row */
-  }
-  .icon-text-list-item {
-    padding: 10px;
-    margin-right: 0px;
-    flex: 0 0 calc(47.33% - 10px);
-  }
-  .icon-text-list-item {
-    padding: 10px;
-    margin-right: 0px;
-    flex: 0 0 calc(47.33% - 10px);
-  }
-  .icon-text-row .icon-text-list-item:last-child svg {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
   }
 }
