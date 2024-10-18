@@ -45,8 +45,8 @@
 }
 
 .text-section {
-  margin-top: 7%;
-  margin-left: 5rem;
+  margin: 7%;
+  /* margin-left: 5rem; */
   flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
@@ -88,62 +88,62 @@
   margin-right: 10px;
 }
 .form-background {
-  flex: 1 1 35%; /* This will allow the form to shrink when needed */
-  max-width: 500px; /* Maximum width for form */
-  position: relative; /* Ensure the form is above the background */
+  flex: 1 1 35%;
+  max-width: 500px;
+  position: relative;
   z-index: 1;
 }
-/*form Section*/
 
 .form-section {
-  width: 100%; /* Full width */
-  max-width: 700px; /* Maximum width for the form */
-  padding: 20px; /* Add padding to the form container */
-  border-radius: 8px; /* Rounded corners for the form container */
-  background-color: #fff; /* Background color for the form */
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-row {
   display: flex;
-  justify-content: space-between; /* Aligns children to occupy full width */
-  margin-bottom: 15px; /* Space between rows */
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .form-group {
   display: flex;
-  flex-direction: column; /* Align label and input vertically */
-  width: 48%; /* Adjust width as necessary for spacing */
+  flex-direction: column;
+  width: 48%;
 }
 
 .form-group label {
-  margin-bottom: 5px; /* Space between label and input */
+  margin-bottom: 5px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 10px; /* Adjust padding */
-  border: 1px solid #ccc; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  width: 100%; /* Full width for inputs */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
 }
 
 textarea {
-  resize: vertical; /* Allow vertical resize */
+  resize: vertical;
 }
-/* Specific styles for single text boxes to increase width */
+
 .form-section .form-group:not(.form-row .form-group) {
-  width: 100%; /* Full width for single text boxes */
+  width: 100%;
 }
+
 .submit-button {
-  padding: 10px 15px; /* Button padding */
-  background-color: orange; /* Button color */
-  color: #fff; /* Text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  margin-top: 10px; /* Space above button */
+  padding: 10px 15px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /* Slider.css */
@@ -496,27 +496,38 @@ textarea {
   display: flex;
   list-style-type: none; /* Remove bullet points */
   flex-direction: column; /* Arrange rows vertically */
-  padding: 0px;
+  padding: 0;
 }
 
 .icon-text-row {
-  display: flex; /* Create a row layout */
-  justify-content: space-between; /* Space items evenly */
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 16px; /* Space between rows */
 }
 
 .icon-text-list-item {
   display: flex;
   align-items: center; /* Align checklist SVG with text */
-  flex: 1; /* Allow equal space for each item */
-  margin-right: 10px; /* Add margin to the right for spacing */
+  color: #fff;
+  flex: 1;
+  margin-right: 10px;
   padding-right: 10px;
   line-height: 1.6;
 }
-.li .icon-text-list-item {
-  margin-left: auto;
-  padding: auto;
+
+.icon-text-list-item svg {
+  height: 20px; /* Force the SVG to be 20px */
+  width: 20px; /* Force the SVG to be 20px */
+  margin-right: 8px; /* Add spacing between icon and text */
+  flex-shrink: 0; /* Prevent shrinking */
+  object-fit: contain; /* Ensure the SVG scales properly */
 }
+
+.icon-text-list-item:nth-child(6) svg {
+  height: 20px !important; /* Ensure the sixth SVG is the same size */
+  width: 20px !important; /* Force it to match the size of others */
+}
+
 /* Remove margin from the last item in each row */
 .icon-text-row .icon-text-list-item:last-child {
   margin-right: 0;
@@ -526,8 +537,9 @@ textarea {
   margin-top: 20px; /* Add spacing above the button */
   padding: 10px 20px; /* Add padding inside the button */
   background-color: #ff9a00; /* Button background color */
-  color: white; /* Button text color */
+  color: rgb(30, 49, 223); /* Button text color */
   border: none; /* Remove border */
+  font-weight: 500;
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
 }
@@ -556,6 +568,11 @@ textarea {
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-snap-type: x mandatory; /* Snap to each slide when scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  .services-section {
+    margin: 10px;
+    width: fit-content;
+    align-items: center;
   }
 
   .slider-content {
@@ -627,6 +644,14 @@ textarea {
     margin-top: 20px;
   }
 
+  .form-row {
+    flex-direction: column; /* Change row to column layout */
+  }
+
+  .form-group {
+    width: 100%; /* Make each form group take full width */
+  }
+
   .cost-left {
     display: flex;
     flex-direction: row;
@@ -655,7 +680,8 @@ textarea {
     width: 100%; /* Make the image responsive */
   }
   .icon-text-list-item {
-    padding: 10px;
+    padding-top: 10px;
+    margin-top: 5px;
     color: white;
   }
   .partner-image-container,
