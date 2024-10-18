@@ -1,62 +1,92 @@
-// import React from 'react';
-// import './Resources.css';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import ServicesPEO1 from "../../../assets/images/ServicesPEO1.jpg";
+import ServicesPEO2 from "../../../assets/images/ServicesPEO2.jpg";
+import ServicesPEO3 from "../../../assets/images/ServicesPEO3.jpg";
+import "./Resources.css";
 
-// interface ArticleProps {
-//   image: string;
-//   categories: string[];
-//   title: string;
-//   description: string;
-// }
+export default function ResourcesAndArticles() {
+  const { t } = useTranslation();
 
-// const ArticleCard: React.FC<ArticleProps> = ({ image, categories, title, description }) => (
-//   <div className="article-card">
-//     <img src={image} alt={title} className="article-image" />
-//     <div className="article-content">
-//       <div className="article-categories">
-//         {categories.map((category, index) => (
-//           <span key={index} className="category-tag">{category}</span>
-//         ))}
-//       </div>
-//       <h3 className="article-title">{title}</h3>
-//       <p className="article-description">{description}</p>
-//     </div>
-//   </div>
-// );
+  const peoResources = [
+    {
+      id: 0,
+      img: ServicesPEO1,
+      article: t("Articles"),
+      resources: t("Resources"),
+      title: t(
+        "The Complete Handbook of Executive Search in India: Examining the Economic and Cultural Effects of Poor Hiring"
+      ),
+      text: t(
+        "Overview Finding and keeping top executive talent is essential for the competitive corporate environment of today."
+      ),
+    },
+    {
+      id: 1,
+      img: ServicesPEO2,
+      article: t("Articles"),
+      resources: t("Resources"),
+      title: t(
+        "Using PEO/EOR Services to Manage Remote Teams in India: Crucial Tools and Strategies"
+      ),
+      text: t(
+        "Overview In the era of digital change and globalization, the capacity to efficiently lead remote teams."
+      ),
+    },
+    {
+      id: 2,
+      img: ServicesPEO3,
+      article: t("Articles"),
+      resources: t("Resources"),
+      title: t(
+        "Strategic Executive Search Services for Leading Companies in India"
+      ),
+      text: t(
+        "Finding the proper people to run your company in the highly competitive business world of today is more."
+      ),
+    },
+  ];
 
-// export default function ResourcesAndArticles() {
-//   const articles: ArticleProps[] = [
-//     {
-//       image: "https://recruitindo.com/wp-content/uploads/2023/12/eliminate.png",
-//       categories: ["Articles", "Resources"],
-//       title: "The Ultimate Guide to Executive Search in Indonesia: Analysing the Financial and Cultural Impact of Wrong Hires",
-//       description: "Introduction In today's competitive business landscape, finding and retaining top executive talent is crucial for the"
-//     },
-//     {
-//       image: "https://recruitindo.com/wp-content/uploads/2023/12/recruitindo-by-number-1024x682.jpeg",
-//       categories: ["Articles", "Resources"],
-//       title: "Managing Remote Teams in Indonesia: Essential Tools and Strategies via PEO/EOR Services",
-//       description: "Introduction In the age of globalisation and digital transformation, the ability to manage remote teams effectively"
-//     },
-//     {
-//       image: "https://recruitindo.com/wp-content/uploads/2024/01/search-solution-1024x768.jpeg",
-//       categories: ["Articles"],
-//       title: "Strategic Executive Search Solutions for Indonesia's Top Businesses",
-//       description: "In today's fiercely competitive business landscape, finding the right talent to lead your organisation is more"
-//     }
-//   ];
-
-//   return (
-//     <div className="resources-and-articles">
-//       <header>RESOURCES</header>
-//       <h1>Resources and Articles</h1>
-//       <div className="article-grid">
-//         {articles.map((article, index) => (
-//           <ArticleCard key={index} {...article} />
-//         ))}
-//       </div>
-//       <button className="more-resources-button">
-//         More Resources <span className="arrow">→</span>
-//       </button>
-//     </div>
-//   );
-// }
+  return (
+    <>
+      {" "}
+      {/* Resources and Articles Section */}
+      <div className="pay-resources">
+        <h2>{t("Resources")}</h2>
+        <h1>{t("Resources and Articles")}</h1>
+        <div className="pay-resource-cards">
+          {peoResources.map((ele, index) => (
+            <>
+              <div key={index} className="pay-resource-card">
+                <img src={ele.img} alt="" />
+                <div className="pay-resource-card-btn">
+                  <button className="pay-resource-article-btn">
+                    {" "}
+                    {ele.article}{" "}
+                  </button>
+                  {ele.resources === " " ? (
+                    " "
+                  ) : (
+                    <>
+                      ,{" "}
+                      <button className="pay-resources-btn">
+                        {ele.resources}
+                      </button>
+                    </>
+                  )}
+                </div>
+                <div className="pay-resource-card-text">
+                  <h4>{ele.title} </h4>
+                  <p> {ele.text}</p>
+                </div>
+              </div>
+            </>
+          ))}
+        </div>
+        <button className="payResource-btn">
+          <a href="/resources">{t("Our Resources")}</a>
+        </button>
+      </div>
+    </>
+  );
+}
