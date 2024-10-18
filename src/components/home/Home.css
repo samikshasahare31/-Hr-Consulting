@@ -93,6 +93,7 @@
   max-width: 600px;
   position: relative;
   z-index: 1;
+  height: 900px;
 }
 
 .form-section {
@@ -820,7 +821,8 @@ textarea {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .main-container {
-    padding-right: -20px;
+    padding-right: 10px;
+    max-width: 100%;
   }
   .form-container {
     margin-right: 40px;
@@ -831,11 +833,25 @@ textarea {
     max-width: 100%;
     margin-left: 10px;
     padding-bottom: 30px;
+    height: 900px;
   }
   .form-section {
     padding-right: 10px;
-    padding-right: 0px;
     width: 400px;
     height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
   }
 }
