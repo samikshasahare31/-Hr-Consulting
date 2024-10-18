@@ -495,32 +495,32 @@ textarea {
 .icon-text-list {
   display: flex;
   list-style-type: none; /* Remove bullet points */
-  flex-direction: column; /* Arrange rows vertically */
   padding: 0;
 }
 
 .icon-text-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between the two columns */
+}
+
+.icon-text-column {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px; /* Space between rows */
+  flex-direction: column;
 }
 
 .icon-text-list-item {
   display: flex;
-  align-items: center; /* Align checklist SVG with text */
+  align-items: center;
   color: #fff;
-  flex: 1;
-  margin-right: 10px;
-  padding-right: 10px;
-  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .icon-text-list-item svg {
-  height: 20px; /* Force the SVG to be 20px */
-  width: 20px; /* Force the SVG to be 20px */
-  margin-right: 8px; /* Add spacing between icon and text */
-  flex-shrink: 0; /* Prevent shrinking */
-  object-fit: contain; /* Ensure the SVG scales properly */
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  object-fit: contain;
 }
 
 .icon-text-list-item:nth-child(6) svg {
@@ -621,19 +621,19 @@ textarea {
     background-color: transparent; /* Background color */
   }
 
-  .text-section h1{
+  .text-section h1 {
     width: fit-content;
     font-size: 2.2rem;
   }
 
-  .text-section p{
+  .text-section p {
     width: fit-content;
   }
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
   .form-section {
-    width: 100%; 
+    width: 100%;
     padding: 1rem;
     background-color: none;
     height: auto;
@@ -673,20 +673,19 @@ textarea {
     padding: 0;
   }
 
-  .one-stop-text h2{
+  .one-stop-text h2 {
     padding: 0;
     font-size: 1.5rem;
   }
 
-  .one-stop-description{
+  .one-stop-description {
     margin: 10px;
     padding: 0;
     margin-top: 20px;
   }
 
   .icon-text-row {
-    flex-direction: column; /* Stack checklist items vertically */
-    align-items: flex-start; /* Align left */
+    grid-template-columns: 1fr;
     width: 100%;
   }
 
@@ -697,7 +696,6 @@ textarea {
   .icon-text-list-item {
     padding-top: 10px;
     margin-top: 5px;
-    color: white;
   }
   .partner-image-container,
   .compliance-image-container {
@@ -718,7 +716,7 @@ textarea {
     order: 2;
     width: 100%;
   }
-  .partner-text{
+  .partner-text {
     padding: 0;
   }
 
@@ -748,10 +746,9 @@ textarea {
     text-align: start;
     margin-top: 20px;
     margin-bottom: 10px;
-
   }
 
-  .cost-text{
+  .cost-text {
     padding: 0;
   }
 
