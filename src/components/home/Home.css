@@ -855,7 +855,54 @@ textarea {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .main-container { 
+  .main-container {
+    max-width: 100%;
+  }
+  .form-container {
+    margin-right: 0px;
+    font-size: 12px;
+    width: 750px;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description,
+  .cost-description {
+    font-size: 16px;
+    margin-left: -15px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .partner-content {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1280px) {
+  .main-container {
     max-width: 100%;
   }
   .form-container {
