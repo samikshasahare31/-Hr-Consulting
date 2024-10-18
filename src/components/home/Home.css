@@ -901,7 +901,7 @@ textarea {
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 800px) and (max-width: 1280px) {
+@media only screen and (min-width: 800px) and (max-width: 1279px) {
   .main-container {
     max-width: 100%;
   }
