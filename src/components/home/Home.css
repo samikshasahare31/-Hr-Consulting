@@ -805,20 +805,7 @@ textarea {
     max-height: 100%; /* Limit height to prevent overflow */
   }
 }
-@media (min-width: 768px) {
-  .partner-description,
-  .compliance-description,
-  .cost-description {
-    font-size: 16px;
-    margin-left: -15px;
-    max-width: 500px;
-    width: 350px;
-    padding-right: 15px;
-  }
-  .partner-content {
-    flex-direction: row;
-  }
-}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .main-container {
     padding-right: 10px;
@@ -853,5 +840,17 @@ textarea {
     font-size: 20px;
     width: auto;
     padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description,
+  .cost-description {
+    font-size: 16px;
+    margin-left: -15px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .partner-content {
+    flex-direction: row;
   }
 }
