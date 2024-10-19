@@ -204,7 +204,7 @@ textarea {
 /* Add hover effects for buttons */
 .prev:hover,
 .next:hover {
-  background-color:none; /* Solid background on hover */
+  background-color: none; /* Solid background on hover */
   transition: background-color 0.3s; /* Smooth transition for hover */
 }
 .services-section {
@@ -456,9 +456,7 @@ textarea {
   padding-top: 25px;
   font-weight: bold;
 }
-/* .compliance-image-container {
-  margin: 20px;
-} */
+
 .compliance-icon {
   padding-bottom: 20px;
 }
@@ -753,7 +751,8 @@ textarea {
     margin-bottom: 10px;
   }
 
-  .partner-expertise {
+  .partner-expertise,
+  .compliance-expertise {
     font-size: 1.35rem;
     padding: 0;
     text-align: start;
