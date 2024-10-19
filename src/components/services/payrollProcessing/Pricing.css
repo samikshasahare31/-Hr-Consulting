@@ -29,13 +29,17 @@
 }
 
 .contact-button {
-  /* width: 10%; */
-  background-color: #fb923c;
-  color: #1e3a8a;
+  background-color: #e79522;
+  color: white;
   font-weight: 600;
   padding: 0.5rem 1rem;
+  margin-top: 2rem;
   border-radius: 0.25rem;
   text-decoration: none;
+}
+
+.contact-button:hover {
+  background-color: #db8d21;
 }
 
 .pricing-info {

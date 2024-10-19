@@ -37,7 +37,7 @@
 }
 
 .schedule-button {
-  background-color: #f97316;
+  background-color: #e79522;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -51,7 +51,7 @@
 }
 
 .schedule-button:hover {
-  background-color: #ea580c;
+  background-color: #db8d21;
 }
 
 .arrow {
@@ -120,7 +120,8 @@
 @media (max-width: 550px) {
   .payroll-landing {
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    padding: 0 0 3rem 0;
   }
 
   .content-section {

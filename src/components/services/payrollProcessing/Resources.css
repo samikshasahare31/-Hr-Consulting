@@ -62,11 +62,16 @@
 .payResource-btn {
   width: 10%;
   text-align: center;
-  background-color: gold;
+  background-color: #e79522;
+  color: white;
   padding: 10px 5px;
   border-radius: 5px;
   border: 0;
   text-decoration: none;
+}
+
+.payResource-btn:hover {
+  background-color: #db8d21;
 }
 
 .payResource-btn a {
