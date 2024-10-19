@@ -3,7 +3,6 @@ import Banner from "./Banner";
 import Cart from "./Cart";
 import Cart2 from "./Cart2";
 import Pricing from "./Pricing";
-import Contact from "./Contact";
 import Resources from "./Resources";
 
 function PayrollProcessing() {
@@ -34,10 +33,6 @@ function PayrollProcessing() {
       </section>
 
       {/* Contact components */}
-
-      <section>
-        <Contact />
-      </section>
 
       {/* Resources components */}
 
