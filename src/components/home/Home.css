@@ -204,7 +204,7 @@ textarea {
 /* Add hover effects for buttons */
 .prev:hover,
 .next:hover {
-  background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+  background-color:none; /* Solid background on hover */
   transition: background-color 0.3s; /* Smooth transition for hover */
 }
 .services-section {
