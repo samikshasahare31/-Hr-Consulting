@@ -571,7 +571,6 @@ textarea {
 /* Media Queries for Responsive Design */
 
 /* For screens less than 768px */
-/* For screens less than 768px */
 @media (max-width: 767px) {
   .slider-container {
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -843,16 +842,21 @@ textarea {
     padding-bottom: 10px;
   }
   .partner-description,
-  .compliance-description,
-  .cost-description {
+  .compliance-description {
     font-size: 16px;
     margin-left: -20px; /* Increase the negative margin */
     max-width: 500px;
     width: 350px;
     padding-right: 15px;
   }
+  .cost-description {
+    padding-left: 20px;
+  }
   .partner-content {
     flex-direction: row;
+  }
+  .cost-left {
+    margin-left: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -890,24 +894,46 @@ textarea {
     padding-bottom: 10px;
   }
   .partner-description,
-  .compliance-description,
-  .cost-description {
-    font-size: 16px;
-    margin-left: -15px;
+  .compliance-description
+   {
+    font-size: 12px;
+    margin-left: -50px;
     max-width: 500px;
-    width: 350px;
-    padding-right: 15px;
+    width: 280px;
+    height: auto;
+    padding-right: 10px;
+    align-items: center;
+  }
+  .cost-description
+  {
+    font-size: 12px;
+    margin-left: -10px;
+    max-width: 500px;
+    width: 280px;
+    height: auto;
+    padding-right: 10px;
+    align-items: center;
   }
   .partner-content {
     flex-direction: row;
   }
-  .partner-expertise {
-    font-size: 22px;
+  .partner-expertise,
+  .cost-expertise,
+  .compliance-expertise {
+    font-size: 16px;
     position: relative;
     left: -50px; /* Shift to the left */
     margin: 10px auto;
     padding-top: 25px;
     font-weight: bold;
+  }
+  .partner-image-container img,
+  .compliance-image-container img,
+  .cost-image-container img {
+    width: 300px; /* Full width of the container */
+    height: 290px; /* Maintain aspect ratio */
+    object-fit: fill; /* Ensure images cover the area without distortion */
+    max-height: 100%; /* Limit height to prevent overflow */
   }
 }
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
