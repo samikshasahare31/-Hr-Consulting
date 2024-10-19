@@ -894,8 +894,7 @@ textarea {
     padding-bottom: 10px;
   }
   .partner-description,
-  .compliance-description
-   {
+  .compliance-description {
     font-size: 12px;
     margin-left: -50px;
     max-width: 500px;
@@ -904,8 +903,7 @@ textarea {
     padding-right: 10px;
     align-items: center;
   }
-  .cost-description
-  {
+  .cost-description {
     font-size: 12px;
     margin-left: -10px;
     max-width: 500px;
@@ -971,14 +969,14 @@ textarea {
     padding-bottom: 10px;
   }
   .partner-description,
-  .compliance-description,
-  .cost-description {
+  .compliance-description {
     font-size: 16px;
-    margin-left: -15px;
+    margin-left: -50px;
     max-width: 500px;
     width: 350px;
     padding-right: 15px;
   }
+
   .partner-content {
     flex-direction: row;
   }
