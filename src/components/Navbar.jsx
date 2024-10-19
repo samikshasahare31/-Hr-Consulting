@@ -272,8 +272,8 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden">
-          <div className="flex flex-col space-y-2 bg-base-100 p-4">
+        <div className="lg:hidden ">
+          <div className="flex flex-col fixed top-0 left-0 mt-16 w-full bg-base-100 p-4">
             <Link
               to="/aboutUs"
               className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"

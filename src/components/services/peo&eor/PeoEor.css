@@ -7,7 +7,7 @@
 .peo-main {
   width: 80%;
   margin: 2rem auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -60,6 +60,10 @@
   border: 0;
   margin-top: 2rem;
   text-decoration: none;
+}
+
+.peo-main-btn:hover {
+  background-color: #db8d21;
 }
 
 /*                           Solutions Section Styles */
@@ -218,13 +222,13 @@
 }
 
 .peo-pricing-cards {
-  width: 80%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
 }
 
 .peo-pricing-card {
-  width: 48%;
+  width: 49%;
   background-color: white;
   border-radius: 20px;
 }
@@ -239,7 +243,7 @@
 .peo-pricing-card-price {
   margin: 1.5rem;
   padding: 1.5rem;
-  background-color: lightgray;
+  background-color: rgb(240, 240, 240);
   border-radius: 10px;
   line-height: 2.25rem;
 }
@@ -291,12 +295,16 @@
 .peo-pricing-btn {
   width: 20%;
   text-align: center;
-  background-color: gold;
+  background-color: #e79522;
   padding: 10px 0;
   border-radius: 5px;
   border: 0;
   margin-top: 2rem;
   text-decoration: none;
+}
+
+.peo-pricing-btn:hover {
+  background-color: #db8d21;
 }
 
 /*                                      Resources and Articles Styles */
@@ -362,11 +370,16 @@
 .peoResource-btn {
   width: 10%;
   text-align: center;
-  background-color: gold;
+  background-color: #e79522;
+  color: white;
   padding: 10px 5px;
   border-radius: 5px;
   border: 0;
   text-decoration: none;
+}
+
+.peoResource-btn:hover {
+  background-color: #db8d21;
 }
 
 .peoResource-btn a {
@@ -374,7 +387,7 @@
 }
 
 /*                                     Responsive Styles 1200px */
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .peo-main {
     width: 90%;
   }
@@ -429,6 +442,10 @@
 
   .peo-pricing-cards {
     width: 90%;
+  }
+
+  .peo-pricing-btn {
+    width: 25%;
   }
 
   .peo-resource-cards {
@@ -513,6 +530,10 @@
 
 /*                                     Responsive Styles 768px */
 @media (max-width: 768px) {
+  .peo-main {
+    margin-bottom: 2rem;
+  }
+
   .peo-solution-card {
     width: 100%;
   }
@@ -537,18 +558,31 @@
     margin: 0 auto;
   }
 
+  .peo-main-btn {
+    font-size: 1rem;
+  }
+
   .peo-solution h1 {
     width: 90%;
     font-size: 1.25rem;
     text-align: center;
   }
 
+  .peo-solution-card {
+    width: 95%;
+    margin: 0 auto;
+  }
+
   .peo-solution-card h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .peo-solution-card p {
     font-size: 18px;
+  }
+
+  .peo-solution-card img {
+    width: 12%;
   }
 
   .peo-benefit h1 {
@@ -558,11 +592,12 @@
   }
 
   .peo-benefit-card {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
 
   .peo-benefit-card h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .peo-benefit-card p {

@@ -342,30 +342,34 @@ function Home() {
 
           <ul className="icon-text-list">
             <div className="icon-text-row">
-              <li className="icon-text-list-item">
-                <CHECKLISTSVG />
-                {t("Regulatory and Tax Compliance")}
-              </li>
-              <li className="icon-text-list-item">
-                <CHECKLISTSVG />
-                {t("Work Permits")}
-              </li>
-              <li className="icon-text-list-item">
-                <CHECKLISTSVG />
-                {t("Payroll Processing")}
-              </li>
-              <li className="icon-text-list-item">
-                <CHECKLISTSVG />
-                {t("Talent recruitment")}
-              </li>
-              <li className="icon-text-list-item">
-                <CHECKLISTSVG />
-                {t("Employee onboarding and off-boarding")}
-              </li>
-              <li className="icon-text-list-item">
-                <CHECKLISTSVG />
-                {t("HR Consulting Services / Ad-hoc HR Services")}
-              </li>
+              <div className="icon-text-column">
+                <li className="icon-text-list-item">
+                  <CHECKLISTSVG />
+                  {t("Regulatory and Tax Compliance")}
+                </li>
+                <li className="icon-text-list-item">
+                  <CHECKLISTSVG />
+                  {t("Work Permits")}
+                </li>
+                <li className="icon-text-list-item">
+                  <CHECKLISTSVG />
+                  {t("Payroll Processing")}
+                </li>
+              </div>
+              <div className="icon-text-column">
+                <li className="icon-text-list-item">
+                  <CHECKLISTSVG />
+                  {t("Talent recruitment")}
+                </li>
+                <li className="icon-text-list-item">
+                  <CHECKLISTSVG />
+                  {t("Employee onboarding and off-boarding")}
+                </li>
+                <li className="icon-text-list-item">
+                  <CHECKLISTSVG />
+                  {t("HR Consulting Services / Ad-hoc HR Services")}
+                </li>
+              </div>
             </div>
           </ul>
 
