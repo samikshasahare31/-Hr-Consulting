@@ -41,28 +41,26 @@ const Resources = () => {
       <section className="resource-section">
         <div className="resource-card-section">
           {currentCards.map((ele, index) => (
-            <>
-              <div key={index} className="resource-card">
-                <img src={ele.img} alt="" />
-                <div className="card-btn">
-                  <button className="article-btn"> {t(ele.article)} </button>
-                  {ele.resources === " " ? (
-                    " "
-                  ) : (
-                    <>
-                      ,
-                      <button className="resources-btn">
-                        {t(ele.resources)}
-                      </button>
-                    </>
-                  )}
-                </div>
-                <div className="card-text">
-                  <h4>{t(ele.title)} </h4>
-                  <p> {t(ele.text)}</p>
-                </div>
+            <div key={index} className="resource-card">
+              <img src={ele.img} alt="" />
+              <div className="card-btn">
+                <button className="article-btn"> {t(ele.article)} </button>
+                {ele.resources === " " ? (
+                  " "
+                ) : (
+                  <>
+                    ,
+                    <button className="resources-btn">
+                      {t(ele.resources)}
+                    </button>
+                  </>
+                )}
               </div>
-            </>
+              <div className="card-text">
+                <h4>{t(ele.title)} </h4>
+                <p> {t(ele.text)}</p>
+              </div>
+            </div>
           ))}
         </div>
         <div className="pages">
