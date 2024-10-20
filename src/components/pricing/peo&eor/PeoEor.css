@@ -27,13 +27,13 @@
 }
 
 .peo-pricing-cards {
-  width: 80%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
 }
 
 .peo-pricing-card {
-  width: 48%;
+  width: 49%;
   background-color: white;
   border-radius: 20px;
 }
@@ -49,7 +49,7 @@
 .peo-pricing-card-price {
   margin: 1.5rem;
   padding: 1.5rem;
-  background-color: rgb(235, 233, 233);
+  background-color: rgb(240, 240, 240);
   border-radius: 10px;
 }
 
@@ -111,6 +111,10 @@
   border: 0;
   margin-top: 2rem;
   text-decoration: none;
+}
+
+.peo-pricing-btn:hover {
+  background-color: #db8d21;
 }
 
 /*                                      Resources and Articles Styles */
@@ -183,11 +187,16 @@
 .peoResource-btn {
   width: 10%;
   text-align: center;
-  background-color: gold;
+  background-color: #e79522;
+  color: white;
   padding: 10px 5px;
   border-radius: 5px;
   border: 0;
   text-decoration: none;
+}
+
+.peoResource-btn:hover {
+  background-color: #db8d21;
 }
 
 .peoResource-btn a {
@@ -204,6 +213,10 @@
 @media (max-width: 1024px) {
   .peo-pricing-cards {
     width: 90%;
+  }
+
+  .peo-pricing-btn {
+    width: 25%;
   }
 
   .peo-resource-cards {

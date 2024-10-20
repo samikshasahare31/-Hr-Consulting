@@ -16,6 +16,8 @@
 }
 
 .resource-header p {
+  font-size: 0.9rem;
+
   color: #acadac;
 }
 .resource-section {
@@ -69,7 +71,7 @@
 .resource-card-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
 }
 
 .pagination button {
@@ -94,6 +96,9 @@
 }
 
 @media (max-width: 1171px) {
+  .resource-header {
+    padding-left: 20px;
+  }
   .resource-header h1 {
     font-size: 2rem;
   }
@@ -104,7 +109,7 @@
     width: 100%;
     flex-direction: column;
   }
-  .card {
+  .resource-card {
     width: 45%;
     margin: 0 10px;
     height: 100%;
@@ -119,9 +124,10 @@
     width: 100%;
   }
 }
-@media (max-width: 775px) {
+
+@media (max-width: 500px) {
   .resource-header {
-    padding-left: 30px;
+    padding-left: 10px;
   }
   .resource-header h1 {
     margin-bottom: 25px;
@@ -131,7 +137,7 @@
   .resource-header p {
     font-size: 0.8rem;
   }
-  .card {
+  .resource-card {
     width: 90%;
     height: 100%;
   }

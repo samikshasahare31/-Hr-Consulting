@@ -1,10 +1,11 @@
 .main-container {
+  box-shadow: 1px;
   position: relative;
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   padding-right: 8%;
   flex-direction: column;
-  height: 900px; /* Ensure the main container takes the full height */
+  height: 820px; /* Ensure the main container takes the full height */
   overflow: hidden; /* Hide any overflow from absolute elements */
   width: auto;
 }
@@ -35,7 +36,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 20px;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .content {
@@ -45,8 +46,7 @@
 }
 
 .text-section {
-  margin: 7%;
-  /* margin-left: 5rem; */
+  margin: 8%;
   flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
@@ -89,15 +89,16 @@
 }
 .form-background {
   flex: 1 1 35%;
-  max-width: 500px;
+  max-width: 600px;
   position: relative;
   z-index: 1;
+  height: 900px;
 }
 
 .form-section {
   width: 100%;
-  max-width: 700px;
-  padding: 20px;
+  max-width: 600px;
+  height: auto;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -126,6 +127,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
+  top: 100%;
+  z-index: 1;
 }
 
 textarea {
@@ -202,7 +205,7 @@ textarea {
 /* Add hover effects for buttons */
 .prev:hover,
 .next:hover {
-  background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+  background-color: none; /* Solid background on hover */
   transition: background-color 0.3s; /* Smooth transition for hover */
 }
 .services-section {
@@ -216,6 +219,7 @@ textarea {
   font-size: 30px;
 }
 .services-section h2 {
+  padding-top: 35px;
   padding-left: 20px;
   font-size: 20px;
 }
@@ -453,9 +457,7 @@ textarea {
   padding-top: 25px;
   font-weight: bold;
 }
-/* .compliance-image-container {
-  margin: 20px;
-} */
+
 .compliance-icon {
   padding-bottom: 20px;
 }
@@ -467,10 +469,13 @@ textarea {
   justify-content: space-between; /* Adjust if necessary */
   background-color: #1d3b6b;
   border-radius: 30px;
-  padding: 40px;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
   height: auto;
   color: white;
 }
+
 .one-stop h2 {
   color: white;
   font-size: 30px;
@@ -495,32 +500,32 @@ textarea {
 .icon-text-list {
   display: flex;
   list-style-type: none; /* Remove bullet points */
-  flex-direction: column; /* Arrange rows vertically */
   padding: 0;
 }
 
 .icon-text-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 0px; /* Space between the two columns */
+}
+
+.icon-text-column {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px; /* Space between rows */
+  flex-direction: column;
 }
 
 .icon-text-list-item {
   display: flex;
-  align-items: center; /* Align checklist SVG with text */
+  align-items: center;
   color: #fff;
-  flex: 1;
-  margin-right: 10px;
-  padding-right: 10px;
-  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .icon-text-list-item svg {
-  height: 20px; /* Force the SVG to be 20px */
-  width: 20px; /* Force the SVG to be 20px */
-  margin-right: 8px; /* Add spacing between icon and text */
-  flex-shrink: 0; /* Prevent shrinking */
-  object-fit: contain; /* Ensure the SVG scales properly */
+  width: 24px; /* Default icon size */
+  height: 24px;
+  margin-right: 10px;
+  flex-shrink: 0; /* Ensures the SVG doesn't shrink */
 }
 
 .icon-text-list-item:nth-child(6) svg {
@@ -549,9 +554,12 @@ textarea {
 }
 
 .one-stop-image {
-  max-width: 100%; /* Make sure the image is responsive */
-  height: auto; /* Maintain aspect ratio */
+  width: 50%;
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
 }
+
 .Brands-container h2 {
   text-align: center;
   padding: 30px;
@@ -562,8 +570,7 @@ textarea {
 /* Media Queries for Responsive Design */
 
 /* For screens less than 768px */
-/* For screens less than 768px */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .slider-container {
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-snap-type: x mandatory; /* Snap to each slide when scrolling */
@@ -621,13 +628,19 @@ textarea {
     background-color: transparent; /* Background color */
   }
 
+  .text-section h1 {
+    width: fit-content;
+    font-size: 2.2rem;
+  }
+
+  .text-section p {
+    width: fit-content;
+  }
   .content {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
   .form-section {
-    width: 100%; /* Full width on smaller screens */
-    margin-top: 1rem;
-    margin-left: 1rem;
+    width: 100%;
     padding: 1rem;
     background-color: none;
     height: auto;
@@ -654,35 +667,47 @@ textarea {
 
   .cost-left {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: start;
   }
+
   .one-stop {
     flex-direction: column; /* Stack elements vertically */
     align-items: center;
   }
 
   .one-stop-text {
-    padding-right: 0;
-    text-align: center; /* Center the text on smaller screens */
+    padding: 0;
+  }
+
+  .one-stop-text h2 {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .one-stop-description {
+    margin: 10px;
+    padding: 0;
+    margin-top: 20px;
   }
 
   .icon-text-row {
-    flex-direction: column; /* Stack checklist items vertically */
-    align-items: flex-start; /* Align left */
+    grid-template-columns: 1fr;
     width: 100%;
   }
 
   .one-stop-image {
-    margin-top: 20px; /* Space between button and image */
-    width: 100%; /* Make the image responsive */
+    width: 80%;
+    margin-top: 20px;
   }
+
   .icon-text-list-item {
     padding-top: 10px;
     margin-top: 5px;
-    color: white;
+  }
+  .icon-text-list-item svg {
+    width: 15px; /* Smaller icon size for mobile screens */
+    height: 15px;
   }
   .partner-image-container,
   .compliance-image-container {
@@ -703,6 +728,9 @@ textarea {
     order: 2;
     width: 100%;
   }
+  .partner-text {
+    padding: 0;
+  }
 
   .cost-content,
   .partner-content,
@@ -717,15 +745,24 @@ textarea {
   }
 
   .cost-expertise {
-    text-align: left;
-    font-size: 1.5em;
-    margin: 0;
+    font-size: 1.35rem;
     padding: 0;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
-  .partner-expertise {
-    font-size: 1.5em;
-    margin-right: 20px;
+  .partner-expertise,
+  .compliance-expertise {
+    font-size: 1.35rem;
+    padding: 0;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .cost-text {
+    padding: 0;
   }
 
   .cost-description {
@@ -735,14 +772,16 @@ textarea {
     width: 100%;
   }
   .partner-description {
-    text-align: justify;
+    text-align: left;
     max-width: 500px; /* Makes the text block narrower to look better on mobile */
     line-height: 1.5; /* Improves readability */
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 10px;
   }
-
+  .partner-description p {
+    margin: 0; /* Removes extra space between paragraphs */
+  }
   .cost-icon,
   .partner-icon {
     width: 100%;
@@ -768,41 +807,208 @@ textarea {
     max-height: 100%; /* Limit height to prevent overflow */
   }
 }
-@media (min-width: 768px) {
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    padding-right: 10px;
+    max-width: 100%;
+  }
+  .form-container {
+    margin-right: 40px;
+    font-size: 12px;
+    width: 800px;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description {
+    font-size: 16px;
+    margin-left: -20px; /* Increase the negative margin */
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .cost-description {
+    padding-left: 20px;
+  }
   .partner-content {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .partner-image-container img {
+    margin-top: 7rem;
+  }
+  .services-section {
+    margin: 10px;
+    width: 100%;
+  }
+  .compliance-image-container img {
+    margin-top: 10rem;
+  }
+  .cost-image-container img {
+    margin-top: 8rem;
+  }
+  .cost-left {
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    max-width: 100%;
+  }
+  .form-container {
+    margin-right: 0px;
+    font-size: 12px;
+    width: 750px;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description {
+    font-size: 12px;
+    margin-left: -60px;
+    max-width: 500px;
+    width: 280px;
+    height: auto;
+    padding-right: 10px;
+    align-items: center;
+  }
+  .cost-description {
+    font-size: 12px;
+    margin-left: -10px;
+    max-width: 500px;
+    width: 280px;
+    height: auto;
+    padding-right: 10px;
+    align-items: center;
+  }
+  .partner-content {
+    flex-direction: row;
+  }
+  .partner-expertise,
+  .cost-expertise,
+  .compliance-expertise {
+    font-size: 16px;
+    position: relative;
+    left: -60px; /* Shift to the left */
+    margin: 10px auto;
+    padding-top: 25px;
+    font-weight: bold;
+  }
+  .partner-image-container img,
+  .compliance-image-container img,
+  .cost-image-container img {
+    width: 300px; /* Full width of the container */
+    height: 290px; /* Maintain aspect ratio */
+    object-fit: fill; /* Ensure images cover the area without distortion */
+    max-height: 100%; /* Limit height to prevent overflow */
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1279px) {
+  .main-container {
+    max-width: 100%;
+  }
+  .form-container {
+    margin-right: 0px;
+    font-size: 12px;
+    width: 750px;
+  }
+  .form-background {
+    max-width: 100%;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    height: 900px;
+  }
+  .form-section {
+    padding-right: 10px;
+    width: 400px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .text-section {
+    margin: 20px;
+    padding-left: 10px;
+  }
+  .text-section h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .text-section p {
+    font-size: 20px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+  .partner-description,
+  .compliance-description {
+    font-size: 16px;
+    margin-left: -50px;
+    max-width: 500px;
+    width: 350px;
+    padding-right: 15px;
+  }
+  .cost-expertise {
+    font-size: 22px;
+    position: relative;
+    left: -50px; /* Shift to the left */
+    margin: 10px auto;
+    padding-top: 25px;
+    font-weight: bold;
+  }
+  .partner-expertise,
+  .compliance-expertise {
+    left: -50px;
+    font-size: 25px;
+    position: relative;
   }
 
-  .partner-text {
-    width: 60%; /* Text takes 60% width */
-    margin-left: 20px;
-  }
-
-  .partner-image-container {
-    display: flex;
-    max-width: 40%; /* Optional: set a max width for the image */
-    flex-wrap: wrap;
-  }
-  .icon-text-row {
-    display: flex; /* Each row is a flex container */
-    justify-content: space-between; /* Space items evenly */
-    flex-wrap: wrap; /* Allow items to wrap to next row */
-  }
-  .icon-text-list-item {
-    padding: 10px;
-    margin-right: 0px;
-    flex: 0 0 calc(47.33% - 10px);
-  }
-  .icon-text-list-item {
-    padding: 10px;
-    margin-right: 0px;
-    flex: 0 0 calc(47.33% - 10px);
-  }
-  .icon-text-row .icon-text-list-item:last-child svg {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
+  .partner-content {
+    flex-direction: row;
   }
 }

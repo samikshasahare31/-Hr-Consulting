@@ -11,18 +11,18 @@
 /* HR CONSULTING */
 
 .firstPart {
-  padding: 0vw 15vw;
+  padding: 5vw 15vw;
   display: flex;
   gap: 2vw;
 }
 
 .left img {
-  height: 70vh;
-  width: 80vw;
+  height: 50vh;
+  width: 60vw;
 }
 
 .right {
-  padding: 7vw 2vw;
+  padding: 2vw 2vw;
   display: flex;
   flex-direction: column;
   gap: 1.5vw;
@@ -39,6 +39,7 @@
   font-size: 2vw;
   font-weight: bolder;
   color: #033658;
+  text-align: start;
 }
 
 .right p {
