@@ -911,7 +911,7 @@ textarea {
   .partner-description,
   .compliance-description {
     font-size: 12px;
-    margin-left: -50px;
+    margin-left: -60px;
     max-width: 500px;
     width: 280px;
     height: auto;
@@ -935,7 +935,7 @@ textarea {
   .compliance-expertise {
     font-size: 16px;
     position: relative;
-    left: -50px; /* Shift to the left */
+    left: -60px; /* Shift to the left */
     margin: 10px auto;
     padding-top: 25px;
     font-weight: bold;
