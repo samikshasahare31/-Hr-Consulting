@@ -506,7 +506,7 @@ textarea {
 .icon-text-row {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  gap: 20px; /* Space between the two columns */
+  gap: 0px; /* Space between the two columns */
 }
 
 .icon-text-column {
@@ -857,18 +857,17 @@ textarea {
     flex-direction: row;
     justify-content: center;
   }
-  .partner-image-container img{
+  .partner-image-container img {
     margin-top: 7rem;
-  
   }
-  .services-section{
+  .services-section {
     margin: 10px;
     width: 100%;
   }
-  .compliance-image-container img{
+  .compliance-image-container img {
     margin-top: 10rem;
   }
-  .cost-image-container img{
+  .cost-image-container img {
     margin-top: 8rem;
   }
   .cost-left {
