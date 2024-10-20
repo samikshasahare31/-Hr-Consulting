@@ -47,7 +47,6 @@
 
 .text-section {
   margin: 8%;
-  margin-left: 5rem;
   flex: 1 1 60%; /* Make sure text section doesn't shrink */
 }
 
@@ -854,7 +853,23 @@ textarea {
     padding-left: 20px;
   }
   .partner-content {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+  }
+  .partner-image-container img{
+    margin-top: 7rem;
+  
+  }
+  .services-section{
+    margin: 10px;
+    width: 100%;
+  }
+  .compliance-image-container img{
+    margin-top: 10rem;
+  }
+  .cost-image-container img{
+    margin-top: 8rem;
   }
   .cost-left {
     margin-left: 30px;
