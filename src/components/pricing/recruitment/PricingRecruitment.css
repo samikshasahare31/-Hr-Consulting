@@ -175,9 +175,43 @@ body {
   background-color: #d17f1a;
 }
 
+@media (min-width: 768px) and (max-width: 1100px) {
+  .pricing-recruitment-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .pricing-recruitment-content,
+  .pricing-recruitment-details {
+    width: 100%;
+    margin-bottom: 0 !important;
+    /* padding: 1.5rem; */
+  }
+
+  .pricing-recruitment-get-started-button,
+  .pricing-recruitment-upload-cv-button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .pricing-recruitment-content {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .pricing-recruitment-details {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+}
+
+
 @media screen and (max-width: 768px) {
   .pricing-recruitment-container {
     flex-direction: column;
+    margin: 5px;
   }
 
   .pricing-recruitment-content,
@@ -189,11 +223,12 @@ body {
   .pricing-recruitment-content {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
   }
 
   .pricing-recruitment-details {
     border-bottom-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .pricing-recruitment-get-started-button,

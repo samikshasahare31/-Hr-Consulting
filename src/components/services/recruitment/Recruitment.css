@@ -318,20 +318,102 @@ body {
   background-color: #d17f1a;
 }
 
+
+@media (min-width: 766px) and (max-width: 1100px) {
+  /* Recruitment procedure section */
+  .services-procedure-steps {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .services-step {
+    flex-basis: 40%;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .services-step-icon {
+    margin-left: 0;
+    padding: 10px;  
+    width: 30px;
+  }
+
+  .services-step-content{
+    padding-top: 20px;
+  }
+ 
+
+  .services-step:nth-child(2) .services-step-icon::after,
+  .services-step:nth-child(4) .services-step-icon::after,
+  .services-step:last-child .services-step-icon::after {
+    display: none;
+  }
+
+  .services-step:nth-child(3) .services-step-icon::after{
+    display: inline;
+  }
+
+
+  /* Recruitment services pricing section */
+  .services-pricing-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .services-pricing-content,
+  .services-pricing-details {
+    width: 100%;
+    /* margin-bottom: 1rem; */
+    padding: 1.5rem;
+  }
+
+  .services-get-started-button,
+  .services-upload-cv-button {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .services-pricing-content {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .services-pricing-details {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+}
+
+
 /* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 768px) {
   .services-recruitment-container {
     flex-direction: column;
     align-items: flex-start;
+    margin: 0;
   }
 
   .services-recruitment-content {
     max-width: 100%;
   }
 
+  .services-recruitment-image {
+    margin-top: 2.5rem;
+    width: 100%;
+    text-align: center;
+  } 
+  
   .services-recruitment-image img {
     max-width: 100%;
     border-radius: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
   }
 
   .services-recruitment-buttons {
@@ -343,18 +425,6 @@ body {
   .services-schedule-button,
   .services-apply-button {
     width: 100%;
-  }
-
-  .services-recruitment-image {
-    margin-top: 2.5rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  .services-recruitment-image img {
-    margin: 20px;
-    width: 100%;
-    max-width: 500px;
   }
 
   /* Recruitment procedure responsive */
@@ -380,6 +450,7 @@ body {
   .services-step-icon {
     margin-bottom: 1rem;
     margin-left: 0;
+    padding: 10px;
   }
 
   /* Yellow vertical line between the icons on mobile */
@@ -389,10 +460,11 @@ body {
     top: 100%;
     left: 50%;
     width: 2px;
-    height: 100px; /* Adjust length based on spacing between steps */
+    height: 180px; /* Adjust length based on spacing between steps */
     background-color: #f2981b;
     transform: translateX(-50%);
     margin: 0;
+    margin-top: 10px;
   }
 
   .services-step:last-child .services-step-icon::after {
@@ -411,6 +483,7 @@ body {
   .services-pricing-container {
     flex-direction: column;
     border-radius: none;
+    margin: 10px;
   }
 
   .services-pricing-content {
@@ -419,6 +492,7 @@ body {
     padding: 1.5rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
   }
 
   .services-pricing-details {

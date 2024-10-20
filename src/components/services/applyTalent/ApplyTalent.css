@@ -197,7 +197,7 @@ body {
   }
 
   .step:last-child .step-icon::after {
-    display: none;
+    display: none !important;
   }
 
   .step-content {
