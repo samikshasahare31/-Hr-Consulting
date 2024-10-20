@@ -773,8 +773,8 @@ textarea {
   }
   .partner-description {
     text-align: left;
-    max-width: 500px; /* Makes the text block narrower to look better on mobile */
-    line-height: 1.5; /* Improves readability */
+    max-width: 600px; /* Makes the text block narrower to look better on mobile */
+    line-height: 1.6; /* Improves readability */
     width: 100%;
     margin: 0;
     padding: 10px;
@@ -790,8 +790,8 @@ textarea {
     width: 100%;
   }
   .compliance-description {
-    text-align: justify; /* Justify text for better alignment */
-    max-width: 500px; /* Limit width for better mobile readability */
+    text-align: left; /* Justify text for better alignment */
+    max-width: 600px; /* Limit width for better mobile readability */
     line-height: 1.6; /* Improve readability with line spacing */
     width: 100%; /* Ensure description takes full width */
     margin: 0 auto; /* Center text */
