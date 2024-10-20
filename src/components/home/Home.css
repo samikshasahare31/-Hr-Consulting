@@ -773,8 +773,8 @@ textarea {
   }
   .partner-description {
     text-align: left;
-    max-width: 600px; /* Makes the text block narrower to look better on mobile */
-    line-height: 1.6; /* Improves readability */
+    max-width: 500px; /* Makes the text block narrower to look better on mobile */
+    line-height: 1.5; /* Improves readability */
     width: 100%;
     margin: 0;
     padding: 10px;
@@ -790,8 +790,8 @@ textarea {
     width: 100%;
   }
   .compliance-description {
-    text-align: left; /* Justify text for better alignment */
-    max-width: 600px; /* Limit width for better mobile readability */
+    text-align: justify; /* Justify text for better alignment */
+    max-width: 500px; /* Limit width for better mobile readability */
     line-height: 1.6; /* Improve readability with line spacing */
     width: 100%; /* Ensure description takes full width */
     margin: 0 auto; /* Center text */
@@ -807,6 +807,7 @@ textarea {
     max-height: 100%; /* Limit height to prevent overflow */
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .main-container {
     padding-right: 10px;
@@ -875,7 +876,6 @@ textarea {
     margin-left: 30px;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .main-container {
     max-width: 100%;
@@ -937,7 +937,7 @@ textarea {
   .compliance-expertise {
     font-size: 16px;
     position: relative;
-    left: -60px;
+    left: -60px; /* Shift to the left */
     margin: 10px auto;
     padding-top: 25px;
     font-weight: bold;
@@ -951,17 +951,14 @@ textarea {
     max-height: 100%; /* Limit height to prevent overflow */
   }
 }
-
-@media only screen and (min-width: 800px) and (max-width: 1280px) {
+@media only screen and (min-width: 800px) and (max-width: 1279px) {
   .main-container {
     max-width: 100%;
-    width: 100%;
-    margin-left: 30px;
   }
   .form-container {
     margin-right: 0px;
     font-size: 12px;
-    width: 780px;
+    width: 750px;
   }
   .form-background {
     max-width: 100%;
@@ -999,7 +996,7 @@ textarea {
   .cost-expertise {
     font-size: 22px;
     position: relative;
-    left: -50px;
+    left: -50px; /* Shift to the left */
     margin: 10px auto;
     padding-top: 25px;
     font-weight: bold;
@@ -1013,25 +1010,5 @@ textarea {
 
   .partner-content {
     flex-direction: row;
-  }
-}
-
-/* Media Query for 800px x 1280px */
-@media only screen and (min-width: 800px) and (max-width: 800px) and (min-height: 1280px) and (max-height: 1280px) {
-  .main-container {
-    padding: 20px;
-  }
-  .form-container {
-    width: 90%;
-  }
-}
-
-/* New Media Query for 884px x 1104px */
-@media only screen and (min-width: 884px) and (max-width: 884px) and (min-height: 1104px) and (max-height: 1104px) {
-  .main-container {
-    padding: 30px;
-  }
-  .form-container {
-    width: 100%;
   }
 }
