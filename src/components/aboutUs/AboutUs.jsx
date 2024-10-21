@@ -128,12 +128,16 @@ function AboutUs() {
       <div className="px-4 md:px-6 lg:px-12">
         <div className="max-w-screen-2xl container mx-auto flex flex-col lg:flex-row lg:gap-12">
           <div className="order-1 w-full lg:w-1/2">
-            <img src={banner} className="w-full h-auto pt-6 lg:pt-10" alt="About Us Banner" />
+            <img
+              src={banner}
+              className="w-full h-auto pt-6 lg:pt-10 max-w-md mx-auto" // Reduced width for the about1.png image
+              alt="About Us Banner"
+            />
           </div>
           <div className="w-full order-2 lg:order-1 lg:w-1/2 mt-6 lg:mt-10">
             <div className="space-y-4 lg:space-y-6">
               <h3 className="font-bold text-base lg:text-lg">ABOUT US</h3>
-              <h1 className="text-2xl lg:text-4xl font-bold">
+              <h1 className="text-2xl lg:text-4xl font-bold text-left">
                 Empowering Businesses with Talent Solutions for India’s Growth
               </h1>
               <p className="text-base lg:text-lg">
@@ -191,14 +195,14 @@ function AboutUs() {
           <div className="order-1 w-full lg:w-1/2">
             <img
               src={aboutRecruitindo}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto" // Reduced width for the About Recruitindo.png image
               alt="Recruitindo platform overview"
             />
           </div>
           <div className="w-full lg:w-1/2 flex items-center mt-6 lg:mt-0 lg:pl-6">
             <div className="space-y-4 lg:space-y-6">
               <h3 className="font-bold text-base lg:text-lg">ABOUT RECRUITINDO</h3>
-              <h1 className="text-2xl lg:text-3xl font-bold">
+              <h1 className="text-2xl lg:text-3xl font-bold text-left">
                 Our platform unlocks the potential of global teams
               </h1>
               <p className="text-base lg:text-lg">
@@ -216,7 +220,9 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      {isOpen && <ScheduleForm />}
+
+      {/* Include the schedule form component */}
+      <ScheduleForm />
     </>
   );
 }
