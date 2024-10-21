@@ -354,7 +354,7 @@ function Home() {
               </div>
               <p className='compliance-description'>
                 {t(
-                  `Indonesia's legal environment is unique, with regulations that can be intricate and often change. With our EOR service, you gain access to our in-depth knowledge of Indonesian labor laws, tax regulations, and compliance requirements. We act as your legal buffer, minimizing risks and protecting your business interests. Our team stays abreast of the latest legal updates, providing peace of mind that your operations are always compliant and your business integrity remains intact.`
+                  `India's legal environment is unique, with regulations that can be intricate and often change. With our EOR service, you gain access to our in-depth knowledge of Indonesian labor laws, tax regulations, and compliance requirements. We act as your legal buffer, minimizing risks and protecting your business interests. Our team stays abreast of the latest legal updates, providing peace of mind that your operations are always compliant and your business integrity remains intact.`
                 )}{" "}
               </p>
             </div>
