@@ -7,7 +7,7 @@ body {
 /* Default Styles for Larger Screens */
 .services-recruitment-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 2rem;
   margin: 3rem;
@@ -118,11 +118,12 @@ body {
   position: absolute;
   top: 50%;
   left: 100%;
-  width: 350px;
+  width: 26rem;
   height: 2px;
   background-color: #f2981b;
   transform: translateY(-50%);
-  margin-left: 15px; /* Extra space for the line, if needed */
+  margin-left: 12px; /* Extra space for the line, if needed */
+  margin-right: 10px;
 }
 
 .services-step:nth-child(3) .services-step-icon::after,

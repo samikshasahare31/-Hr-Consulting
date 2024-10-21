@@ -1,5 +1,5 @@
 import React from "react";
-import "./managedServices.css";
+import "./ManagedServices.css";
 
 function ManagedServices() {
   return (
