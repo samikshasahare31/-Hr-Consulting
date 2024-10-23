@@ -162,7 +162,7 @@ function AboutUs() {
               <div className="space-y-4 sm:space-y-6">
                 <h2 className="text-2xl sm:text-3xl font-bold">Our Mission</h2>
                 <p className="text-sm sm:text-base">
-                "At Recruitindo, our mission is to empower businesses and entrepreneurs from around the globe in setting up and growing their operations in India.
+                "At HR Consulting, our mission is to empower businesses and entrepreneurs from around the globe in setting up and growing their operations in India.
                 </p>
                 <p className="text-sm sm:text-base">
                   We believe that welcoming more entrepreneurs to India benefits the country’s economy, and we are committed to making this process seamless.
@@ -201,12 +201,12 @@ function AboutUs() {
           </div>
           <div className="w-full lg:w-1/2 flex items-center mt-6 lg:mt-0 lg:pl-6">
             <div className="space-y-4 lg:space-y-6">
-              <h3 className="font-bold text-base lg:text-lg">ABOUT RECRUITINDO</h3>
+              <h3 className="font-bold text-base lg:text-lg">HR Consulting</h3>
               <h1 className="text-2xl lg:text-3xl font-bold text-left">
                 Our platform unlocks the potential of global teams
               </h1>
               <p className="text-base lg:text-lg">
-              "Welcome to Recruitindo! We are your strategic partner for business growth in India. With a focus on Employer of Record (EOR) services, recruitment solutions, and HR consulting, we are dedicated to simplifying your entry and expansion into the Indian market. Our expertise helps businesses navigate the complexities of hiring and compliance, ensuring a smooth and successful journey."
+              "Welcome to HR Consulting! We are your strategic partner for business growth in India. With a focus on Employer of Record (EOR) services, recruitment solutions, and HR consulting, we are dedicated to simplifying your entry and expansion into the Indian market. Our expertise helps businesses navigate the complexities of hiring and compliance, ensuring a smooth and successful journey."
               </p>
               <button
                 className="btn btn-warning text-black px-4 lg:px-8 py-2 rounded-md hover:text-white hover:bg-yellow-600 duration-300 cursor-pointer mt-4 lg:mt-6"
