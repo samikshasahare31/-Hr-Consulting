@@ -83,7 +83,7 @@ const Apply = () => {
 
       </div>
       {/* Job Description  */}
-      <div className='d-flex justify-content-center job-information-div '>
+      <div className=' job-information-div '>
 
         <div className='job-information'>
           <div className='job-deatils-heading'>
