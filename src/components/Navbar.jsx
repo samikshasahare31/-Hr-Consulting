@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { IoMdClose, IoMdArrowDropdown } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
@@ -58,12 +58,15 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
   };
-
-  const handleLinkClick = (dropdownKey) => {
+  const handleLinkClick = (dropdownKey, isMobile = false) => {
     setDropdownOpen((prevState) => ({
       ...prevState,
       [dropdownKey]: false, // Close the dropdown when a link is clicked
     }));
+  
+    if (isMobile) {
+      setIsOpen(false); // Close mobile menu if it was open
+    }
   };
 
   return (
@@ -72,18 +75,19 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex">
-              <Link to="/" className="text-black font-bold text-xl m-3">
+              <NavLink to="/" className="text-black font-bold text-xl m-3">
                 {t("TEN HR Consulting")}
-              </Link>
+              </NavLink>
             </div>
           </div>
           <div className="flex items-center ml-auto space-x-4 text-black hidden lg:flex">
-            <Link
+            <NavLink
               to="/aboutUs"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
-            >
+              className={({ isActive }) => 
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }>
               {t("About")}
-            </Link>
+            </NavLink>
 
             {/* Services Dropdown */}
             <div className="relative flex items-center">
@@ -104,41 +108,61 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   className="absolute top-full right-0 mt-1 w-48 bg-base-100 rounded-md shadow-lg"
                   ref={(el) => (dropdownRefs.current["services"] = el)}
                 >
-                  <Link
+                  <NavLink
                     to="/services/peo&eor"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("services")}
                   >
                     {t("PEO & EoR")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/recruitment"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("services")}
                   >
                     {t("Recruitment")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/hrConsulting"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("services")}
                   >
                     {t("HR Consulting")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/managedServices"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("services")}
                   >
                     {t("Managed Services")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/payrollProcessing"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("services")}
                   >
                     {t("PayrollProcessing")}
-                  </Link>
+                  </NavLink>
                 </div>
               )}
             </div>
@@ -162,66 +186,92 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   className="absolute top-full right-0 mt-1 w-48 bg-base-100 rounded-md shadow-lg"
                   ref={(el) => (dropdownRefs.current["pricing"] = el)}
                 >
-                  <Link
+                  <NavLink
                     to="/pricing/peo&eor"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("pricing")}
                   >
                     {t("PEO & EoR")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/recruitment"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("pricing")}
                   >
                     {t("Recruitment")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/hrConsulting"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("pricing")}
                   >
                     {t("HR Consulting")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/managedServices"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("pricing")}
                   >
                     {t("Managed Services")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/payrollProcessing"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? 'bg-orange-100 text-orange-400' : ''
+                      }`
+                    }
                     onClick={() => handleLinkClick("pricing")}
                   >
                     {t("PayrollProcessing")}
-                  </Link>
+                  </NavLink>
                 </div>
               )}
             </div>
 
-            <Link
+            <NavLink
               to="/calculator"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
+              className={({ isActive }) => 
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }
             >
               {t("Calculator")}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/resources"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
+              className={({ isActive }) => 
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }
             >
               {t("Resources")}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contactUs"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium"
+              className={({ isActive }) => 
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }
             >
               {t("Contact Us")}
-            </Link>
+            </NavLink>
 
             {/* Language Selector */}
-            <div className="relative flex items-center ">
+            {/* <div className="relative flex items-center ">
               <button
                 onClick={() => toggleDropdown("language")}
                 className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium flex"
@@ -247,14 +297,15 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   </button>
                 </div>
               )}
-            </div>
-            <Link
+            </div> */}
+            <NavLink
             to="/jobVacancies"
-            className="btn btn-warning text-black-300 hover:bg-warning-600 hover:text-white rounded-md text-sm font-small cursor-pointer"
-            // className=" text-black px-4 md:px-12 py-2 rounded-md hover:text-white  duration-300 cursor-pointer"
+            className={({ isActive }) =>
+              `btn btn-warning text-black-300 hover:bg-warning-600 hover:text-white rounded-md text-sm font-small cursor-pointer ${isActive ? 'bg-warning-600 text-white' : ''}`
+            }
           >
-            {t("Job Vacancies")} 
-          </Link>
+            {t("Job Vacancies")}
+          </NavLink>
 
           </div>
 
@@ -274,12 +325,15 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
       {isOpen && (
         <div className="lg:hidden ">
           <div className="flex flex-col fixed top-0 left-0 mt-16 w-full bg-base-100 p-4">
-            <Link
-              to="/aboutUs"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
-            >
-              {t("About")}
-            </Link>
+          <NavLink
+            to="/aboutUs"
+            className={({ isActive }) =>
+              `text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+            }
+            onClick={() => handleLinkClick("aboutUs", true)}
+          >
+            {t("About")}
+          </NavLink>
             <div className="relative">
               <button
                 onClick={() => toggleDropdown("mobileServices")}
@@ -298,48 +352,69 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   className="mt-1 w-full bg-base-100 rounded-md shadow-lg"
                   ref={(el) => (dropdownRefs.current["mobileServices"] = el)}
                 >
-                  <Link
+                  <NavLink
                     to="/services/peo&eor"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobileServices")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobileServices", true)}
                   >
                     {t("PEO & EoR")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/recruitment"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobileServices")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobileServices", true)}
                   >
                     {t("Recruitment")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/hrConsulting"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobileServices")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobileServices", true)}
+                  
                   >
                     {t("HR Consulting")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/managedServices"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobileServices")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobileServices", true)}
                   >
                     {t("Managed Services")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/services/payrollProcessing"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobileServices")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobileServices", true)}
                   >
                     {t("PayrollProcessing")}
-                  </Link>
+                  </NavLink>
                 </div>
               )}
             </div>
             <div className="relative">
               <button
                 onClick={() => toggleDropdown("mobilePricing")}
-                className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium flex"
+                className="block text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium w-full text-left focus:outline-none"
               >
                 {t("Pricing")}
                 <IoMdArrowDropdown
@@ -354,65 +429,94 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   className="bg-base-100 rounded-md shadow-lg mt-1 w-full"
                   ref={(el) => (dropdownRefs.current["mobilePricing"] = el)}
                 >
-                  <Link
+                  <NavLink
                     to="/pricing/peo&eor"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobilePricing")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobilePricing", true)}
                   >
                     {t("PEO & EoR")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/recruitment"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobilePricing")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobilePricing", true)}
                   >
                     {t("Recruitment")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/hrConsulting"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobilePricing")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobilePricing", true)}
                   >
                     {t("HR Consulting")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/managedServices"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobilePricing")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobilePricing", true)}
                   >
                     {t("Managed Services")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/pricing/payrollProcessing"
-                    className="block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600"
-                    onClick={() => handleLinkClick("mobilePricing")}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm text-black-300 hover:bg-orange-200 hover:text-orange-600 ${
+                        isActive ? "bg-orange-100 text-orange-400" : ""
+                      }`
+                    }
+                    onClick={() => handleLinkClick("mobilePricing", true)}
                   >
                     {t("PayrollProcessing")}
-                  </Link>
+                  </NavLink>
                 </div>
               )}
             </div>
-            <Link
+            <NavLink
               to="/calculator"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
+              className={({ isActive }) =>
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }
+              onClick={() => handleLinkClick("calculator", true)}
             >
               {t("Calculator")}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/resources"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
+              className={({ isActive }) =>
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }
+              onClick={() => handleLinkClick("resources", true)}
             >
               {t("Resources")}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contactUs"
-              className="text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium"
+              className={({ isActive }) =>
+                `text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+              }
+              onClick={() => handleLinkClick("contactUs", true)}
             >
               {t("Contact Us")}
-            </Link>
+            </NavLink>
 
             {/* Language Selector */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => toggleDropdown("mobileLanguage")}
                 className="text-black-300 hover:bg-orange-200 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium flex"
@@ -438,14 +542,17 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
                   </button>
                 </div>
               )}
-            </div>
+            </div> */}
 
-            <Link
+            <NavLink
             to="/jobVacancies"
-            className="text-black-300  hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
+            className={({ isActive }) =>
+              `text-black-300 hover:bg-orange-200 hover:text-orange-600 block px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-orange-100 text-orange-400' : ''}`
+            }
+            onClick={() => handleLinkClick("jobVacancies", true)}
           >
             {t('Job Vacancies')}
-          </Link>
+          </NavLink>
           </div>
         </div>
       )}
@@ -454,3 +561,12 @@ const Navbar = ({ isSidebarOpen, handleToggleSidebar }) => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+

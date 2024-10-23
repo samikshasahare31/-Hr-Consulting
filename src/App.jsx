@@ -24,6 +24,7 @@ import PayrollProcessing from "./components/services/payrollProcessing/PayrollPr
 import PricingPayrollProcessing from "./components/pricing/payrollProcessing/PricingPayrollProcessing";
 import JobVacancies from "./components/jobVacancies/jobVacancies";
 import Apply from "./components/jobVacancies/Apply";
+import ContactForm from "./components/Contact/ContactForm";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </I18nextProvider>
+      <ContactForm />
       <Footer />
     </>
   );

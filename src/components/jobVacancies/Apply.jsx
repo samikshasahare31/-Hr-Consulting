@@ -18,6 +18,7 @@ const Apply = () => {
     if (jobDataFromState) {
       setJobDataInfo(jobDataFromState);
     } else {
+
       console.error('No job data available in state or localStorage');
     }
   }, [location]);
@@ -174,7 +175,7 @@ const Apply = () => {
 
         {/* Form */}
         <div className='p-8 job-apply-form'>
-          <div className='input-name-div d-flex'>
+          <div className='input-first-last-name'>
             <div className='input-group'>
               <label className='required-field'>First Name</label>
               <input className='input-name' type="text" placeholder='John' required />
@@ -184,7 +185,6 @@ const Apply = () => {
               <input className='input-name' type="text" placeholder='Doe' required />
             </div>
           </div>
-
           <div className='email-container'>
             <div className='label-row'>
               <label className='required-field'>Email</label>
