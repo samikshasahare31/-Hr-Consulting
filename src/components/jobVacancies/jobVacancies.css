@@ -243,9 +243,15 @@
 
 @media (max-width: 900px) {
   .job {
-    width: 105%;
-    height: 380px;
+    height: 385px;
   }
+  .job-text{
+    margin-left: -180px !important;
+}
+.job-text h1{
+  margin-left: -72%;
+
+}
   .find-button {
     width: 66%;
 
@@ -260,6 +266,7 @@
   .job-search-container {
     height: 2068px;
   }
+  
 }
 @media (max-width: 768px) {
   .job {
@@ -268,6 +275,8 @@
   .job-text {
     padding-inline-start: 108px;
     height: 100%;
+    margin-left: -74px !important;
+
   }
   .job-text h1 {
     margin-left: -70%;
@@ -283,57 +292,68 @@
     width: 28%;
   }
 }
-@media (max-width: 480px) {
+@media  only screen and  (max-width: 480px) {
   .job {
     width: 100% !important;
     height: 293px !important;
   }
   .job-post {
     display: block;
+    width:96%;
+    margin-left: 5%;
+    
   }
+  .location{
+    
+      padding: 5%;
+  }
+  
   .job-text {
     margin-left: -17%;
   }
   .job-text h1 {
-    margin-left: -33%;
+    margin-left: -3%;
   }
   .job-search {
-    width: 106%;
+    width: 98%;
   }
   .job-search-container {
     width: 93%;
     height: 465px;
   }
   .job-apply {
-    width: 393px;
-    height: 312px;
+    width: 357px;
+    height: 388px;
   }
   .job-deatils {
-    grid-template-rows: 86px 0px 50px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 46px 28px 50px;
+
     margin-left: -3%;
   }
 
   .apply-now-button {
-    margin-left: 83%;
-    width: 25%;
-    height: 10%;
+    margin-left: 4%;
+    width: 47%;
+        height: 40px;
+        margin-top: 7%;
   }
   .apply-button-arrow {
-    margin-left: 63px !important;
+    margin-left: 113px !important;
     margin-top: -21px;
   }
 }
 
 @media (max-width: 390px) {
   .job {
-    width: 111% !important;
+    width: 100% !important;
     height: 293px !important;
   }
   .job-search-container {
     width: 92% !important;
   }
   .job-apply {
-    width: 370px !important;
+    width: 353px !important;
   }
 
   .job-text {
@@ -345,11 +365,12 @@
     margin-top: -22px;
   }
   .apply-now-button {
-    width: 29%;
-    height: 10%;
+  
+    width: 49%;
+    height: 35px;
+
   }
   .job-search-container {
-    width: 110%;
   }
 }
 
@@ -358,8 +379,8 @@
     width: 100% !important;
   }
   .job-apply {
-    width: 341px !important;
-    height: 336px;
+    width: 327px !important;
+    height: 392px;
   }
   .job {
     width: 97% !important;
@@ -373,20 +394,32 @@
     margin-left: -6%;
   }
   .apply-now-button {
-    width: 27%;
-    height: 10%;
-  }
+    width: 51%;
+    height: 41px;
+    margin-top: 5%;
+}
 }
 @media (max-width: 320px) {
   .job-text {
     margin-left: -23% !important;
   }
   .job-text h1 {
-    margin-left: -18%;
+    margin-left: -6% !important;
   }
   .job-apply {
     width: 308px !important;
     height: 402px;
+  }
+  .job-name{
+    
+      width: 258%;
+  
+  }
+  .setting-icons {
+    width: 40px;
+  }
+  .salary-icons {
+    width: 28px;
   }
   .job-deatils {
     margin-left: -13%;
@@ -404,9 +437,9 @@
     height: 10%;
   }
   .apply-button-arrow {
-    margin-left: 80% !important;
-    margin-top: -30px;
-    height: 33px !important;
+    margin-left: 83% !important;
+    margin-top: -20px;
+    height: 30px !important;
     width: 71px !important;
   }
   .job-apply-form {
@@ -415,6 +448,13 @@
   .submit {
     width: 67%;
   }
+}
+@media  only screen and  (width:375px){
+
+.job-apply {
+  width: 338px !important;
+}
+
 }
 
 @media (width: 1115px) {
