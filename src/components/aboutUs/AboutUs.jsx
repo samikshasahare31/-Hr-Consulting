@@ -141,7 +141,7 @@ function AboutUs() {
                 Empowering Businesses with Talent Solutions for India’s Growth
               </h1>
               <p className="text-base lg:text-lg">
-                At HR Consulting, we make it easier for businesses to thrive in India with our seamless hiring, PEO, and HR services. We connect you with the right local talent and handle the intricacies of employment regulations, so you can focus on what matters most—growing your business.
+              "At HR Consulting, we simplify business expansion in India by providing expert recruitment, PEO, and HR management services. Our team ensures compliance with local employment laws and connects you with skilled professionals, allowing you to concentrate on scaling your business effortlessly."
               </p>
               <button
                 className="btn btn-warning text-black px-4 lg:px-8 py-2 rounded-md hover:text-white hover:bg-yellow-600 duration-300 cursor-pointer mt-4 lg:mt-6"
@@ -162,19 +162,19 @@ function AboutUs() {
               <div className="space-y-4 sm:space-y-6">
                 <h2 className="text-2xl sm:text-3xl font-bold">Our Mission</h2>
                 <p className="text-sm sm:text-base">
-                  Recruitindo’s mission is to support businesses and entrepreneurs worldwide in establishing and growing their ventures in India.
+                "At Recruitindo, our mission is to empower businesses and entrepreneurs from around the globe in setting up and growing their operations in India.
                 </p>
                 <p className="text-sm sm:text-base">
                   We believe that welcoming more entrepreneurs to India benefits the country’s economy, and we are committed to making this process seamless.
                 </p>
                 <p className="text-sm sm:text-base">
-                  Our goal is to simplify hiring local Indian talent, creating a smooth experience that benefits both businesses and the local job market.
+                Our focus is on streamlining the process of hiring local talent, ensuring a hassle-free experience that benefits both companies and the Indian job market.
                 </p>
                 <p className="text-sm sm:text-base">
                   Understanding India’s regulatory landscape can be challenging, and that's why we're here—to make it easier for you to navigate.
                 </p>
                 <p className="text-sm sm:text-base">
-                  By simplifying this process, we aim to unlock new opportunities for businesses and contribute to the growth and success of the Indian market.
+                By easing this process, we open doors to new opportunities and contribute to the success of your business in India.
                 </p>
               </div>
             </div>
@@ -206,9 +206,7 @@ function AboutUs() {
                 Our platform unlocks the potential of global teams
               </h1>
               <p className="text-base lg:text-lg">
-                Welcome to Recruitindo — your strategic partner for business growth in India. 
-                We specialize in Employer of Record (EOR) services, recruitment solutions, and HR 
-                consulting to simplify your entry and expansion in the Indian market.
+              "Welcome to Recruitindo! We are your strategic partner for business growth in India. With a focus on Employer of Record (EOR) services, recruitment solutions, and HR consulting, we are dedicated to simplifying your entry and expansion into the Indian market. Our expertise helps businesses navigate the complexities of hiring and compliance, ensuring a smooth and successful journey."
               </p>
               <button
                 className="btn btn-warning text-black px-4 lg:px-8 py-2 rounded-md hover:text-white hover:bg-yellow-600 duration-300 cursor-pointer mt-4 lg:mt-6"
