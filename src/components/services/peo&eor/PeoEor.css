@@ -316,6 +316,13 @@
   padding: 2rem 0;
 }
 
+.peo-resources h2 {
+  color: #e79522;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .peo-resources h1 {
   color: #002863;
 }
@@ -380,10 +387,6 @@
 
 .peoResource-btn:hover {
   background-color: #db8d21;
-}
-
-.peoResource-btn a {
-  text-decoration: none;
 }
 
 /*                                     Responsive Styles 1200px */

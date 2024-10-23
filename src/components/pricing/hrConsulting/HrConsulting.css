@@ -1,5 +1,5 @@
 .Main {
-  padding: 4vw 15vw;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 5vw;
@@ -20,11 +20,11 @@
 .priceSheet {
   height: auto;
   width: 100%; /* Set width to 100% */
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.3vw;
+  margin: 0;
   justify-content: space-between; /* To ensure equal spacing between items */
 }
 
@@ -118,32 +118,15 @@
 }
 
 /*                 RESPONSIVE STYLE         */
+/* Existing styles remain unchanged */
 
 @media screen and (max-width: 1200px) {
-  /* Fourth Part */
-  .Main {
-    padding: 2vw 12vw;
-  }
-
-  .upperPart h1 {
-    font-size: 2.5vw;
-  }
-
-  .upperPart h2 {
-    font-size: 1.6vw;
-  }
-
-  .priceSheet {
-    flex-direction: row;
-    gap: 1vw;
-  }
-
+  /* Adjustments for iPad */
   .priceCard {
-    width: calc(30% - 2vw);
-    height: auto;
-    width: 22vw;
+    width: calc(50% - 2vw); /* Two cards in one line */
+    height: 45vh;
   }
-
+  
   .priceCard h1 {
     font-size: 2vw;
   }
@@ -171,7 +154,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* Fourth Part */
+  /* Adjustments for mobile devices */
   .Main {
     padding: 2vw 14vw;
   }
@@ -190,9 +173,10 @@
   }
 
   .priceCard {
-    width: 100%;
-    height: 100vw;
+    width: 100%; /* One card in one line */
+    height: 65vh;
   }
+
   .priceCard .innerDiv {
     height: 12vh;
   }
@@ -224,9 +208,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  /* Fourth Part */
+  /* Adjustments for smaller mobile devices */
   .Main {
-    padding: 2vw 15vw;
+    padding: 1rem;
   }
 
   .upperPart h1 {
@@ -245,6 +229,7 @@
   .priceCard {
     width: 100%;
     height: 120vw;
+    padding: 20px;
   }
 
   .priceCard h1 {
@@ -254,6 +239,7 @@
   .priceCard h2 {
     font-size: 3.5vw;
   }
+
   .priceCard .innerDiv {
     height: 7vh;
   }

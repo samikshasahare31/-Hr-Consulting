@@ -118,7 +118,7 @@ body {
   position: absolute;
   top: 50%;
   left: 100%;
-  width: 26rem;
+  width: 25rem;
   height: 2px;
   background-color: #f2981b;
   transform: translateY(-50%);
@@ -152,10 +152,9 @@ body {
 
 /* Recruitment Services Pricing Section */
 .services-pricing-container {
-  margin: 3rem;
+  margin: 2rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
   color: white;
   background-color: transparent;
   align-items: stretch;
@@ -341,6 +340,18 @@ body {
     padding: 10px;  
     width: 30px;
   }
+  
+  .services-step-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 21rem;
+    height: 2px;
+    background-color: #f2981b;
+    transform: translateY(-50%);
+    margin-left: 8px; /* Extra space for the line, if needed */
+  }
 
   .services-step-content{
     padding-top: 20px;
@@ -361,7 +372,7 @@ body {
   /* Recruitment services pricing section */
   .services-pricing-container {
     flex-direction: column;
-    padding: 1rem;
+    margin: 1rem;
   }
 
   .services-pricing-content,
@@ -484,7 +495,7 @@ body {
   .services-pricing-container {
     flex-direction: column;
     border-radius: none;
-    margin: 10px;
+    margin: 1rem;
   }
 
   .services-pricing-content {

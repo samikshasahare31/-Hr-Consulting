@@ -187,8 +187,6 @@ const Recruitment = () => {
         </div>
       </div>
 
-      <div>Contact US </div>
-
       {/* Resources and Articles Section */}
       <div className="resources-articles-section">
         <h3 className="resources-heading">Resources</h3>

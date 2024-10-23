@@ -119,9 +119,10 @@ li {
   width: 30%;
 }
 .job-information-div {
+  display: flex;
+  justify-content: center;
   margin-top: 6%;
   margin-bottom: 4%;
-
   width: 100%;
 }
 .job-deatils-heading {
@@ -212,13 +213,11 @@ ul.custom-list-point li::before {
   border-radius: 1rem 1rem 1rem 1rem;
   box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.1);
 }
-.input-first-last-name{
+.input-first-last-name {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-
 
 .input-group {
   display: flex;
@@ -244,9 +243,6 @@ ul.custom-list-point li::before {
 .input-row {
   display: flex;
   justify-content: space-between;
-}
-.email-container {
-  /* margin-top: 20px; */
 }
 
 .Email-div {
@@ -420,97 +416,6 @@ ul.custom-list-point li::before {
   background-color: #e6a84e;
 }
 
-@media (max-width: 400px) {
-  .job-list {
-    height: 1%;
-  }
-  .job-apply-form {
-    margin-top: 6%;
-  }
-  .Contact-div {
-    display: flex;
-    flex-direction: column;
-  }
-  .country {
-    width: 97%;
-  }
-  .submit {
-    width: 64%;
-  }
-}
-
-@media (max-width: 700px) {
-  .job-list {
-    width: 102% !important;
-  }
-  .job-list-deatils {
-    width: 128%;
-  }
-  .job-deatils-apply {
-    display: flex;
-    flex-direction: column;
-    row-gap: 17px;
-  }
-  .custom-list {
-    width: 205%;
-  }
-
-  .job-information-div {
-    display: block !important;
-    margin-left: 16% !important;
-  }
-  .Job-headng-description {
-    /* width: 289%; */
-  }
-  .Job-headng-requirements {
-    /* width: 289%; */
-  }
-  .custom-ol-point {
-    width: 205%;
-  }
-
-  .job-list-button {
-    width: 22%;
-  }
-  .job-deatils-heading {
-    margin-bottom: 5%;
-    margin-top: 15%;
-  }
-  .job-summary-heading {
-    width: 323%;
-  }
-  .job-summary-text {
-    width: 283% !important;
-  }
-  .key-responsibilities-heading {
-    margin-bottom: 8%;
-    width: 282% !important;
-  }
-  .key-responsibilities {
-    width: 118% !important;
-  }
-  .qualfication {
-    width: 331%;
-  }
-  .qualfication-heading {
-    width: 76%;
-  }
-  .key-responsibilities ul {
-    width: 104% !important;
-  }
-  .key-responsibilities-text {
-    width: 261%;
-  }
-  .job-apply-form {
-    width: 71% !important;
-    height: 46%;
-    margin-left: -10%;
-    margin-bottom: 21%;
-  }
-  .submit {
-    margin-left: 21%;
-  }
-}
 @media (max-width: 320px) {
   .job-list {
     width: 102% !important;
@@ -586,17 +491,25 @@ ul.custom-list-point li::before {
   }
 }
 
-@media (width: 390px) {
+@media (max-width: 390px) {
   .job-list {
     width: 102% !important;
   }
   .job-heading-job-list {
     width: 100%;
   }
+  .job-information-div {
+    display: block !important;
+    width: 89%;
+    margin-left: 10% !important;
+  }
+  .job-deatils-heading {
+    width: 144%;
+  }
 
   .job-list-deatils {
     height: 408px;
-    width: 432px;
+    width: 342px;
     margin-left: 2%;
   }
   .job-deatils-apply {
@@ -606,61 +519,92 @@ ul.custom-list-point li::before {
     margin-top: 20%;
   }
   .custom-list {
-    width: 259%;
+    width: 318% !important;
   }
   .location-icons {
     margin-top: -3%;
 
     width: 7% !important;
   }
-  .input-first-last-name{
+  .input-first-last-name {
     flex-direction: column !important;
-  }
- 
-  .job-apply-form {
-    width: 88% !important;
-    height: 46%;
-    margin-left: -10%;
-    margin-bottom: 21%;
-  }
-  
   }
 
-@media only screen and (max-width: 600px) {
-  .input-first-last-name{
-    flex-direction: column !important;
-    
+  .job-apply-form {
+    width: 100% !important;
+    height: 100%;
+    margin-top: 11%;
+    margin-left: -5%;
   }
-  .input-group{
+}
+
+@media only screen and (max-width: 600px) {
+  .job-list-button {
+    width: 32% !important;
+  }
+  .Job-headng-description {
+    width: 180% !important;
+  }
+  .Job-heading-requirements {
+    width: 180%;
+  }
+
+  .job-heading-job-list {
+    font-size: 101% !important;
+  }
+  .job-summary-heading {
+    margin-left: -20%;
+    width: 141%;
+  }
+  .job-summary-text {
+    width: 341%;
+  }
+
+  .key-responsibilities {
+    width: 300%;
+  }
+  .job-deatils-apply {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 37px 35px 56px;
+    width: 100%;
+  }
+  .job-information-div {
+    display: block !important;
+    width: 89% !important;
+    margin-left: 10% !important;
+  }
+  .custom-list {
+    width: 271% !important;
+  }
+  .custom-ol-point {
+    width: 271% !important;
+  }
+  .job-apply-form {
+    width: 100% !important;
+    height: 100%;
+    margin-top: 11%;
+    margin-left: -5%;
+  }
+
+  .input-first-last-name {
+    flex-direction: column !important;
+  }
+  .input-group {
     width: 100% !important;
   }
-  .input-telephone{
+  .input-telephone {
     width: 107% !important;
   }
-  .Contact-div{
-    display:flex !important;
+  .Contact-div {
+    display: flex !important;
     flex-direction: column !important;
   }
   .country {
     width: 99% !important;
   }
-  .Telephone{
+  .Telephone {
     width: 93% !important;
   }
-}
-@media only screen and (max-width: 900px)  {
-  .country{
-    margin-top: -6%;
-
-  }
-}
-@media only screen and (max-width: 900px)  {
-   .country{
-   }
-   .country-div{
-    margin-top: 16%;
-    gap: 6% !important;
-   }
 }
 
 @media (max-width: 480px) {
@@ -673,37 +617,48 @@ ul.custom-list-point li::before {
 }
 @media (max-width: 768px) {
   .job-list-button {
-    width: 28% !important;
-  }
-  .job-list-deatils {
-    margin-left: 1%;
-  }
-  .job-heading-job-list {
-    width: 67%;
-  }
-  .job-information-div {
-    width: 128%;
-    margin-left: -10%;
-  }
-  .submit {
-    width: 57%;
-  }
-  .job-list-button {
     width: 20%;
   }
-  .location-icons {
-    width: 7% !important;
+  .job-information-div {
+    width: 100%;
+    margin-left: 1%;
+    column-gap: 6%;
+  }
+  .custom-list {
+    width: 120%;
+  }
+  .custom-ol-point {
+    width: 120%;
+  }
+  .job-apply-form {
+    width: 44%;
   }
 }
-@media (max-width: 900px) {
-  .job-information-div {
-    margin-left: -12%;
-    width: 127%;
-  }
+@media only screen and (max-width: 900px) {
   .job-list-button {
-    width: 19%;
+    width: 17%;
   }
-  .submit {
-    width: 50%;
+  .job-information-div {
+    column-gap: 8%;
+  }
+  .custom-list {
+    width: 130%;
+  }
+  .custom-ol-point {
+    width: 130%;
+  }
+  .job-apply-form {
+    width: 43%;
+  }
+  .email-container {
+    margin-bottom: 33px;
+  }
+  .country {
+    margin-top: -6%;
+  }
+
+  .country-div {
+    margin-top: 16px !important;
+    gap: 6% !important;
   }
 }

@@ -2,12 +2,23 @@ import React from "react";
 import "./PeoEor.css";
 import { peoPricing } from "../../../assets/data/peoPricing";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import PricingPEO1 from "../../../assets/images/PricingPEO1.png";
 import PricingPEO2 from "../../../assets/images/PricingPEO2.webp";
 import PricingPEO3 from "../../../assets/images/PricingPEO3.jpg";
 
 function PricingPeoEor() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const contactUsPage = () => {
+    navigate("/contactUs");
+  };
+
+  const resourcesPage = () => {
+    navigate("/resources");
+  };
+
   const peoResources = [
     {
       id: 0,
@@ -59,7 +70,9 @@ function PricingPeoEor() {
                   <li key={index}>{t(item)}</li>
                 ))}
               </ul>
-              <button className="peo-pricing-btn">{t("Let’s Talk")}</button>
+              <button className="peo-pricing-btn" onClick={contactUsPage}>
+                {t("Let’s Talk")}
+              </button>
             </div>
           ))}
         </div>
@@ -98,8 +111,8 @@ function PricingPeoEor() {
             </>
           ))}
         </div>
-        <button className="peoResource-btn">
-          <a href="/resources">{t("Our Resources")}</a>
+        <button className="peoResource-btn" onClick={resourcesPage}>
+          {t("Our Resources")}
         </button>
       </div>
     </div>
