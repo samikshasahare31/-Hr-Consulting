@@ -15,8 +15,12 @@ function PeoEor() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const handleclick = () => {
+  const contactUsPage = () => {
     navigate("/contactUs");
+  };
+
+  const resourcesPage = () => {
+    navigate("/resources");
   };
 
   const peoResources = [
@@ -73,7 +77,9 @@ function PeoEor() {
               "Skip the complexities of launching your own business just to hire local talent. With our PEO solution, you can begin immediately!"
             )}
           </p>
-          <button className="peo-main-btn">{t("Let’s Talk")}</button>
+          <button className="peo-main-btn" onClick={contactUsPage}>
+            {t("Let’s Talk")}
+          </button>
         </div>
       </div>
 
@@ -112,7 +118,7 @@ function PeoEor() {
                     <h2>{t(data.name)}</h2>
                     <p>{t(data.desc)}</p>
                     <img
-                      onClick={handleclick}
+                      onClick={contactUsPage}
                       src={rightArrow}
                       alt="Right Arrow image"
                     />
@@ -144,7 +150,9 @@ function PeoEor() {
                   <li key={index}>{t(item)}</li>
                 ))}
               </ul>
-              <button className="peo-pricing-btn">{t("Let’s Talk")}</button>
+              <button className="peo-pricing-btn" onClick={contactUsPage}>
+                {t("Let’s Talk")}
+              </button>
             </div>
           ))}
         </div>
@@ -183,8 +191,8 @@ function PeoEor() {
             </>
           ))}
         </div>
-        <button className="peoResource-btn">
-          <a href="/resources">{t("Our Resources")}</a>
+        <button className="peoResource-btn" onClick={resourcesPage}>
+          {t("Our Resources")}
         </button>
       </div>
     </div>
