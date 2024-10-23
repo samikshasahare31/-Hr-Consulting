@@ -88,7 +88,7 @@ function Home() {
   return (
     <section>
       <div className='main-container'>
-        <div className='form-container'>
+        <div className='frm-container'>
           <div className='content'>
             <div className='text-section'>
               <div className='avatar-section'>
@@ -275,7 +275,7 @@ function Home() {
                     ></textarea>
                   </div>
 
-                  <button type='submit' className='submit-button'>
+                  <button type='submit' className='submit-btn'>
                     {t("Submit Enquiry")}
                   </button>
                   {formStatus && <p>{formStatus}</p>}
