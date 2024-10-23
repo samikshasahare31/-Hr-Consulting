@@ -212,12 +212,13 @@ ul.custom-list-point li::before {
   border-radius: 1rem 1rem 1rem 1rem;
   box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.1);
 }
-
-.input-name-div {
+.input-first-last-name{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
+
+
 
 .input-group {
   display: flex;
@@ -245,7 +246,7 @@ ul.custom-list-point li::before {
   justify-content: space-between;
 }
 .email-container {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .Email-div {
@@ -459,10 +460,10 @@ ul.custom-list-point li::before {
     margin-left: 16% !important;
   }
   .Job-headng-description {
-    width: 289%;
+    /* width: 289%; */
   }
   .Job-headng-requirements {
-    width: 289%;
+    /* width: 289%; */
   }
   .custom-ol-point {
     width: 205%;
@@ -612,15 +613,54 @@ ul.custom-list-point li::before {
 
     width: 7% !important;
   }
+  .input-first-last-name{
+    flex-direction: column !important;
+  }
+ 
   .job-apply-form {
     width: 88% !important;
     height: 46%;
     margin-left: -10%;
     margin-bottom: 21%;
   }
-  .submit {
-    margin-left: 21%;
+  
   }
+
+@media only screen and (max-width: 600px) {
+  .input-first-last-name{
+    flex-direction: column !important;
+    
+  }
+  .input-group{
+    width: 100% !important;
+  }
+  .input-telephone{
+    width: 107% !important;
+  }
+  .Contact-div{
+    display:flex !important;
+    flex-direction: column !important;
+  }
+  .country {
+    width: 99% !important;
+  }
+  .Telephone{
+    width: 93% !important;
+  }
+}
+@media only screen and (max-width: 900px)  {
+  .country{
+    margin-top: -6%;
+
+  }
+}
+@media only screen and (max-width: 900px)  {
+   .country{
+   }
+   .country-div{
+    margin-top: 16%;
+    gap: 6% !important;
+   }
 }
 
 @media (max-width: 480px) {
