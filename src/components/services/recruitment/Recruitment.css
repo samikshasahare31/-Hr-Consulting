@@ -152,10 +152,9 @@ body {
 
 /* Recruitment Services Pricing Section */
 .services-pricing-container {
-  margin: 3rem;
+  margin: 2rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
   color: white;
   background-color: transparent;
   align-items: stretch;
@@ -361,7 +360,7 @@ body {
   /* Recruitment services pricing section */
   .services-pricing-container {
     flex-direction: column;
-    padding: 1rem;
+    margin: 1rem;
   }
 
   .services-pricing-content,
@@ -484,7 +483,7 @@ body {
   .services-pricing-container {
     flex-direction: column;
     border-radius: none;
-    margin: 10px;
+    margin: 1rem;
   }
 
   .services-pricing-content {
