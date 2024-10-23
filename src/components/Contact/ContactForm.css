@@ -14,7 +14,7 @@
 
 .contactform-form-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 2rem;
   margin-top: 0;
   flex-direction: row;
@@ -124,6 +124,7 @@ b {
   .contactform-form-container {
     flex-direction: column;
     align-items: center;
+    margin: 1rem;
     overflow: hidden !important;
     padding: 0; /* Add padding to avoid overlap */
   }
@@ -172,6 +173,7 @@ b {
   .contactform-form-container {
     flex-direction: column;
     align-items: center;
+    margin: 1rem;
     overflow: hidden !important;
   }
 
