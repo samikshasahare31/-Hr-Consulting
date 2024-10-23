@@ -1,14 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+}
+
 .payroll-landing {
-  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem 0 3rem 0;
+  padding: 40px 20px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
 .content-section {
-  width: 50%;
-  margin: 0 40px;
+  flex: 1 1 400px;
+  margin-right: 40px;
 }
 
 .subtitle {
@@ -26,7 +35,7 @@
   font-weight: 700;
   margin-bottom: 24px;
   line-height: 1.2;
-  text-align: start;
+  float: right;
 }
 
 .description {
@@ -37,7 +46,7 @@
 }
 
 .schedule-button {
-  background-color: #e79522;
+  background-color: #f97316;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -51,7 +60,7 @@
 }
 
 .schedule-button:hover {
-  background-color: #db8d21;
+  background-color: #ea580c;
 }
 
 .arrow {
@@ -59,27 +68,141 @@
 }
 
 .image-section {
-  width: 50%;
+  flex: 1 1 600px;
   position: relative;
   margin-top: 40px;
 }
 
 .main-image {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.payroll-progress {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.payroll-progress svg {
+  margin-left: 8px;
+}
+
+.payroll-list {
+  position: absolute;
+  bottom: -80px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+}
+
+.payroll-list h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: #1e3a8a;
+}
+
+.employee-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.employee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f97316;
+  margin-right: 12px;
+}
+
+.employee-name {
+  flex: 1;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.employee-amount {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.employee-card {
+  position: absolute;
+  top: 60px;
+  right: -80px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 240px;
+}
+
+.employee-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.employee-header .employee-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.employee-header .employee-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e3a8a;
+}
+
+.salary-info {
+  margin-bottom: 16px;
+}
+
+.salary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.salary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e3a8a;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  margin-top: 12px;
 }
 
 @media (max-width: 1024px) {
   .payroll-landing {
-    width: 95%;
+    flex-direction: column;
   }
 
-  .title {
-    font-size: 30px;
+  .content-section {
+    margin-right: 0;
+    margin-bottom: 40px;
   }
 
-  .main-image {
-    width: 90%;
+  .image-section {
+    margin-top: 60px;
   }
 
   .employee-card {
@@ -95,15 +218,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .payroll-landing {
-    width: 97.5%;
-  }
-
-  .main-image {
-    width: 95%;
-  }
-
+@media (max-width: 640px) {
   .title {
     font-size: 28px;
   }
@@ -113,54 +228,25 @@
   }
 
   .schedule-button {
-    width: 65%;
-  }
-}
-
-@media (max-width: 550px) {
-  .payroll-landing {
     width: 100%;
-    flex-wrap: wrap-reverse;
-    padding: 0 0 3rem 0;
+    justify-content: center;
   }
 
-  .content-section {
-    width: 100%;
-  }
-
-  .content-section .title {
-    font-size: 21px;
-  }
-
-  .content-section .description {
+  .payroll-progress {
+    top: 10px;
+    right: 10px;
     font-size: 12px;
+    padding: 6px 12px;
   }
 
-  .payroll-landing .schedule-button {
-    width: 45%;
-  }
-
-  .image-section {
-    width: 100%;
-  }
-
-  .schedule-button {
-    width: 65%;
+  .employee-card,
+  .payroll-list {
+    padding: 15px;
   }
 }
 
-@media (max-width: 468px) {
-  .content-section {
-    margin: 0 15px;
-  }
+/* popup css */
 
-  .payroll-landing .schedule-button {
-    width: 50%;
-    font-size: 12px;
-  }
-}
-
-/*                                         popup css */
 
 .popup-overlay {
   position: fixed;
@@ -193,7 +279,7 @@
   cursor: pointer;
 }
 
-/*                                          form css */
+/* form css color */
 
 :root {
   --color-primary: #1e3a8a;
@@ -205,179 +291,79 @@
   --color-gray-700: #374151;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
 
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: var(--color-primary);
-  margin-bottom: 2rem;
-}
+
+/* form css */
 
 .form-container {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-row {
   display: flex;
-  background-color: var(--color-white);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  gap: 20px;
 }
 
-.form-section {
+.form-group {
+  margin-bottom: 15px;
   flex: 1;
-  padding: 2rem;
-}
-
-.info-section {
-  flex: 1;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 2rem;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-
-.input-group {
-  margin-bottom: 1rem;
 }
 
 label {
   display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-gray-700);
-  margin-bottom: 0.25rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
+input, select, textarea {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid var(--color-gray-300);
-  border-radius: 0.25rem;
-  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color-secondary);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+  background-size: 12px auto;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .submit-button {
-  width: auto;
-  background-color: var(--color-secondary);
-  color: var(--color-white);
-  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
   border: none;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
+  font-size: 16px;
+  width: 100%;
 }
 
 .submit-button:hover {
-  background-color: #ffbd59;
-}
-
-.icon-mail {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 1.5rem;
-  fill: var(--color-secondary);
-}
-
-.info-section h2 {
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.info-section p {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* Custom styles for select dropdown */
-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-  background-position: right 0.5rem center;
-  background-repeat: no-repeat;
-  background-size: 1.5em 1.5em;
-  padding-right: 2.5rem;
-}
-
-/* Placeholder text color */
-::placeholder {
-  color: var(--color-gray-400);
-}
-
-/* Flex utilities */
-.flex {
-  display: flex;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-1\/3 {
-  width: 33.333333%;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .form-container {
-    flex-direction: column;
-  }
-
-  .info-section {
-    border-radius: 0 0 0.5rem 0.5rem;
-  }
-}
-
-/* Additional styles to match the image */
-.form-section {
-  background-color: #f8fafc;
-}
-
-textarea {
-  min-height: 100px;
-}
-
-.required-field::after {
-  content: "*";
-  color: red;
-  margin-left: 2px;
-}
-
-.country-code-select {
-  max-width: 120px;
-}
-
-.personal-telephone-input {
-  flex: 1;
+  background-color: #0056b3;
 }

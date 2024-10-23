@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Banner.css';
 
 export default function Banner() {
-    // पॉपअप के लिए state बनाएं
+    // State for popup
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [formData, setFormData] = useState({
         firstName: '',
@@ -11,30 +11,31 @@ export default function Banner() {
         countryCode: '+1',
         phone: '',
         company: '',
-        message: '',
+        reason: '',
+        message: ''
     });
 
-    // जब बटन क्लिक हो, पॉपअप ओपन करें
+    // Open popup
     const handlePopupOpen = () => {
         setIsPopupOpen(true);
     };
 
-    // पॉपअप को बंद करने के लिए
+    // Close popup
     const handlePopupClose = () => {
         setIsPopupOpen(false);
     };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form Data Submitted: ', formData);
+        console.log('Form Data Submitted:', formData);
     };
 
     return (
@@ -68,11 +69,10 @@ export default function Banner() {
                             ×
                         </button>
                         <div className="form-container">
-
-                            <form onSubmit={handleSubmit} className="form-section">
-                                <div className="flex gap-4">
-                                    <div className="w-1/2 input-group">
-                                        <label htmlFor="firstName" className="required-field">First Name</label>
+                            <form onSubmit={handleSubmit}>
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label htmlFor="firstName">First Name *</label>
                                         <input
                                             type="text"
                                             id="firstName"
@@ -83,8 +83,8 @@ export default function Banner() {
                                             placeholder="John"
                                         />
                                     </div>
-                                    <div className="w-1/2 input-group">
-                                        <label htmlFor="lastName" className="required-field">Last Name</label>
+                                    <div className="form-group">
+                                        <label htmlFor="lastName">Last Name *</label>
                                         <input
                                             type="text"
                                             id="lastName"
@@ -92,12 +92,12 @@ export default function Banner() {
                                             value={formData.lastName}
                                             onChange={handleChange}
                                             required
-                                            placeholder="Doe"
+                                            placeholder="Deo"
                                         />
                                     </div>
                                 </div>
-                                <div className="input-group">
-                                    <label htmlFor="email" className="required-field">Email</label>
+                                <div className="form-group">
+                                    <label htmlFor="email">Email *</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -108,24 +108,24 @@ export default function Banner() {
                                         placeholder="Email"
                                     />
                                 </div>
-                                <div className="flex gap-4">
-                                    <div className="w-1/3 input-group">
-                                        <label htmlFor="countryCode" className="required-field">Country Code</label>
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label htmlFor="countryCode">Country Code *</label>
                                         <select
                                             id="countryCode"
                                             name="countryCode"
                                             value={formData.countryCode}
                                             onChange={handleChange}
                                             required
-                                            className="country-code-select"
                                         >
                                             <option value="+1">+1 (US)</option>
                                             <option value="+44">+44 (UK)</option>
-                                            <option value="+62">+62 (ID)</option>
+                                            <option value="+91">+91 (IN)</option>
+                                            {/* Add more country codes as needed */}
                                         </select>
                                     </div>
-                                    <div className="w-2/3 input-group">
-                                        <label htmlFor="phone" className="required-field">Personal Telephone</label>
+                                    <div className="form-group">
+                                        <label htmlFor="phone">Personal Telephone *</label>
                                         <input
                                             type="tel"
                                             id="phone"
@@ -133,12 +133,11 @@ export default function Banner() {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             required
-                                            className="personal-telephone-input"
                                         />
                                     </div>
                                 </div>
-                                <div className="input-group">
-                                    <label htmlFor="company" className="required-field">Company</label>
+                                <div className="form-group">
+                                    <label htmlFor="company">Company *</label>
                                     <input
                                         type="text"
                                         id="company"
@@ -148,24 +147,23 @@ export default function Banner() {
                                         required
                                     />
                                 </div>
-                                <div className="w-1/4 input-group">
-                                    <label htmlFor="servides" className="required-field">Reason to inquiry </label>
+                                <div className="form-group">
+                                    <label htmlFor="reason">Reason to inquiry *</label>
                                     <select
-                                        id="servides"
-                                        name="servides"
-                                        value={formData.servides}
+                                        id="reason"
+                                        name="reason"
+                                        value={formData.reason}
                                         onChange={handleChange}
                                         required
-                                        className="country-code-select"
                                     >
-                                        <option>PEO & EOR</option>
-                                        <option>Recruitement</option>
-                                        <option>HR Consulting</option>
-                                        <option>Payroll Payment</option>
-                                        <option>Managed Services</option>
+                                        <option value="PEO & EoR">PEO & EoR</option>
+                                        <option value="Payroll">Recruitment</option>
+                                        <option value="HR Consulting">HR Consulting</option>
+                                        <option value="Payroll Payment">Payroll Payment</option>
+                                        <option value="Managed Services">Managed Services</option>
                                     </select>
                                 </div>
-                                <div className="input-group">
+                                <div className="form-group">
                                     <label htmlFor="message">How can we help you?</label>
                                     <textarea
                                         id="message"
@@ -173,12 +171,9 @@ export default function Banner() {
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows={4}
-                                        placeholder="Message"
                                     ></textarea>
                                 </div>
-                                <button type="submit" className="submit-button">
-                                    Submit Enquiry
-                                </button>
+                                <button type="submit" className="submit-button">Submit Enquiry</button>
                             </form>
                         </div>
                     </div>
@@ -187,3 +182,4 @@ export default function Banner() {
         </div>
     );
 }
+
