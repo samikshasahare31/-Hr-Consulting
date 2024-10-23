@@ -184,11 +184,12 @@ function ContactForm() {
     return (
 
         <div className="ContactForm">
-            <div className="form-container">
-                <div className='form-section'>
+            <h2 className="contactform-heading">Contact Us</h2>
+            <div className="contactform-form-container">
+                <div className='contactform-form-section'>
                     <form onSubmit={handleSubmit}>
-                        <div className='form-row'>
-                            <div className='form-group'>
+                        <div className='contactform-form-row'>
+                            <div className='contactform-form-group'>
                                 <label>{t("First Name *")}</label>
                                 <input
                                     type='text'
@@ -199,7 +200,7 @@ function ContactForm() {
                                 />
                             </div>
 
-                            <div className='form-group'>
+                            <div className='contactform-form-group'>
                                 <label>{t("Last Name *")}</label>
                                 <input
                                     type='text'
@@ -211,7 +212,7 @@ function ContactForm() {
                             </div>
                         </div>
 
-                        <div className='form-group'>
+                        <div className='contactform-form-group'>
                             <label>{t("Email *")}</label>
                             <input
                                 type='email'
@@ -222,8 +223,8 @@ function ContactForm() {
                             />
                         </div>
 
-                        <div className='form-row'>
-                            <div className='form-group'>
+                        <div className='contactform-form-row'>
+                            <div className='contactform-form-group'>
                                 <label>{t("Country Code *")}</label>
                                 <select
                                     name='countryCode'
@@ -242,7 +243,7 @@ function ContactForm() {
                                 </select>
                             </div>
 
-                            <div className='form-group'>
+                            <div className='contactform-form-group'>
                                 <label>{t("Personal Telephone *")}</label>
                                 <input
                                     type='tel'
@@ -254,7 +255,7 @@ function ContactForm() {
                             </div>
                         </div>
 
-                        <div className='form-group'>
+                        <div className='contactform-form-group'>
                             <label>{t("Company *")}</label>
                             <input
                                 type='text'
@@ -265,7 +266,7 @@ function ContactForm() {
                             />
                         </div>
 
-                        <div className='form-group'>
+                        <div className='contactform-form-group'>
                             <label>{t("Reason for inquiry *")}</label>
                             <select
                                 name='inquiry'
@@ -281,7 +282,7 @@ function ContactForm() {
                             </select>
                         </div>
 
-                        <div className='form-group'>
+                        <div className='contactform-form-group'>
                             <label>{t("How can we help you ?")}</label>
                             <textarea
                                 name='message'
@@ -290,14 +291,14 @@ function ContactForm() {
                             ></textarea>
                         </div>
 
-                        <button type='submit' className='submit-button'>
+                        <button type='submit' className='contactform-submit-button'>
                             {t("Submit Enquiry")}
                         </button>
                         {formStatus && <p>{formStatus}</p>}
                     </form>
 
                 </div>
-                <div className="intro-section">
+                <div className="contactform-intro-section">
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 72 72" fill="none"><g id="carbon:email-new"><path id="Vector" d="M42.75 54H9L8.99325 20.0385L34.7197 37.8495C35.0959 38.1098 35.5425 38.2492 36 38.2492C36.4575 38.2492 36.9041 38.1098 37.2803 37.8495L63 20.0475V40.5H67.5V18C67.4982 16.8071 67.0235 15.6635 66.18 14.82C65.3365 13.9765 64.1929 13.5018 63 13.5H9C7.80689 13.5012 6.66299 13.9757 5.81934 14.8193C4.97568 15.663 4.50119 16.8069 4.5 18V54C4.50179 55.1929 4.97646 56.3365 5.81999 57.18C6.66352 58.0235 7.80707 58.4982 9 58.5H42.75V54ZM58.0477 18L36 33.264L13.9523 18H58.0477Z" fill="#FFBD59"></path><path id="Vector_2" d="M58.5 63C63.4706 63 67.5 58.9706 67.5 54C67.5 49.0294 63.4706 45 58.5 45C53.5294 45 49.5 49.0294 49.5 54C49.5 58.9706 53.5294 63 58.5 63Z" fill="#FFBD59"></path></g></svg>
                     <b>Let us help you with your HR Needs</b>
                     <p>
