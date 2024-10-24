@@ -1,14 +1,21 @@
 import React from "react";
 import "./Pricing.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Pricing() {
+  const navigate = useNavigate();
+
+  const contactUsPage = () => {
+    navigate("/contactUs");
+  };
+
   return (
     <div className="pricing-container">
       <div className="pricing-card-content">
         <h2>PRICING</h2>
         <h1>Reach out to us for a detailed quote for Payroll Processing</h1>
 
-        <button className="contact-button">
+        <button className="contact-button" onClick={contactUsPage}>
           Schedule Now <span className="arrow">→</span>
         </button>
       </div>

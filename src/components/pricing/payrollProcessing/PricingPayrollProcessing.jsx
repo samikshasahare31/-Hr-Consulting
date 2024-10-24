@@ -1,8 +1,15 @@
 import React from "react";
 import "./PricingPayrollProcessing.css";
 import Resources from "./Resources";
+import { useNavigate } from "react-router-dom";
 
 function PricingPayrollProcessing() {
+  const navigate = useNavigate();
+
+  const contactUsPage = () => {
+    navigate("/contactUs");
+  };
+
   return (
     <>
       <div className="pricing-container">
@@ -10,7 +17,7 @@ function PricingPayrollProcessing() {
           <h2>PRICING</h2>
           <h1>Reach out to us for a detailed quote for Payroll Processing</h1>
 
-          <button className="contact-button">
+          <button className="contact-button" onClick={contactUsPage}>
             Schedule Now <span className="arrow">→</span>
           </button>
         </div>

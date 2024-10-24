@@ -7,8 +7,15 @@
   padding: 2rem 0;
 }
 
+.pay-resources h2 {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .pay-resources h1 {
   font-size: 2rem;
+  font-weight: 600;
   color: #002863;
 }
 

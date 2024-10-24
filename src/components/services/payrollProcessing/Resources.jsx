@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import ServicesPEO1 from "../../../assets/images/ServicesPEO1.jpg";
 import ServicesPEO2 from "../../../assets/images/ServicesPEO2.jpg";
 import ServicesPEO3 from "../../../assets/images/ServicesPEO3.jpg";
@@ -7,6 +8,11 @@ import "./Resources.css";
 
 export default function ResourcesAndArticles() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const resourcesPage = () => {
+    navigate("/resources");
+  };
 
   const peoResources = [
     {
@@ -49,7 +55,6 @@ export default function ResourcesAndArticles() {
 
   return (
     <>
-      {" "}
       {/* Resources and Articles Section */}
       <div className="pay-resources">
         <h2>{t("Resources")}</h2>
@@ -68,7 +73,6 @@ export default function ResourcesAndArticles() {
                     " "
                   ) : (
                     <>
-                      ,{" "}
                       <button className="pay-resources-btn">
                         {ele.resources}
                       </button>
@@ -83,8 +87,8 @@ export default function ResourcesAndArticles() {
             </>
           ))}
         </div>
-        <button className="payResource-btn">
-          <a href="/resources">{t("Our Resources")}</a>
+        <button className="payResource-btn" onClick={resourcesPage}>
+          {t("Our Resources")}
         </button>
       </div>
     </>
