@@ -243,6 +243,8 @@ ul.custom-list-point li::before {
 .input-row {
   display: flex;
   justify-content: space-between;
+  height: 40px;
+
 }
 
 .Email-div {
