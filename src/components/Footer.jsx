@@ -1,6 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import "./PrivacyPolicy";
+import "./FAQ/FAQSection";
+import "./FAQ/FAQItem"
 
 const Footer = () => {
   return (
@@ -24,7 +26,7 @@ const Footer = () => {
   <l1>Company</l1>
   <br />
   <br />
-  <li><a href="/faq">Frequently Asked Questions</a></li>
+  <li><a href="/FAQ">Frequently Asked Questions</a></li>
   <li><a href="/aboutUs">About TEN HR Consulting</a></li>
   <li><a href="#">Terms of Service</a></li>
   <li><a href="/privacy-policy">Privacy Policy</a></li>

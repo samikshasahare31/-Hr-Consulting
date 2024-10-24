@@ -72,6 +72,7 @@ function App() {
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/applyy" element={<Apply />} />
+            <Route path="/FAQ" element={<FAQSection />} />
           </Routes>
         </BrowserRouter>
       </I18nextProvider>
