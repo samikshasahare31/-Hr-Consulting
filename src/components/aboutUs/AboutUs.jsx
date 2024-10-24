@@ -178,7 +178,7 @@ function AboutUs() {
                 </p>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-6">
+            <div className="w-full lg:w-1/2  lg:mt-0 ">
               <img
                 src={missionImage}
                 className="w-full h-full object-cover rounded-lg shadow-lg"
