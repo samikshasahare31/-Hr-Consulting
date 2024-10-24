@@ -1,6 +1,7 @@
 import React from "react";
 import "./ManagedServices.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import mainImage from "../../../assets/images/managed-services-image.webp";
 
 function ManagedServices() {
   const navigate = useNavigate(); // Hook to access the navigate function
@@ -12,10 +13,10 @@ function ManagedServices() {
   return (
     <div className="App">
       {/* Section 1 */}
-      <section className="section section-hero">
+      <section className="section-hero">
         <div className="text-container">
           <h4>MANAGED SERVICES</h4>
-          <h1>End to End Recruiting, Admin, Payroll, and HR Management</h1>
+          <h1>End to End Recruiting</h1>
           <p>
             Through our managed services solution, we will recruit, hire, and
             manage all HR-related admin for your employees in Indonesia. All you
@@ -24,15 +25,12 @@ function ManagedServices() {
           <button className="btn-primary">Schedule Now</button>
         </div>
         <div className="image-container">
-          <img
-            src="https://recruitindo.com/wp-content/uploads/2023/12/managed-services.png"
-            alt="Service illustration"
-          />
+          <img src={mainImage} alt="Service illustration" />
         </div>
       </section>
 
       {/* Section 2 */}
-      <section className="section section-phases">
+      <section className="section-phases">
         <h2>We build teams to achieve your target outcomes</h2>
         <div className="phases-container">
           <div className="phase">
@@ -65,13 +63,11 @@ function ManagedServices() {
       <section className="quote-section">
         <div className="quote-content">
           <h3>Pricing</h3>
-          <h2 className="quote-title">
-            Reach out for a quote for Managed Services
-          </h2>
+          <h2>Reach out for a quote for Managed Services</h2>
           <button className="quote-btn">Schedule Now →</button>
         </div>
-        <div>
-          <p className="quote-description">
+        <div className="quote-description">
+          <p>
             We need to deeply understand what you are trying to accomplish
             before sharing pricing. Please reach out to us to schedule time to
             connect, so we can better understand your needs. Once we have been
