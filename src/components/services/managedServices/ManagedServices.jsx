@@ -17,7 +17,10 @@ function ManagedServices() {
           <button className="btn-primary">Schedule Now</button>
         </div>
         <div className="image-container">
-          <img src="https://recruitindo.com/wp-content/uploads/2023/12/managed-services.png" alt="service illustration" />
+          <img
+            src="https://recruitindo.com/wp-content/uploads/2023/12/managed-services.png"
+            alt="service illustration"
+          />
         </div>
       </section>
 
@@ -51,30 +54,22 @@ function ManagedServices() {
         </div>
       </section>
 
-{/* Section 3 */}
-<section className="quote-section">
-      <div className="quote-content">
-        <h2 className="quote-title">Reach out for a quote for Managed Services</h2>
-        <p className="quote-description">
-          We need to deeply understand what you are trying to accomplish before sharing pricing.
-          Please reach out to us to schedule time to connect, so we can better understand your needs.
-          Once we have been able to scope your project, we will issue pricing within 48 hours.
-        </p>
-        <button className="quote-btn">Schedule Now →</button>
-      </div>
-</section>
-{/* Section 3 End */}
-
-      {/* Section 4 */}
-      <section className="section section-pricing">
-        <div className="pricing-left">
-          <h3>Reach out for a quote for Managed Services</h3>
-          <button className="btn-primary">Schedule Now</button>
-        </div>
-        <div className="pricing-right">
-          <p>
-            We need to deeply understand what you are trying to accomplish before
-            sharing pricing. Reach out to us for more information.
+      {/* Section 3 */}
+      <section className="quote-section">
+      
+        <div className="quote-content">
+          <h3>Pricing</h3>
+          <h2 className="quote-title">
+            Reach out for a quote for Managed Services
+          </h2>
+          <button className="quote-btn">Schedule Now →</button>
+          </div>
+          <div>
+          <p className="quote-description">
+            We need to deeply understand what you are trying to accomplish
+            before sharing pricing. Please reach out to us to schedule time to
+            connect, so we can better understand your needs. Once we have been
+            able to scope your project, we will issue pricing within 48 hours.
           </p>
         </div>
       </section>
