@@ -5,7 +5,6 @@ import Resources from "./Resources";
 function PricingPayrollProcessing() {
   return (
     <>
-      {" "}
       <div className="pricing-container">
         <div className="pricing-card-content">
           <h2>PRICING</h2>
@@ -46,6 +45,7 @@ function PricingPayrollProcessing() {
           </div>
         </div>
       </div>
+
       {/* Resources Section */}
       <Resources />
     </>

@@ -9,36 +9,19 @@ function PayrollProcessing() {
   return (
     <>
       {/* Banner Components */}
-
-      <section>
-        <Banner />
-      </section>
+      <Banner />
 
       {/* cart components */}
-
-      <section>
-        <Cart />
-      </section>
+      <Cart />
 
       {/* Cart2 components */}
-
-      <section>
-        <Cart2 />
-      </section>
+      <Cart2 />
 
       {/* Pricing components */}
-
-      <section>
-        <Pricing />
-      </section>
-
-      {/* Contact components */}
+      <Pricing />
 
       {/* Resources components */}
-
-      <section>
-        <Resources />
-      </section>
+      <Resources />
     </>
   );
 }
