@@ -1,15 +1,12 @@
 .Body {
   height: auto;
   width: 100%;
-
-  /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
   gap: 2vw;
 }
 
 /* HR CONSULTING */
-
 .firstPart {
   padding: 5vw 15vw;
   display: flex;
@@ -34,7 +31,6 @@
   font-family: serif;
   font-weight: bold;
 }
-
 .right h1 {
   font-size: 2vw;
   font-weight: bolder;
@@ -60,8 +56,7 @@
   content: " →";
 }
 
-/*  LIST OF SERVICES */
-
+/* LIST OF SERVICES */
 .secondPart {
   height: auto;
   width: 100%;
@@ -110,7 +105,6 @@
 .card {
   height: auto;
   width: 24vw;
-  width: 17vw;
   background-color: white;
   border-radius: 0.5vw;
   padding: 2.5vw 2vw;
@@ -125,6 +119,7 @@
   height: 4vw;
   width: 4vw;
 }
+
 .card h1 {
   font-size: 1.5vw;
   font-weight: bolder;
@@ -150,6 +145,7 @@
   border-radius: 10px;
   padding: 2rem;
 }
+
 .uniqueCard img {
   height: 5vw;
   width: 5vw;
@@ -174,14 +170,12 @@
   color: white;
 }
 
-/* // HR SERVICES FOR BUSINESS */
-
+/* HR SERVICES FOR BUSINESS */
 .thirdPart {
   height: auto;
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* gap: 5vw; */
   background-color: rgb(62, 62, 172);
   padding: 5vw 15vw;
   border-radius: 1vw 1vw;
@@ -193,7 +187,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 3vw;
   position: relative;
 }
@@ -211,16 +204,7 @@
   text-overflow: ellipsis;
 }
 
-.leftPoint li::before {
-  content: "✔";
-  font-size: 1vw;
-  border-radius: 50%;
-  background-color: #ff9a00;
-  border: 1px solid rgb(21, 22, 21);
-  color: rgb(51, 51, 232);
-  margin-right: 1vw;
-}
-
+.leftPoint li::before,
 .rightPoint li::before {
   content: "✔";
   font-size: 1vw;
@@ -234,10 +218,13 @@
 .points {
   display: flex;
   flex-direction: row;
-
   justify-content: center;
-  /* justify-content: center; */
   gap: 1vw;
+}
+
+.right button{
+  padding: 3px;
+  width: 40%;
 }
 
 .leftPoint,
@@ -248,18 +235,17 @@
   gap: 1vw;
   text-align: justify;
 }
+
 .leftPoint ul,
 .rightPoint ul {
-  /* list-style-type: none; */
-  /* padding: 0; */
   display: flex;
   flex-direction: column;
   gap: 1vw;
 }
 
 .thirdImg img {
-  width: 170vw;
-  margin-left: 5vw;
+  width: 120vw;
+  /* margin-left: 5vw; */
 }
 
 .leftThird button {
@@ -280,20 +266,17 @@
   content: " →";
 }
 
-/* >HR Consulting Price Sheet */
-
+/* HR Consulting Price Sheet */
 .fourthPart {
   height: auto;
   width: 100%;
-  /* display: flex;
-    flex-direction: column; */
-  padding: 0vw 15vw;
+  padding: 0vw 5vw;
   background-color: #f5f5f5;
   z-index: 1;
 }
 
 .upperText {
-  margin-top: 4vw;
+  padding-top: 4vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,12 +292,12 @@
 
 .upperText h3 {
   font-size: 1.2vw;
-
   color: #616d74;
 }
 
 .priceSheet {
-  margin-top: 5vw;
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
   height: auto;
   width: 100%;
   border-radius: 5%;
@@ -322,12 +305,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.3vw;
-  justify-content: space-between; /* To ensure equal spacing between items */
+  justify-content: space-between;
 }
 
 .priceCard {
   height: 55vw;
-  width: calc(33.33% - 1vw); /* Ensure 3 cards fit in one row */
+  width: calc(33.33% - 1vw);
   background-color: white;
   border-radius: 0.5vw 0.5vw 0.5vw 1vw;
   padding: 2.5vw 2vw;
@@ -400,526 +383,190 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border-radius: 0 0 0 1vw;
+  border-radius: 0 0 0 10px;
 }
 
 .priceCard button::after {
   content: " →";
 }
 
-/*                                   RESPONSIVE STYLE     */
 
-/* Media Query for 1200px */
-@media screen and (max-width: 1200px) {
-  .Body {
-    padding: 0;
-    flex-direction: column;
-    gap: 3vw;
-  }
-
-  /* First Part */
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
   .firstPart {
-    padding: 0 10vw;
-    gap: 2vw;
     flex-direction: row;
+    padding: 5vw 10vw;
   }
 
-  .left img {
-    height: 60vh;
-    width: 45vw;
+  .right h1,
+  .threeLine h1,
+  .upperText h1 {
+    font-size: 3.5vw;
   }
 
-  .right {
-    padding: 5vw 2vw;
-    gap: 1vw;
-  }
-
-  .right h1 {
+  .right h3,
+  .threeLine h3,
+  .threeLine h2,
+  .card-container h1,
+  .upperText h3 {
     font-size: 2.5vw;
-  }
-
-  .right h3 {
-    font-size: 1.5vw;
-  }
-
-  .right p {
-    font-size: 1.2vw;
   }
 
   .right button {
     height: 6vh;
-    width: 15vw;
-    font-size: 1.2vw;
-  }
-
-  /* Second Part */
-  .secondPart {
-    padding: 0 10vw;
-    gap: 2vw;
-  }
-
-  .threeLine h1 {
-    font-size: 3vw;
-  }
-
-  .threeLine h2,
-  .threeLine h3 {
-    font-size: 1.6vw;
+    width: 40%;
   }
 
   .card-container {
-    padding: 0 10vw;
-    gap: 2vw;
+    padding: 15px;
   }
 
-  .card {
-    width: calc(30% - 2vw);
+  .card-container .card {
+    width: 48%;
   }
 
-  .uniqueCard h1 {
-    font-size: 2.2vw;
-  }
-
-  .uniqueCard p {
-    font-size: 1.2vw;
-  }
-
-  /* Third Part */
   .thirdPart {
-    padding: 5vw 12vw;
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .thirdPart .leftThird h1 {
-    font-size: 2.5vw;
-  }
-
-  .thirdPart .leftThird p {
-    font-size: 1.2vw;
-  }
-
-  .leftPoint li::before,
-  .rightPoint li::before {
-    font-size: 1.5vw;
-  }
-
-  /* Fourth Part */
-  .fourthPart {
-    padding: 0 12vw;
-  }
-
-  .upperText h1 {
-    font-size: 2.5vw;
-  }
-
-  .upperText h3 {
-    font-size: 1.6vw;
-  }
-
-  .priceSheet {
-    flex-direction: row;
-    gap: 2vw;
+  .leftThird button {
+    height: 8vh;
+    width: 14vw;
   }
 
   .priceCard {
-    width: calc(30% - 2vw);
-    height: auto;
+    width: 48%;
   }
 
   .priceCard h1 {
-    font-size: 2vw;
-  }
-
-  .priceCard h2 {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .priceCard button {
-    width: 15vw;
-    font-size: 1.4vw;
+    height: 8vh;
+    width: 10vw;
   }
-
-  .innerDiv h1 {
-    font-size: 1.4vw;
-  }
-
-  .innerDiv h3 {
-    font-size: 1.2vw;
-  }
-
-  .priceSheet ul {
-    gap: 1vw;
+  .left img {
+    height: 30vh;
+    width: 80vw;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* Adjust the Body */
-  .Body {
-    padding: 0;
-    flex-direction: column;
-    gap: 4vw;
-  }
-
-  /* First Part */
   .firstPart {
-    padding: 0 5vw;
     flex-direction: column;
-    gap: 4vw;
+    padding: 5vw 10vw;
   }
 
-  .left img {
-    height: auto;
-    width: 100%;
+  .right h1,
+  .threeLine h1,
+  .upperText h1 {
+    font-size: 4vw;
   }
 
-  .right {
-    padding: 5vw 2vw;
-    gap: 3vw;
+  .right h3,
+  .threeLine h3,
+  .threeLine h2,
+  .card-container h1,
+  .upperText h3 {
+    font-size: 2.8vw;
   }
 
-  .right h1 {
-    font-size: 3.5vw;
-  }
-
-  .right h3 {
-    font-size: 2.5vw;
-  }
-
-  .right p {
-    font-size: 2.2vw;
+  .card-container p {
+    font-size: 2.3vw;
+    padding: 1rem;
   }
 
   .right button {
-    height: 6vw;
-    width: 30vw;
-    font-size: 2.5vw;
+    height: 5vh;
+    width: 50%;
   }
 
-  /* Second Part */
-  .secondPart {
-    padding: 2vw 5vw;
-  }
-
-  .threeLine h1 {
-    font-size: 4vw;
-  }
-
-  .threeLine h2 {
-    font-size: 2.5vw;
-  }
-
-  .threeLine h3 {
-    font-size: 2.2vw;
-  }
-
-  .card-container {
-    padding: 0;
-    gap: 3vw;
-    flex-direction: column;
-  }
-
-  .logo-container img {
-    height: 5vw;
-    width: 5vw;
-  }
-
-  .card h1 {
-    font-size: 2.8vw;
-  }
-
-  .card p {
-    font-size: 2vw;
-  }
-
-  .card {
+  .secondPart .card {
     width: 100%;
   }
 
-  /* Unique Card Adjustments */
-  .uniqueCard h1 {
-    font-size: 3.8vw;
-  }
-
-  .uniqueCard p {
-    font-size: 2.5vw;
-  }
-
-  /* Third Part */
   .thirdPart {
-    padding: 5vw;
     flex-direction: column;
-    gap: 4vw;
-  }
-
-  .points {
-    margin-top: 4vw;
-  }
-
-  .leftPoint,
-  .rightPoint ul {
-    gap: 2vw;
-  }
-
-  .thirdPart .leftThird h1 {
-    font-size: 4vw;
-  }
-
-  .thirdPart .leftThird p {
-    font-size: 2.2vw;
-  }
-
-  .leftPoint li::before,
-  .rightPoint li::before {
-    font-size: 2vw;
   }
 
   .leftThird button {
-    font-size: 2.8vw;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    height: 6vh;
-    width: 25vw;
-    top: 50vw;
-  }
-
-  /* Fourth Part */
-  .fourthPart {
-    padding: 5vw;
-  }
-
-  .upperText h1 {
-    font-size: 3.8vw;
-  }
-
-  .upperText h3 {
-    font-size: 2.5vw;
-  }
-
-  .priceSheet {
-    flex-direction: column;
-    gap: 4vw;
+    height: 7vh;
+    width: 16vw;
   }
 
   .priceCard {
     width: 100%;
-    height: 100vw;
-  }
-  .priceCard .innerDiv {
-    height: 12vh;
   }
 
   .priceCard h1 {
-    font-size: 3vw;
-  }
-
-  .priceCard h2 {
-    font-size: 2.8vw;
-  }
-
-  .innerDiv h1 {
-    font-size: 2.8vw;
-  }
-
-  .innerDiv h3 {
-    font-size: 2.2vw;
-  }
-
-  .priceSheet ul {
-    gap: 2vw;
+    font-size: 4vw;
   }
 
   .priceCard button {
-    width: 35vw;
-    font-size: 2.8vw;
+    height: 9vh;
+    width: 14vw;
+  }
+
+  .priceSheet {
+    flex-direction: column;
+  }
+  .left img {
+    height: 30vh;
+    width: 50vw;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 480px) {
-  /* Adjust the Body */
-  .Body {
-    padding: 0;
-    flex-direction: column;
-    gap: 5vw;
-  }
-
-  /* First Part */
-  .firstPart {
-    padding: 0 5vw;
-    flex-direction: column;
-    gap: 4vw;
-  }
-
-  .left img {
-    height: auto;
-    width: 100%;
-  }
-
-  .right {
-    padding: 5vw 2vw;
-    gap: 3vw;
-  }
-
-  .right h1 {
-    font-size: 5vw;
-  }
-
-  .right h3 {
-    font-size: 3.5vw;
-  }
-
-  .right p {
-    font-size: 3vw;
-  }
-
-  .right button {
-    height: 7vw;
-    width: 35vw;
-    font-size: 3vw;
-  }
-
-  /* Second Part */
-  .secondPart {
-    padding: 2vw 5vw;
-  }
-
-  .threeLine h1 {
-    font-size: 5vw;
-  }
-
-  .threeLine h2 {
-    font-size: 3vw;
-  }
-
-  .threeLine h3 {
-    font-size: 2.5vw;
-  }
-
-  .card-container {
-    padding: 0;
-    gap: 3vw;
-    flex-direction: column;
-  }
-
-  .logo-container img {
-    height: 6vw;
-    width: 6vw;
-  }
-
-  .card h1 {
-    font-size: 3.5vw;
-  }
-
-  .card p {
-    font-size: 2.5vw;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  /* Unique Card Adjustments */
-  .uniqueCard h1 {
-    font-size: 5vw;
-  }
-
-  .uniqueCard p {
-    font-size: 3vw;
-  }
-
-  /* Third Part */
-  .thirdPart {
-    padding: 5vw;
-    flex-direction: column;
-    gap: 5vw;
-  }
-
-  .thirdPart .leftThird {
-    position: relative;
-  }
-  .points {
-    margin-top: 5vw;
-  }
-  .leftPoint,
-  .rightPoint ul {
-    gap: 2vw;
-  }
-
-  .thirdPart .leftThird h1 {
-    font-size: 5vw;
-  }
-
-  .thirdPart .leftThird p {
-    font-size: 3vw;
-  }
-
-  .leftPoint li::before,
-  .rightPoint li::before {
-    font-size: 3vw;
-  }
-
-  .leftThird button {
-    font-size: 3vw;
-    position: absolute; /* Place it relative to the nearest positioned ancestor */
-    bottom: 10px; /* 10px from the bottom */
-    right: 10px; /* 10px from the right */
-    height: 6vh;
-    width: 30vw;
-    background-color: #ffbd59;
-    border-radius: 0.5vh;
-    color: #033658;
-    text-align: center;
-    top: 80vw;
-  }
-
-  /* Fourth Part */
-  .fourthPart {
-    padding: 5vw;
-  }
-
+@media screen and (max-width: 368px) {
+  .right h1,
+  .threeLine h1,
   .upperText h1 {
-    font-size: 4.5vw;
+    font-size: 5vw;
   }
 
+  .right h3,
+  .threeLine h3,
+  .threeLine h2,
+  .card-container h1,
   .upperText h3 {
     font-size: 3vw;
   }
 
-  .priceSheet {
+  .card-container p {
+    font-size: 3vw;
+    padding: 1.5rem;
+  }
+
+  .right button {
+    height: 6vh;
+    width: 60%;
+  }
+
+  .thirdPart {
     flex-direction: column;
-    gap: 5vw;
+  }
+
+  .leftThird button {
+    height: 10vh;
+    width: 18vw;
   }
 
   .priceCard {
     width: 100%;
-    height: 120vw;
   }
 
   .priceCard h1 {
-    font-size: 4vw;
-  }
-
-  .priceCard h2 {
-    font-size: 3.5vw;
-  }
-  .priceCard .innerDiv {
-    height: 7vh;
-  }
-
-  .innerDiv h1 {
-    font-size: 3vw;
-  }
-
-  .innerDiv h3 {
-    font-size: 2.5vw;
-  }
-
-  .priceSheet ul {
-    gap: 2vw;
+    font-size: 5vw;
   }
 
   .priceCard button {
-    width: 40vw;
-    font-size: 3.5vw;
+    height: 10vh;
+    width: 16vw;
+  }
+
+  .priceSheet {
+    flex-direction: column;
   }
 }
