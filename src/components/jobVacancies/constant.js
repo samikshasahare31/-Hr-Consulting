@@ -188,14 +188,10 @@ export const jobPosts = [
       jobdegree: "Bachelor Degree",
       jobSalary: "IDR 18,000,000",
       JobDescription: [
-        "负责总经理相关项目文件、资料的书面翻译，会议现场翻译",
-        "协助总经理协调日常事务，撰写领导日常报告，负责公司的制度管理和落实 参与总经理召开会议的组织、安排、记录",
-        "负责总经理的文件、资料的管理，协助总经理与高管进行沟通转达。",
+       
       ],
       Requirements: [
-        "全日制本科及以上学历，HSK4级以上，有留学或者海外工作经验者优先。",
-        "有3年以上工作经验，其中有高管助理或者秘书经验者优先，有市场工作经验者优先。",
-        "具有优秀的组织协调能力、沟通能力及分析能力，具有高情商，能够应对各种场景和各种阶层人群",
+      
       ],
     },
   },
@@ -251,14 +247,10 @@ export const Administration = [
       jobSalary: "IDR 18,000,000",
 
       JobDescription: [
-        "负责总经理相关项目文件、资料的书面翻译，会议现场翻译",
-        "协助总经理协调日常事务，撰写领导日常报告，负责公司的制度管理和落实 参与总经理召开会议的组织、安排、记录",
-        "负责总经理的文件、资料的管理，协助总经理与高管进行沟通转达。",
+      
       ],
       Requirements: [
-        "全日制本科及以上学历，HSK4级以上，有留学或者海外工作经验者优先。",
-        "有3年以上工作经验，其中有高管助理或者秘书经验者优先，有市场工作经验者优先。",
-        "具有优秀的组织协调能力、沟通能力及分析能力，具有高情商，能够应对各种场景和各种阶层人群",
+       
       ],
     },
   },
@@ -1975,7 +1967,7 @@ export const Sales = [
   },
   {
     jobHeading:
-      "Field Sales Supervisor (Bandung, Banjarmasin, Bekasi, Cirebon, Jambi, Jakarta, Medan, Makassar, Palembang, Pontianak, Surabaya, Tangerang, Bogor, Bandar Lampung, Semarang, PadangField Sales Supervisor)",
+      "Field Sales Supervisor (Bandung, Banjarmasin, Bekasi, Cirebon, Jambi, Jakarta, Bogor, Bandar Lampung, Semarang, PadangField Sales Supervisor)",
     jobcategory: "Sales",
     jobName: "Field Sales Supervisor",
     jobLocation: "Banten",
@@ -1983,7 +1975,7 @@ export const Sales = [
     jobSalary: "IDR 7,000,000",
     JobList: {
       jobHeading:
-        "Field Sales Supervisor (Bandung, Banjarmasin, Bekasi, Cirebon, Jambi, Jakarta, Medan, Makassar, Palembang, Pontianak, Surabaya, Tangerang, Bogor, Bandar Lampung, Semarang, PadangField Sales Supervisor)",
+        "Field Sales Supervisor (Bandung, Banjarmasin, Bekasi, Cirebon, Jambi, Jakarta, Bogor, Bandar Lampung, Semarang, PadangField Sales Supervisor)",
       jobcategory: "Sales",
       jobName: "Field Sales Supervisor",
       jobLocation: "Banten",
@@ -2225,14 +2217,10 @@ export const Translator1 = [
       jobdegree: "Bachelor Degree",
       jobSalary: "IDR 18,000,000",
       JobDescription: [
-        "负责总经理相关项目文件、资料的书面翻译，会议现场翻译",
-        "协助总经理协调日常事务，撰写领导日常报告，负责公司的制度管理和落实 参与总经理召开会议的组织、安排、记录",
-        "负责总经理的文件、资料的管理，协助总经理与高管进行沟通转达。",
+      
       ],
       Requirements: [
-        "全日制本科及以上学历，HSK4级以上，有留学或者海外工作经验者优先。",
-        "有3年以上工作经验，其中有高管助理或者秘书经验者优先，有市场工作经验者优先。",
-        "具有优秀的组织协调能力、沟通能力及分析能力，具有高情商，能够应对各种场景和各种阶层人群",
+       
       ],
     },
   },

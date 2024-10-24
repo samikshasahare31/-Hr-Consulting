@@ -115,7 +115,7 @@ const JobVacancies = () => {
                     <div key={index} className="job-categorie-button m-1">
                       <button
                         className="button-all p-2" style={{
-                          backgroundColor: selectedCategory === job.category ? '15357A' : 'initial',
+                          backgroundColor: selectedCategory === job.category ? '#15357A' : 'initial',
                           color: selectedCategory === job.category ? 'white' : 'black',
                         }}
                         onClick={() => handleCategoryClick(job)}

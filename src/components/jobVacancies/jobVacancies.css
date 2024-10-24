@@ -23,7 +23,7 @@
   color: #033658;
   font-weight: 800;
   font-size: 32px;
-  /* margin-left: -82%; */
+  margin-left: -82%;
   margin-top: 2%;
   margin-bottom: 1%;
 }
@@ -249,7 +249,7 @@
     margin-left: -180px !important;
 }
 .job-text h1{
-  margin-left: -1%;
+  margin-left: -70%;
 
 }
   .find-button {
@@ -279,7 +279,7 @@
 
   }
   .job-text h1 {
-    margin-left: -1%;
+    margin-left: -65%;
   }
 
   .job-apply {
@@ -312,7 +312,7 @@
     margin-left: -17%;
   }
   .job-text h1 {
-    margin-left: -3%;
+    margin-left: -32%;
   }
   .job-search {
     width: 98%;
@@ -465,5 +465,11 @@
 @media (width: 1280px) {
   .job {
     height: 394px !important;
+ 
+  }
+  .job-text{
+    margin-left: -8%;
+    height: 394px;
+
   }
 }
